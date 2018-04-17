@@ -4,39 +4,35 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="AGClinec">
+		<meta name="description" content="ACClinic,">
 		<meta name="author" content="Rodrigo Ramos, Leandro lima, Anderson Sanches">
 		
 		<title>ACClinic</title>
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Google Web Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
-		<!-- Template CSS Files  -->
+		<!-- Arquivos CSS  -->
 		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link href="js/plugins/camera/css/camera.css" rel="stylesheet">
 		<link href="js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">	
 		<link href="css/responsive.css" rel="stylesheet">
+
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<!-- Fav and touch icons -->
-		
+
+		<!-- Icone Site -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/fav-144.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/fav-114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/fav-72.png">
 		<link rel="apple-touch-icon-precomposed" href="images/fav-57.png">
 		<link rel="shortcut icon" href="images/fav.png">
-		
 	</head>
 	<body>
-	<!-- Header Starts -->
-		<header class="main-header">
+	<!-- Header cabeçalho -->
 		<!-- Nested Container Starts -->
 			<div class="container">
 			<!-- Top Bar Starts -->
@@ -47,7 +43,7 @@
 						</div>
 						<div class="col-sm-6 col-xs-12">
 							<ul class="list-unstyled list-inline">
-								<li><a href="mailto:care@yourhosptialsname.com">
+								<li><a href="mailto:sac@hemodiagnostico.com.br">
 									<i class="fa fa-envelope-o"></i>
 									sac@hemodiagnostico.com.br
 								</a></li>
@@ -126,7 +122,7 @@
 			</div>
 		<!-- Nested Container Ends -->
 		</header>
-	<!-- Header Ends -->
+	<!-- Header cabeçalho -->
 	<!-- Slider Section Starts -->
 		<section class="slider clearfix">
 			<div id="camera_wrap_1" class="camera_wrap camera_white_skin">
@@ -145,8 +141,8 @@
 			<!-- Slide #2 Starts -->
 				<div data-src="images/slider/slider-img2.jpg">
 					<div class="camera_caption fadeIn hidden-sm hidden-xs">
-						<h2>Main Heading</h2>
-						<h2><span>Some Caption</span> Here</h2>
+						<h2>Atendimento de Qualidade</h2>
+						<h2><span>kajslkjslkj l</span> Here</h2>
 						<p>
 							Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book.
 						</p>
