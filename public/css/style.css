@@ -13,8 +13,22 @@ a:focus {
 }
 a:focus { outline: none; }
 
-/* Heading Styles Starts */
 
+/* Trazendo fonts locais */
+@font-face {
+     font-family: 'Lato';
+     src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+
+.imgLogo {
+	padding:0px;
+	margin-top:-20px;
+	width:200px;
+	height:80px;
+}
+
+
+/* Estilizando os Titulos*/
 h1, 
 h2, 
 h3, 

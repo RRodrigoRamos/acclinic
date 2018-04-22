@@ -7,7 +7,7 @@
 		<meta name="description" content="ACClinic,">
 		<meta name="author" content="Rodrigo Ramos, Leandro lima, Anderson Sanches">
 		
-		<title>ACClinic</title>
+		<title>ACClinic.::Agendamentos e Consultas Clinicas::..</title>
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- Arquivos CSS  -->
@@ -25,11 +25,11 @@
 		<![endif]-->
 
 		<!-- Icone Site -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/fav-144.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/fav-114.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/fav-72.png">
-		<link rel="apple-touch-icon-precomposed" href="images/fav-57.png">
-		<link rel="shortcut icon" href="images/fav.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/fav/fav/icon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/fav/fav/icon.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/fav/fav/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="images/fav/">
+		<link rel="shortcut icon" href="images/fav/icon.png">
 	</head>
 	<body>
 	<!-- Header cabeçalho -->

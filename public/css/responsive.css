@@ -204,6 +204,15 @@
 /* Small Devices Styles Starts */
 
 @media (min-width: 768px) and (max-width: 991px) {
+
+
+/*logo Clinic*/
+	.imgLogo {
+		padding:0px;
+		margin-top:-15px;
+		width:150px;
+		height:70px;
+	}
 	
 /* Heading Styles Starts */
 
@@ -363,6 +372,16 @@
 /* Extra Small Devices Styles Starts */
 
 @media (max-width: 767px) {
+
+
+	/*logo Clinic*/
+	.imgLogo {
+		padding:0px;
+		margin-top:-15px;
+		width:150px;
+		height:70px;
+	}
+	
 	
 /* Navigation Styles Starts */
 

@@ -4,77 +4,77 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="ACClinic - Sistema de Monitoriramente de horários e atendimento de agendamento online de consultas clinicas, com o objetivo de aproximar o cliente a clinica">
+		<meta name="description" content="ACClinic,">
 		<meta name="author" content="Rodrigo Ramos, Leandro lima, Anderson Sanches">
 		
-		<title>ACClinic.::Agendamentos de Consultas e Exames::.</title>
+		<title>ACClinic</title>
 		<!-- Bootstrap -->
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<!-- Template CSS Files  -->
-		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link href="../js/plugins/camera/css/camera.css" rel="stylesheet">
-		<link href="../js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-		<link href="../css/style.css" rel="stylesheet">
-		<link href="../css/responsive.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Arquivos CSS  -->
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="js/plugins/camera/css/camera.css" rel="stylesheet">
+		<link href="js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">	
+		<link href="css/responsive.css" rel="stylesheet">
+
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		
-		<!-- Fav and touch icons -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/fav/favIcon.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/fav/favIcon.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/fav/favIcon.png">
-		<link rel="apple-touch-icon-precomposed" href="../images/fav/favIcon.png">
-		<link rel="shortcut icon" href="../images/fav/favIcon.png">
-		
+
+		<!-- Icone Site -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/fav-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/fav-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/fav-72.png">
+		<link rel="apple-touch-icon-precomposed" href="images/fav-57.png">
+		<link rel="shortcut icon" href="images/fav.png">
 	</head>
 	<body>
-	<!-- Topo -->
-		<header class="main-header">
-		<!-- Conteudo inicial  -->
+	<!-- Header cabeçalho -->
+		<!-- Nested Container Starts -->
 			<div class="container">
-			<!-- Informações do Topo site -->
+			<!-- Top Bar Starts -->
 				<div class="top-bar hidden-sm hidden-xs">
 					<div class="row">
 						<div class="col-sm-6 col-xs-12">
-							  <span> <i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>  Funcionamos de </span> segunda à sexta: 7h às 18h e sábados de 7h às 12h.
+							<span>Funcionamos de </span> segunda à sexta: 7h às 18h e sábados de 7h às 12h.
 						</div>
 						<div class="col-sm-6 col-xs-12">
 							<ul class="list-unstyled list-inline">
 								<li><a href="mailto:sac@hemodiagnostico.com.br">
-									<i class="fa fa-envelope-o"></i> sac@hemodiagnostico.com.br
+									<i class="fa fa-envelope-o"></i>
+									sac@hemodiagnostico.com.br
 								</a></li>
 								<li><i class="fa fa-phone"></i> Fone: (96) 3217-0700 / 98801-3805</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-			<!-- Informações do Topo site Fim -->
-			<!-- Navbar Menu -Inicio -->
+			<!-- Top Bar Ends -->
+			<!-- Navbar Starts -->
 				<nav id="nav" class="navbar navbar-default" role="navigation">
 					<div class="container-fluid">
-					<!-- Menu Infor  -->
+					<!-- Navbar Header Starts -->
 						<div class="navbar-header">
-						<!-- Collapse Button Menu Mobile -->
+						<!-- Collapse Button Starts -->
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<!-- <span class="sr-only">Toggle navigation</span> -->
-								<span class="icon-bar"></span>
+								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-						<!-- Collapse Button Menu Mobile Fim -->
-						<!-- Logo  -->
-							<a href="/home" class="navbar-brand">
-								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
+						<!-- Collapse Button Ends -->
+						<!-- Logo Starts -->
+							<a href="index.html" class="navbar-brand">
+								<i class="fa fa-heartbeat"></i>
+								ACClinic
 							</a>
-						<!-- Logo Fim -->
+						<!-- Logo Ends -->
 						</div>
-					<!-- Menu Infor Fim -->
-					<!-- Menu Collapse -->
+					<!-- Navbar Header Ends -->
+					<!-- Navbar Collapse Starts -->
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li class="active"><a href="index.html">Página Inicial</a></li>
@@ -88,7 +88,9 @@
 										<li><a href="doctors.html">Médicos</a></li>
 										<li><a href="doctor-profile.html">Perfis</a></li>
 									</ul>
-								</li>								
+								</li>
+								<!-- <li><a href="services.html">Serviços</a></li>-->
+								
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										Serviços
@@ -110,18 +112,18 @@
 									</ul>
 								</li>
 								<li><a href="contact.html">Contato</a></li>
-								<li class="btn btn-md"><a href="login.html">Entrar </a></li>
+								<li><a href="login.html"><button type="button" class="btn btn-info">Entrar</button></a></li>
 							</ul>
 						</div>
-					<!-- Menu Collapse Fim -->
+					<!-- Navbar Collapse Ends -->
 					</div>
 				</nav>
-			<!-- Navbar Menu Fim -->
+			<!-- Navbar Ends -->
 			</div>
-		<!-- Conteudo Inicial Fim -->
+		<!-- Nested Container Ends -->
 		</header>
-	<!-- Topo Fim -->
-	<!-- Carossel Sldes -->
+	<!-- Header cabeçalho -->
+	<!-- Slider Section Starts -->
 		<section class="slider clearfix">
 			<div id="camera_wrap_1" class="camera_wrap camera_white_skin">
 			<!-- Slide #1 Starts -->
@@ -139,8 +141,8 @@
 			<!-- Slide #2 Starts -->
 				<div data-src="images/slider/slider-img2.jpg">
 					<div class="camera_caption fadeIn hidden-sm hidden-xs">
-						<h2>Main Heading</h2>
-						<h2><span>Some Caption</span> Here</h2>
+						<h2>Atendimento de Qualidade</h2>
+						<h2><span>kajslkjslkj l</span> Here</h2>
 						<p>
 							Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book.
 						</p>
@@ -162,10 +164,10 @@
 			<!-- Slide #3 Ends -->
 			</div>
 		</section>
-	<!-- Carossel Sldes Fim -->
-	<!-- Conteudo Inicio  -->
+	<!-- Slider Section Ends -->
+	<!-- Main Container Starts -->
 		<div class="container main-container">
-		<!-- Conteudo inBox -->
+		<!-- Notification Boxes Starts -->
 			<div class="notification-boxes row">
 			<!-- Box #1 Starts -->
 				<div class="col-md-3 col-sm-6 col-xs-12">
@@ -216,8 +218,8 @@
 				</div>
 			<!-- Box #4 Ends -->
 			</div>
-		<!-- Conteudo inBox Fim -->
-		<!-- Conteudo Section -->
+		<!-- Notification Boxes Ends -->
+		<!-- Welcome Section Starts -->
 			<section class="welcome-area">
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
@@ -235,12 +237,12 @@
 					</div>
 				</div>
 			</section>
-		<!-- Conteudo Section Fim -->
+		<!-- Welcome Section Ends -->
 		</div>
-	<!-- Conteudo Inicial Fim -->
-	<!-- Conteudo Section Doctors -->
+	<!-- Main Container Ends -->
+	<!-- Meet Our Doctors Section Starts -->
 		<section class="featured-doctors">
-		<!-- Doctors Container -->
+		<!-- Nested Container Starts -->
 			<div class="container">
 				<h2><span class="lite">Meet Our</span> Doctors</h2>
 				<p>
@@ -349,12 +351,64 @@
 				<!-- Doctor Bio #4 Ends -->
 				</div>
 			</div>
-		<!-- Doctors Container Fim -->
+		<!-- Nested Container Ends -->
 		</section>
-	<!-- Conteudo Section Doctors Fim -->
+	<!-- Meet Our Doctors Section Ends -->
 	<!-- Main Container Starts -->
-	<div class="container">
-		<!-- Conteudo Noticias/Departamentos -->
+		<div class="container main-container">
+		<!-- Medical Services Section Starts -->
+			<section class="medical-services">
+				<h2 class="main-heading1 lite">Our Best</h2>
+				<h2 class="main-heading2">Medical Services</h2>
+			<!-- Medical Services List Starts -->
+				<ul class="list-unstyled row text-center">
+					<li class="col-md-2 col-sm-4 col-xs-12">
+						<div class="icon">
+							<img src="images/icons/band-aid.png" alt="Band Aid">
+						</div>
+						<h5>First Aid</h5>
+						<p>Lorem Ipsum is simply dummy text ...</p>
+					</li>
+					<li class="col-md-2 col-sm-4 col-xs-12">
+						<div class="icon">
+							<img src="images/icons/tooth.png" alt="Dental Care">
+						</div>
+						<h5>Dental Care</h5>
+						<p>Lorem Ipsum is simply dummy text ...</p>
+					</li>
+					<li class="col-md-2 col-sm-4 col-xs-12">
+						<div class="icon">
+							<img src="images/icons/ambulance.png" alt="24x7 Ambulance">
+						</div>
+						<h5>24x7 Ambulance</h5>
+						<p>Lorem Ipsum is simply dummy text ...</p>
+					</li>
+					<li class="col-md-2 col-sm-4 col-xs-12">
+						<div class="icon">
+							<img src="images/icons/nurse.png" alt="Qualified Doctors">
+						</div>
+						<h5>Qualified Doctors</h5>
+						<p>Lorem Ipsum is simply dummy text ...</p>
+					</li>
+					<li class="col-md-2 col-sm-4 col-xs-12">
+						<div class="icon">
+							<img src="images/icons/saline-bottle.png" alt="Medical Pharmacy">
+						</div>
+						<h5>Medical Pharmacy</h5>
+						<p>Lorem Ipsum is simply dummy text ...</p>
+					</li>
+					<li class="col-md-2 col-sm-4 col-xs-12">
+						<div class="icon">
+							<img src="images/icons/stethoscope.png" alt="Pulmonary">
+						</div>
+						<h5>Pulmonary</h5>
+						<p>Lorem Ipsum is simply dummy text ...</p>
+					</li>
+				</ul>
+			<!-- Medical Services List Ends -->
+			</section>
+		<!-- Medical Services Section Ends -->
+		<!-- Content Starts -->
 			<div class="row">
 			<!-- Latest News Section Starts -->
 				<section class="col-md-8 col-xs-12">
@@ -374,7 +428,7 @@
 												<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 												<div class="inner">
 													<h5>
-														<a href="#"> 111Latest News Post Heading</a>
+														<a href="#">Latest News Post Heading</a>
 													</h5>
 													<ul class="list-unstyled list-inline post-meta">
 														<li>
@@ -401,7 +455,7 @@
 												<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 												<div class="inner">
 													<h5>
-														<a href="#"> 111 Latest Tip Post Heading</a>
+														<a href="#">Latest Tip Post Heading</a>
 													</h5>
 													<ul class="list-unstyled list-inline post-meta">
 														<li>
@@ -483,12 +537,11 @@
 										<!-- News Post Ends -->
 										</div>
 									</div>
-
 								</div>
 							<!-- Slide #2 Ends -->
 							</div>
 						<!-- Wrapper for Slides Ends -->
-						<!-- Painel Control -->
+						<!-- Controls Starts -->
 							<a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
 								<span class="fa fa-angle-left" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
@@ -497,13 +550,13 @@
 								<span class="fa fa-angle-right" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
-						<!-- Painel Control Fim -->
+						<!-- Controls Ends -->
 						</div>
 					<!-- Latest News Carousel Ends -->
 					</div>
 				</section>
 			<!-- Latest News Section Ends -->
-			<!-- Departamentos aside Starts -->
+			<!-- Medical Department aside Starts -->
 				<aside class="col-md-4 col-xs-12">
 					<div class="main-block1">
 						<h2 class="main-heading1 lite">Medical</h2>
@@ -682,7 +735,7 @@
 					<!-- Accordion Ends -->
 					</div>
 				</aside>
-			<!-- Departamentos aside Fim -->
+			<!-- Medical Department aside Ends -->
 			</div>
 		<!-- Content Ends -->
 		<!-- Book Appointment Box Starts -->
@@ -704,7 +757,7 @@
 			</div>
 		<!-- Book Appointment Box Ends -->
 		</div>
-	<!-- Conteudo Noticias/Departamentoss -->
+	<!-- Main Container Ends -->
 	<!-- Footer Starts -->
 		<footer class="main-footer">
 		<!-- Footer Area Starts -->
@@ -826,4 +879,4 @@
 	<script src="https://maps.googleapis.com/maps/api/js"></script>	
 	<script src="js/custom.js"></script>	
 	</body>
-</html
+</html>
