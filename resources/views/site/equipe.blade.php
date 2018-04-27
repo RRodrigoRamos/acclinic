@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('title', 'UNIDADES')
+@section('title', 'INSTITUCIONAL-EQUIPE')
 
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
@@ -37,7 +37,7 @@
 											<li>
 												<a href="/pagina/institucional">Quem Somos</a>
 											</li>
-											<li>
+											<li class="active">
 												<a href="/pagina/equipe"> 
 												Equipe</a>
 											</li>
@@ -45,7 +45,7 @@
 												<a href="/pagina/medicos">
 												Médicos</a>
 											</li>
-											<li class="active">
+											<li>
 												<a href="/pagina/unidades">Unidades</a>
 											</li>
 										</ul>
@@ -63,13 +63,13 @@
 										</a>
 										<ul class="dropdown-menu" role="menu">
 											<li>
-												<a href="/areaCliente/consultas">Consultas</a>
+												<a href="/servicos/consultas">Consultas</a>
 											</li>
 											<li>
-												<a href="/areaCliente/exames">Exames</a>
+												<a href="/servicos/exames">Exames</a>
 											</li>
 											<li>
-												<a href="/areaCliente/agendamento">Agendamentos</a>
+												<a href="/servico/agendamentos">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
@@ -77,7 +77,7 @@
 										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
 									<li>
-										<a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
+										<a href="/areaClinte" ><i class="fa fa-user"></i> Área do cliente</a>
 									</li>
 								</ul>
 							</div>
@@ -91,12 +91,16 @@
 	<!-- Topo Fim -->
 	@endsection
 
+
 	@section('ConteudoPrincipal')
 	<br>
 	<br>
- Conteudo da Pagina UNIDADES DA CLINICA
+ Conteudo da Pagina EQUIPE CLINICA
  <br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario  UNIDADES DA CLINICA
+<br>
+	<br>
+ Conteudo da EQUIPE CLINICA
+ <br><br>
 @endsection

@@ -37,7 +37,7 @@
 												<a href="/pagina/institucional">Quem Somos</a>
 											</li>
 											<li>
-												<a href="/pagina/equipe_tecnica"> 
+												<a href="/pagina/equipe"> 
 												Equipe</a>
 											</li>
 											<li>
@@ -68,7 +68,7 @@
 												<a href="/servicos/exames">Exames</a>
 											</li>
 											<li>
-												<a href="/servico/agendamento">Agendamentos</a>
+												<a href="/servico/agendamentos">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
@@ -131,6 +131,17 @@
 	<!-- Carossel Slides Fim -->
 	@endsection
 	@section('ConteudoSecundario')
+
+	<!-- teste  -->
+	<div class="card-body">
+         @if (session('status'))
+          <div class="alert alert-success">
+            {{ session('status') }}
+          </div>
+         @endif
+     Você está logado ! 
+    </div>
+     <!-- teste fim -->
 	<!-- Conteudo Inicio  -->
 		<div class="container main-container">
 		<!-- Conteudo inBox -->

@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('title', 'UNIDADES')
+@section('title', 'Area Cliente')
 
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
@@ -28,7 +28,7 @@
 							<div class="navbar-collapse collapse">					
 								<ul class="nav navbar-nav navbar-right">
 									<li>
-										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
+										<a href="/inicio">Início</a>
 									</li>
 									<li class="dropdown active">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
@@ -37,7 +37,7 @@
 											<li>
 												<a href="/pagina/institucional">Quem Somos</a>
 											</li>
-											<li>
+											<li class="active">
 												<a href="/pagina/equipe"> 
 												Equipe</a>
 											</li>
@@ -45,7 +45,7 @@
 												<a href="/pagina/medicos">
 												Médicos</a>
 											</li>
-											<li class="active">
+											<li>
 												<a href="/pagina/unidades">Unidades</a>
 											</li>
 										</ul>
@@ -63,13 +63,13 @@
 										</a>
 										<ul class="dropdown-menu" role="menu">
 											<li>
-												<a href="/areaCliente/consultas">Consultas</a>
+												<a href="/servicos/consultas">Consultas</a>
 											</li>
 											<li>
-												<a href="/areaCliente/exames">Exames</a>
+												<a href="/servicos/exames">Exames</a>
 											</li>
 											<li>
-												<a href="/areaCliente/agendamento">Agendamentos</a>
+												<a href="/servico/agendamento">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
@@ -77,7 +77,7 @@
 										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
 									<li>
-										<a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
+										<a href="/areaClinte" ><i class="fa fa-user"></i> Área do cliente</a>
 									</li>
 								</ul>
 							</div>
@@ -91,12 +91,12 @@
 	<!-- Topo Fim -->
 	@endsection
 
+
 	@section('ConteudoPrincipal')
-	<br>
-	<br>
- Conteudo da Pagina UNIDADES DA CLINICA
- <br><br>
+	<br><br><br>
+ Conteudo da Pagina AREA DO CLIENTE
+ <br><br><br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario  UNIDADES DA CLINICA
+Conteudo Secundario Pagina  AREA DO CLIENTE
 @endsection

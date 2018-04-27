@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('title', 'UNIDADES')
+@section('title', 'SERVIÇOS:Consultas-Exames-Agendamentos')
 
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
@@ -30,7 +30,7 @@
 									<li>
 										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
 									</li>
-									<li class="dropdown active">
+									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
@@ -45,7 +45,7 @@
 												<a href="/pagina/medicos">
 												Médicos</a>
 											</li>
-											<li class="active">
+											<li>
 												<a href="/pagina/unidades">Unidades</a>
 											</li>
 										</ul>
@@ -56,20 +56,20 @@
 									<li>
 										<a href="/pagina/convenios">Convênios</a>
 									</li>		
-									<li class="dropdown">
+									<li class="dropdown active">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											Serviços 
 											<i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="/areaCliente/consultas">Consultas</a>
+											<li class="active">
+												<a href="/servico/consultas">Consultas</a>
 											</li>
 											<li>
-												<a href="/areaCliente/exames">Exames</a>
+												<a href="/servico/exames">Exames</a>
 											</li>
 											<li>
-												<a href="/areaCliente/agendamento">Agendamentos</a>
+												<a href="/servico/agendamentos">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
@@ -91,12 +91,13 @@
 	<!-- Topo Fim -->
 	@endsection
 
+
 	@section('ConteudoPrincipal')
 	<br>
-	<br>
- Conteudo da Pagina UNIDADES DA CLINICA
- <br><br>
+	<br><br>
+ Conteudo da Pagina INFORMAÇÕES DE CONSULTAS
+ <br><br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario  UNIDADES DA CLINICA
+Conteudo Secundario INFORMAÇÕES DE CONSULTAS
 @endsection

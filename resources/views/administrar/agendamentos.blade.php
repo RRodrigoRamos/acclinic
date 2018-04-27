@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('title', 'UNIDADES')
+@section('title', 'AGENDAMENTOS')
 
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
@@ -28,9 +28,9 @@
 							<div class="navbar-collapse collapse">					
 								<ul class="nav navbar-nav navbar-right">
 									<li>
-										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
+										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true">Início</a>
 									</li>
-									<li class="dropdown active">
+									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
@@ -45,7 +45,7 @@
 												<a href="/pagina/medicos">
 												Médicos</a>
 											</li>
-											<li class="active">
+											<li>
 												<a href="/pagina/unidades">Unidades</a>
 											</li>
 										</ul>
@@ -68,16 +68,16 @@
 											<li>
 												<a href="/areaCliente/exames">Exames</a>
 											</li>
-											<li>
-												<a href="/areaCliente/agendamento">Agendamentos</a>
+											<li class="active">
+												<a href="/areaCliente/agendamentos">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
 									<li>
-										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
+										<a href="/pagina/localizacao"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
 									<li>
-										<a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
+										<a href="/areaClinte" ><i class="fa fa-user"></i> Área do cliente</a>
 									</li>
 								</ul>
 							</div>
@@ -90,13 +90,12 @@
 		</header>
 	<!-- Topo Fim -->
 	@endsection
-
-	@section('ConteudoPrincipal')
+@section('ConteudoPrincipal')
 	<br>
-	<br>
- Conteudo da Pagina UNIDADES DA CLINICA
- <br><br>
+	<br><br>
+	 Conteudo da Pagina AGENDAMENTOS
+ 	<br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario  UNIDADES DA CLINICA
+	Conteudo Secundario Pagina AGENDAMENTOS
 @endsection

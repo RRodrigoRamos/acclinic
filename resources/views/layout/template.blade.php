@@ -78,17 +78,14 @@
 									<i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>
 									Av. Coaracy Nunes, 892 - Centro, Macapá - AP, 68900-010
 								</li>
-								<br/>
 								<li class="clearfix">
 									<i class="fa fa-phone-square fa-2x"></i>
 									(96) 3217 - 0700
 								</li>
-								<br/>
 								<li class="clearfix">
 									<i class="fa fa-phone fa-2x"></i>
 									(96) 98801 - 3805
 								</li>
-								<br/>
 								<li class="clearfix">
 									<i class="fa fa-envelope-o fa-2x"></i>
 									<a href="mailto:sac@hemodiagnostico.com.br">sac@hemodiagnostico.com.br</a>

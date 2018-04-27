@@ -4,18 +4,21 @@
 Route::get('/inicio', function () {
     return view('home');
 });
+Route::get('/', function () {
+    return view('home');
+});
 
 // // Tela de Login
 Auth::routes();
-Route::get('/areaClinte', 'HomeController@index')->name('home');
+Route::get('/areaCliente', 'HomeController@index')->name('home');
 
 // Paginas Site
-Route::get('/{pg}/{id}', function ($id) {
+Route::get('/{pg}/{id}', function ($pg,$id) {
     return view('site.'.$id);
 });
 
 // Administração
-Route::get('administracao', function ($id) {
-    return view('administrar.');
+Route::get('/administracao/{id}', function ($id) {
+    return view('administrar.'.$id);	
 });
 
