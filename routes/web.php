@@ -1,24 +1,21 @@
 <?php
 
-
-
-
-
-
-
-
-// Rotas simples
-Route::get('/', function () {
-    return view('layout.template');
-});
-
 // Pagina Inicial
 Route::get('/inicio', function () {
     return view('home');
 });
 
+// // Tela de Login
+Auth::routes();
+Route::get('/areaClinte', 'HomeController@index')->name('home');
 
-// Tela de Login
-Route::get('/exames', function () {
-    return view('site.exame');
+// Paginas Site
+Route::get('/{pg}/{id}', function ($id) {
+    return view('site.'.$id);
 });
+
+// Administração
+Route::get('administracao', function ($id) {
+    return view('administrar.');
+});
+

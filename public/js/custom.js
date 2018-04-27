@@ -1,7 +1,6 @@
 $(function() {
 	
     "use strict";
-	
 	// REMOVE # FROM URL
 	$( 'a[href="#"]' ).click( function(e) {
 		e.preventDefault();
@@ -88,31 +87,34 @@ $(function() {
 			enabled: true
 		}
 	});
-	
-	//AJAX CONTACT FORM
-	$(".contact-form").submit(function() {
-		var rd = this;
-		var url = "sendemail.php"; // the script where you handle the form input.
-		$.ajax({
-			type: "POST",
-			url: url,
-			data: $(".contact-form").serialize(), // serializes the form's elements.
-			success: function(data) {
-				$(rd).prev().text(data.message).fadeIn().delay(3000).fadeOut();
-			}
-		});
-		return false; // avoid to execute the actual submit of the form.
-	});
-	
-	// GOOGLE MAP
-	function initialize($) {
-		var mapOptions = {	
-			zoom: 8,
-			center: new google.maps.LatLng(17.421306, 78.457553),
-			disableDefaultUI: true
-		};
-		var map = new google.maps.Map(document.querySelector('.map'), mapOptions);
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-	
+});
+
+// key Google Maps == AIzaSyBP-gcDVPV_bpHHOqg9_10D7NFiadnGdxg
+
+
+// trecho do link para o topo
+jQuery(document).ready(function($){
+  var offset = 300,
+    offset_opacity = 1200,
+    //duration of the top scrolling animation (in ms)
+    scroll_top_duration = 700,
+    //grab the "back to top" link
+    $back_to_top = $('.to-top');
+
+  //hide or show the "back to top" link
+  $(window).scroll(function(){
+    ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('to-is-visible') : $back_to_top.removeClass('to-is-visible to-fade-out');
+    if( $(this).scrollTop() > offset_opacity ) {
+      $back_to_top.addClass('to-fade-out');
+    }
+  });
+
+  //smooth scroll to top
+  $back_to_top.on('click', function(event){
+    event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0 ,
+      }, scroll_top_duration
+    );
+  });
 });

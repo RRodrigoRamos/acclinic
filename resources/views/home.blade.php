@@ -1,183 +1,149 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="ACClinic,">
-		<meta name="author" content="Rodrigo Ramos, Leandro lima, Anderson Sanches">
-		
-		<title>ACClinic.::Agendamentos e Consultas Clinicas::..</title>
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Arquivos CSS  -->
-		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link href="js/plugins/camera/css/camera.css" rel="stylesheet">
-		<link href="js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">	
-		<link href="css/responsive.css" rel="stylesheet">
-
-		
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-		<!-- Icone Site -->
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/fav/fav/icon.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/fav/fav/icon.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/fav/fav/icon.png">
-		<link rel="apple-touch-icon-precomposed" href="images/fav/">
-		<link rel="shortcut icon" href="images/fav/icon.png">
-	</head>
-	<body>
-	<!-- Header cabeçalho -->
-		<!-- Nested Container Starts -->
-			<div class="container">
-			<!-- Top Bar Starts -->
-				<div class="top-bar hidden-sm hidden-xs">
-					<div class="row">
-						<div class="col-sm-6 col-xs-12">
-							<span>Funcionamos de </span> segunda à sexta: 7h às 18h e sábados de 7h às 12h.
-						</div>
-						<div class="col-sm-6 col-xs-12">
-							<ul class="list-unstyled list-inline">
-								<li><a href="mailto:sac@hemodiagnostico.com.br">
-									<i class="fa fa-envelope-o"></i>
-									sac@hemodiagnostico.com.br
-								</a></li>
-								<li><i class="fa fa-phone"></i> Fone: (96) 3217-0700 / 98801-3805</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			<!-- Top Bar Ends -->
-			<!-- Navbar Starts -->
+@extends('layout.template')
+@section('title', 'Home - INICIO')
+@section('Menu')
+			<!-- Navbar Menu -Inicio -->
 				<nav id="nav" class="navbar navbar-default" role="navigation">
-					<div class="container-fluid">
-					<!-- Navbar Header Starts -->
-						<div class="navbar-header">
-						<!-- Collapse Button Starts -->
+			<div class="container-fluid">
+				<!-- Navbar Header Starts -->
+					<div class="navbar-header">
+						<!-- Collapse Button Menu Mobile -->
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
+								<span class="sr-only">Navegação</span>
+								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-						<!-- Collapse Button Ends -->
-						<!-- Logo Starts -->
-							<a href="index.html" class="navbar-brand">
-								<i class="fa fa-heartbeat"></i>
-								ACClinic
+						<!-- Collapse Button Menu Mobile Fim -->
+							<!-- Logo  -->
+							<a href="/home" class="navbar-brand">
+								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
-						<!-- Logo Ends -->
-						</div>
-					<!-- Navbar Header Ends -->
-					<!-- Navbar Collapse Starts -->
-						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav navbar-right">
-								<li class="active"><a href="index.html">Página Inicial</a></li>
-								<li class=""><a href="about.html">Institucional</a></li>
-								
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										Médicos
-									</a>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="doctors.html">Médicos</a></li>
-										<li><a href="doctor-profile.html">Perfis</a></li>
-									</ul>
-								</li>
-								<!-- <li><a href="services.html">Serviços</a></li>-->
-								
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										Serviços
-									</a>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="services.html">Todos os Serviços</a></li>
-										<li><a href="#">a</a></li>
-										<li><a href="#">b</a></li>
-										<li><a href="#">c</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										Unidades
-									</a>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="news.html">Macapá</a></li>
-										<li><a href="news-single.html">Santana</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contato</a></li>
-								<li><a href="login.html"><button type="button" class="btn btn-info">Entrar</button></a></li>
-							</ul>
-						</div>
-					<!-- Navbar Collapse Ends -->
+						<!-- Logo Fim -->
 					</div>
-				</nav>
-			<!-- Navbar Ends -->
+					<!-- Menu Infor Fim -->
+						<!-- Navbar Header Ends -->
+						<!-- Navbar Collapse Starts -->
+							<div class="navbar-collapse collapse">					
+								<ul class="nav navbar-nav navbar-right">
+									<li class="active">
+										<a href="/inicio">Início</a>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
+										</a>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="/pagina/institucional">Quem Somos</a>
+											</li>
+											<li>
+												<a href="/pagina/equipe_tecnica"> 
+												Equipe</a>
+											</li>
+											<li>
+												<a href="/pagina/medicos">
+												Médicos</a>
+											</li>
+											<li>
+												<a href="/pagina/unidades">Unidades</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/pagina/especialidades">Especialidades</a>
+									</li>
+									<li>
+										<a href="/pagina/convenios">Convênios</a>
+									</li>		
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											Serviços 
+											<i class="fa fa-caret-down"></i>
+										</a>
+										<ul class="dropdown-menu" role="menu">
+											<li>
+												<a href="/servicos/consultas">Consultas</a>
+											</li>
+											<li>
+												<a href="/servicos/exames">Exames</a>
+											</li>
+											<li>
+												<a href="/servico/agendamento">Agendamentos</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
+									</li>
+									<li>
+										<a href="/areaClinte" ><i class="fa fa-user"></i> Área do cliente</a>
+									</li>
+								</ul>
+							</div>
+						<!-- Navbar Collapse Ends -->
+					</div>
+		</nav>
+			<!-- Navbar Menu Fim -->
 			</div>
-		<!-- Nested Container Ends -->
+		<!-- Conteudo Inicial Fim -->
 		</header>
-	<!-- Header cabeçalho -->
-	<!-- Slider Section Starts -->
+	<!-- Topo Fim -->
+	@endsection
+	@section('ConteudoPrincipal')
+	<!-- Carossel Slides -->
 		<section class="slider clearfix">
 			<div id="camera_wrap_1" class="camera_wrap camera_white_skin">
 			<!-- Slide #1 Starts -->
-				<div data-src="images/slider/slider-img1.jpg">
+				<div data-src="../images/slider/slider-img1.jpg">
 					<div class="camera_caption fadeFromLeft hidden-sm hidden-xs">
-						<h2>One Stop Solution</h2>
-						<h2>For All <span>Medical Needs</span></h2>
+						<h2>Clinica Médica e Especializada</h2>
 						<p>
-							Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book.
+							Por ser gerida por especialistas, ela se preocupa essencialmente com sua saúde e, principalmente, com seu bem-estar e qualidade de vida.
 						</p>
-						<a href="services.html" class="btn btn-secondary">View Services</a>
+						<a href="services.html" class="btn btn-secondary">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Slide #1 Ends -->
 			<!-- Slide #2 Starts -->
-				<div data-src="images/slider/slider-img2.jpg">
+				<div data-src="../images/slider/slider-img2.jpg">
 					<div class="camera_caption fadeIn hidden-sm hidden-xs">
-						<h2>Atendimento de Qualidade</h2>
-						<h2><span>kajslkjslkj l</span> Here</h2>
+						<h2>Exames Laboratorias</h2>
 						<p>
-							Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book.
+							Uma das principais finalidades dos testes laboratoriais é auxiliar o raciocínio médico após a obtenção da história clínica e a realização do exame físico.
 						</p>
-						<a href="#" class="btn btn-secondary">Read More</a>
+						<a href="#" class="btn btn-secondary">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Slide #2 Ends -->
             <!-- Slide #3 Starts -->
-				<div data-src="images/slider/slider-img3.jpg">
+				<div data-src="../images/slider/slider-img3.jpg">
 					<div class="camera_caption fadeIn hidden-sm hidden-xs">
-						<h2>Main Heading</h2>
-						<h2><span>Some Caption</span> Here</h2>
+						<h2>Agendamento para Consultas e Exames </h2>
 						<p>
-							Lorem Ipsum is simply dummy text printer took a galley of type and scrambled it to make a type specimen book.
+							Este é mais um serviço que disponibilizamos para você. Faça seu agendamento de consultas e exames de uma maneira rápida, fácil e segura.
 						</p>
-						<a href="#" class="btn btn-secondary">Read More</a>
+						<a href="/area_cliente" class="btn btn-secondary"> Agendamento </a>
 					</div>
 				</div>
 			<!-- Slide #3 Ends -->
 			</div>
 		</section>
-	<!-- Slider Section Ends -->
-	<!-- Main Container Starts -->
+	<!-- Carossel Slides Fim -->
+	@endsection
+	@section('ConteudoSecundario')
+	<!-- Conteudo Inicio  -->
 		<div class="container main-container">
-		<!-- Notification Boxes Starts -->
+		<!-- Conteudo inBox -->
 			<div class="notification-boxes row">
 			<!-- Box #1 Starts -->
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<div class="box">
 						<i class="fa fa-user-md"></i>
-						<h4>Qualified Doctors</h4>
+						<h4> Doutores Qualificados </h4>
 						<p>
-							Lorem ipsum dolorit amet consetur adipiscing Morbi sollicitudin just non odio molestie.
+							 Corpo técnico qualificado, 
 						</p>
-						<a href="#" class="btn btn-transparent">Read More</a>
+						<a href="#" class="btn btn-transparent">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Box #1 Ends -->
@@ -185,11 +151,11 @@
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<div class="box">
 						<i class="fa fa-stethoscope"></i>
-						<h4>Regular Checkup</h4>
+						<h4>Dicas de Saúde</h4>
 						<p>
-							Lorem ipsum dolorit amet consetur adipiscing Morbi sollicitudin just non odio molestie.
+							Dicas de saúde, para você e sua família.
 						</p>
-						<a href="#" class="btn btn-transparent">Read More</a>
+						<a href="#" class="btn btn-transparent">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Box #2 Ends -->
@@ -197,11 +163,11 @@
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<div class="box">
 						<i class="fa fa-flask"></i>
-						<h4>Lab Test</h4>
+						<h4>Loboratório de Analise Clinicas </h4>
 						<p>
-							Lorem ipsum dolorit amet consetur adipiscing Morbi sollicitudin just non odio molestie.
+							Teste e analise clínicas em laborátório especializados fazer seu exame
 						</p>
-						<a href="#" class="btn btn-transparent">Read More</a>
+						<a href="#" class="btn btn-transparent">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Box #3 Ends -->
@@ -218,8 +184,8 @@
 				</div>
 			<!-- Box #4 Ends -->
 			</div>
-		<!-- Notification Boxes Ends -->
-		<!-- Welcome Section Starts -->
+		<!-- Conteudo inBox Fim -->
+		<!-- Conteudo Section -->
 			<section class="welcome-area">
 				<div class="row">
 					<div class="col-md-6 col-xs-12">
@@ -233,16 +199,16 @@
 						</p>
 					</div>
 					<div class="col-md-6 col-xs-12">
-						<img src="images/image1.jpg" alt="image" class="img-responsive img-style1">
+						<img src="../images/image1.jpg" alt="image" class="img-responsive img-style1">
 					</div>
 				</div>
 			</section>
-		<!-- Welcome Section Ends -->
+		<!-- Conteudo Section Fim -->
 		</div>
-	<!-- Main Container Ends -->
-	<!-- Meet Our Doctors Section Starts -->
+	<!-- Conteudo Inicial Fim -->
+	<!-- Conteudo Section Doctors -->
 		<section class="featured-doctors">
-		<!-- Nested Container Starts -->
+		<!-- Doctors Container -->
 			<div class="container">
 				<h2><span class="lite">Meet Our</span> Doctors</h2>
 				<p>
@@ -253,7 +219,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="bio-box">
 							<div class="profile-img">
-								<img src="images/doctors/doctor-bio-img1.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+								<img src="../images/doctors/doctor-bio-img1.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
 								<div class="overlay">
 									<ul class="list-unstyled list-inline sm-links">
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -278,7 +244,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="bio-box">
 							<div class="profile-img">
-								<img src="images/doctors/doctor-bio-img2.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+								<img src="../images/doctors/doctor-bio-img2.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
 								<div class="overlay">
 									<ul class="list-unstyled list-inline sm-links">
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -303,7 +269,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="bio-box">
 							<div class="profile-img">
-								<img src="images/doctors/doctor-bio-img3.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+								<img src="../images/doctors/doctor-bio-img3.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
 								<div class="overlay">
 									<ul class="list-unstyled list-inline sm-links">
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -328,7 +294,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-12">
 						<div class="bio-box">
 							<div class="profile-img">
-								<img src="images/doctors/doctor-bio-img4.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+								<img src="../images/doctors/doctor-bio-img4.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
 								<div class="overlay">
 									<ul class="list-unstyled list-inline sm-links">
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -351,64 +317,12 @@
 				<!-- Doctor Bio #4 Ends -->
 				</div>
 			</div>
-		<!-- Nested Container Ends -->
+		<!-- Doctors Container Fim -->
 		</section>
-	<!-- Meet Our Doctors Section Ends -->
+	<!-- Conteudo Section Doctors Fim -->
 	<!-- Main Container Starts -->
-		<div class="container main-container">
-		<!-- Medical Services Section Starts -->
-			<section class="medical-services">
-				<h2 class="main-heading1 lite">Our Best</h2>
-				<h2 class="main-heading2">Medical Services</h2>
-			<!-- Medical Services List Starts -->
-				<ul class="list-unstyled row text-center">
-					<li class="col-md-2 col-sm-4 col-xs-12">
-						<div class="icon">
-							<img src="images/icons/band-aid.png" alt="Band Aid">
-						</div>
-						<h5>First Aid</h5>
-						<p>Lorem Ipsum is simply dummy text ...</p>
-					</li>
-					<li class="col-md-2 col-sm-4 col-xs-12">
-						<div class="icon">
-							<img src="images/icons/tooth.png" alt="Dental Care">
-						</div>
-						<h5>Dental Care</h5>
-						<p>Lorem Ipsum is simply dummy text ...</p>
-					</li>
-					<li class="col-md-2 col-sm-4 col-xs-12">
-						<div class="icon">
-							<img src="images/icons/ambulance.png" alt="24x7 Ambulance">
-						</div>
-						<h5>24x7 Ambulance</h5>
-						<p>Lorem Ipsum is simply dummy text ...</p>
-					</li>
-					<li class="col-md-2 col-sm-4 col-xs-12">
-						<div class="icon">
-							<img src="images/icons/nurse.png" alt="Qualified Doctors">
-						</div>
-						<h5>Qualified Doctors</h5>
-						<p>Lorem Ipsum is simply dummy text ...</p>
-					</li>
-					<li class="col-md-2 col-sm-4 col-xs-12">
-						<div class="icon">
-							<img src="images/icons/saline-bottle.png" alt="Medical Pharmacy">
-						</div>
-						<h5>Medical Pharmacy</h5>
-						<p>Lorem Ipsum is simply dummy text ...</p>
-					</li>
-					<li class="col-md-2 col-sm-4 col-xs-12">
-						<div class="icon">
-							<img src="images/icons/stethoscope.png" alt="Pulmonary">
-						</div>
-						<h5>Pulmonary</h5>
-						<p>Lorem Ipsum is simply dummy text ...</p>
-					</li>
-				</ul>
-			<!-- Medical Services List Ends -->
-			</section>
-		<!-- Medical Services Section Ends -->
-		<!-- Content Starts -->
+	<div class="container">
+		<!-- Conteudo Noticias/Departamentos -->
 			<div class="row">
 			<!-- Latest News Section Starts -->
 				<section class="col-md-8 col-xs-12">
@@ -425,10 +339,10 @@
 										<div class="col-sm-6 col-xs-12">
 										<!-- News Post Starts -->
 											<div class="news-post-box">
-												<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+												<img src="../images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 												<div class="inner">
 													<h5>
-														<a href="#">Latest News Post Heading</a>
+														<a href="#"> 111Latest News Post Heading</a>
 													</h5>
 													<ul class="list-unstyled list-inline post-meta">
 														<li>
@@ -452,10 +366,10 @@
 										<div class="col-sm-6 col-xs-12">
 										<!-- News Post Starts -->
 											<div class="news-post-box">
-												<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+												<img src="../images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 												<div class="inner">
 													<h5>
-														<a href="#">Latest Tip Post Heading</a>
+														<a href="#"> 111 Latest Tip Post Heading</a>
 													</h5>
 													<ul class="list-unstyled list-inline post-meta">
 														<li>
@@ -485,7 +399,7 @@
 										<div class="col-sm-6 col-xs-12">
 										<!-- News Post Starts -->
 											<div class="news-post-box">
-												<img src="images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+												<img src="../images/news/news-thumb-img1.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 												<div class="inner">
 													<h5>
 														<a href="#">Latest News Post Heading</a>
@@ -512,7 +426,7 @@
 										<div class="col-sm-6 col-xs-12">
 										<!-- News Post Starts -->
 											<div class="news-post-box">
-												<img src="images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
+												<img src="../images/news/news-thumb-img2.jpg" alt="Blog Image" class="img-responsive img-center-sm img-center-xs">
 												<div class="inner">
 													<h5>
 														<a href="#">Latest Tip Post Heading</a>
@@ -537,11 +451,12 @@
 										<!-- News Post Ends -->
 										</div>
 									</div>
+
 								</div>
 							<!-- Slide #2 Ends -->
 							</div>
 						<!-- Wrapper for Slides Ends -->
-						<!-- Controls Starts -->
+						<!-- Painel Control -->
 							<a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
 								<span class="fa fa-angle-left" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
@@ -550,13 +465,13 @@
 								<span class="fa fa-angle-right" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
-						<!-- Controls Ends -->
+						<!-- Painel Control Fim -->
 						</div>
 					<!-- Latest News Carousel Ends -->
 					</div>
 				</section>
 			<!-- Latest News Section Ends -->
-			<!-- Medical Department aside Starts -->
+			<!-- Departamentos aside Starts -->
 				<aside class="col-md-4 col-xs-12">
 					<div class="main-block1">
 						<h2 class="main-heading1 lite">Medical</h2>
@@ -735,7 +650,7 @@
 					<!-- Accordion Ends -->
 					</div>
 				</aside>
-			<!-- Medical Department aside Ends -->
+			<!-- Departamentos aside Fim -->
 			</div>
 		<!-- Content Ends -->
 		<!-- Book Appointment Box Starts -->
@@ -750,133 +665,12 @@
 					</div>
 					<div class="col-md-3 col-xs-12 hidden-sm hidden-xs">
 						<div class="box-img">
-							<img src="images/appointment-booking-img1.png" alt="" />
+							<img src="../images/appointment-booking-img1.png" alt="" />
 						</div>
 					</div>
 				</div>
 			</div>
 		<!-- Book Appointment Box Ends -->
 		</div>
-	<!-- Main Container Ends -->
-	<!-- Footer Starts -->
-		<footer class="main-footer">
-		<!-- Footer Area Starts -->
-			<div class="footer-area">
-			<!-- Nested Container Starts -->
-				<div class="container">
-					<div class="row">
-					<!-- Hosptial Information Starts -->
-						<div class="col-md-3 col-sm-4 col-xs-12">
-							<h4>Hosptial Information</h4>
-							<p>
-								Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.
-							</p>
-							<ul class="list-unstyled address-list">
-								<li class="clearfix address">
-									<i class="fa fa-home"></i>
-									Shilparamam Lonsdale St. Marks Road, Talay Victoria 8011 London.
-								</li>
-								<li class="clearfix">
-									<i class="fa fa-fax"></i>
-									001 - 785 987 1234
-								</li>
-								<li class="clearfix">
-									<i class="fa fa-phone"></i>
-									001 - 123 478 5987
-								</li>
-								<li class="clearfix">
-									<i class="fa fa-envelope"></i>
-									<a href="mailto:info@yourhospitalsite.com">info@yourhospitalsite.com</a>
-								</li>
-							</ul>
-						</div>
-					<!-- Hosptial Information Ends -->
-					<!-- Services Starts -->
-						<div class="col-md-2 col-sm-4 col-xs-12">
-							<h4>Services</h4>
-							<ul class="list-unstyled">
-								<li><a href="#"><i class="fa fa-angle-right"></i> Pediatric Clinic</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i> Diagnosis Clinic</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i> Cardiac Clinic</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i> Laboratory Analysis</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i> Dental Clinic</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i> Gynecological Clinic</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i> Psychological</a></li>
-							</ul>
-						</div>
-					<!-- Services Ends -->
-					<!-- Twitter Starts -->
-						<div class="col-md-3 col-sm-4 col-xs-12">
-							<h4>Twitter</h4>
-							<ul class="list-unstyled tweets-list">
-								<li>
-									<i class="fa fa-twitter"></i>
-									Our Hospitals Website Launched.
-									<a href="#">http://t.co/xyz12abc</a>
-								</li>
-								<li>
-									<i class="fa fa-twitter"></i>
-									Our Hospitals Twitter Page, please follow.
-									<a href="#">http://t.co/testlink</a>
-								</li>
-								<li>
-									<i class="fa fa-twitter"></i>
-									Our Hospitals Facebook Page, please like.
-									<a href="#">http://t.co/abc123link</a>
-								</li>
-								<li>
-									<i class="fa fa-twitter"></i>
-									Our Hospitals Broucher Launched.
-									<a href="#">http://t.co/xyz-test1</a>
-								</li>
-							</ul>
-						</div>
-					<!-- Twitter Ends -->
-					<!-- Signup Newsletter Starts -->
-						<div class="col-md-4 col-xs-12 newsletter-block">
-							<h4>Signup Newsletter</h4>
-							<form action="#" class="newsletter">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Your Name">
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-control" placeholder="Enter your Email Address">
-								</div>
-								<button type="submit" class="btn btn-lg btn-block btn-secondary">Submit</button>
-							</form>
-						</div>
-					<!-- Signup Newsletter Ends -->
-					</div>
-				</div>
-			<!-- Nested Container Ends -->
-			</div>
-		<!-- Footer Area Ends -->
-		<!-- Copyright Starts -->
-			<div class="copyright">
-				<div class="container clearfix">
-					<p class="pull-left">
-						&copy; Copyright 2015. AlL Rights Reserved By <span>Hosptials</span>
-					</p>
-					<ul class="list-unstyled list-inline pull-right">
-						<li><a href="#">Terms Of Services</a></li>
-						<li><a href="#">Privacy</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
-					</ul>
-				</div>
-			</div>
-		<!-- Copyright Ends -->
-		</footer>
-	<!-- Footer Ends -->
-	<!-- Template JS Files -->
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.min.js"></script>	
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/plugins/camera/js/jquery.mobile.customized.min.js"></script>
-	<script src="js/plugins/camera/js/jquery.easing.1.3.js"></script>
-	<script src="js/plugins/camera/js/camera.min.js"></script>	
-	<script src="js/plugins/shuffle/jquery.shuffle.modernizr.min.js"></script>
-	<script src="js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js"></script>	
-	<script src="js/custom.js"></script>	
-	</body>
-</html>
+	<!-- Conteudo Noticias/Departamentoss Fim-->
+	@endsection
