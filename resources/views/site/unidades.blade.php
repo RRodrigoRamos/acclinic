@@ -1,6 +1,24 @@
 @extends('layout.template')
 @section('title', 'UNIDADES')
-
+@section('topoInfor')
+			<!-- Informações do Topo site -->
+				<div class="top-bar hidden-sm hidden-xs">
+					<div class="row">
+						<div class="col-sm-6 col-xs-12">
+							  <span> <i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>  Funcionamos de </span> segunda à sexta: 7h às 18h e sábados de 7h às 12h.
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<ul class="list-unstyled list-inline">
+								<li><a href="mailto:sac@hemodiagnostico.com.br">
+									<i class="fa fa-envelope-o"></i> sac@hemodiagnostico.com.br
+								</a></li>
+								<li><i class="fa fa-phone"></i> Fone: (96) 3217-0700 / 98801-3805</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		<!-- Informações do Topo site Fim -->
+@endsection
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
 				<nav id="nav" class="navbar navbar-default" role="navigation">

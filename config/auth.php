@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +73,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => acclinic\User::class,
+        ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => acclinic\Admin::class,
         ],
 
         // 'users' => [

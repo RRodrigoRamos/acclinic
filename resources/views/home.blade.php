@@ -1,5 +1,24 @@
 @extends('layout.template')
 @section('title', 'Home - INICIO')
+@section('topoInfor')
+			<!-- Informações do Topo site -->
+				<div class="top-bar hidden-sm hidden-xs">
+					<div class="row">
+						<div class="col-sm-6 col-xs-12">
+							  <span> <i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>  Funcionamos de </span> segunda à sexta: 7h às 18h e sábados de 7h às 12h.
+						</div>
+						<div class="col-sm-6 col-xs-12">
+							<ul class="list-unstyled list-inline">
+								<li><a href="mailto:sac@hemodiagnostico.com.br">
+									<i class="fa fa-envelope-o"></i> sac@hemodiagnostico.com.br
+								</a></li>
+								<li><i class="fa fa-phone"></i> Fone: (96) 3217-0700 / 98801-3805</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		<!-- Informações do Topo site Fim -->
+@endsection
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
 				<nav id="nav" class="navbar navbar-default" role="navigation">
@@ -16,7 +35,7 @@
 							</button>
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
-							<a href="/home" class="navbar-brand">
+							<a href="/inicio" class="navbar-brand">
 								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
@@ -76,7 +95,7 @@
 										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
 									<li>
-										<a href="/areaClinte" ><i class="fa fa-user"></i> Área do cliente</a>
+										<a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
 									</li>
 								</ul>
 							</div>
@@ -100,7 +119,7 @@
 						<p>
 							Por ser gerida por especialistas, ela se preocupa essencialmente com sua saúde e, principalmente, com seu bem-estar e qualidade de vida.
 						</p>
-						<a href="services.html" class="btn btn-secondary">Saiba Mais...</a>
+						<a href="/pagina/equipe" class="btn btn-secondary">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Slide #1 Ends -->
@@ -111,7 +130,7 @@
 						<p>
 							Uma das principais finalidades dos testes laboratoriais é auxiliar o raciocínio médico após a obtenção da história clínica e a realização do exame físico.
 						</p>
-						<a href="#" class="btn btn-secondary">Saiba Mais...</a>
+						<a href="/pagina/examesLab" class="btn btn-secondary">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Slide #2 Ends -->
@@ -122,7 +141,7 @@
 						<p>
 							Este é mais um serviço que disponibilizamos para você. Faça seu agendamento de consultas e exames de uma maneira rápida, fácil e segura.
 						</p>
-						<a href="/area_cliente" class="btn btn-secondary"> Agendamento </a>
+						<a href="/areaCliente" class="btn btn-secondary"> Agendamento </a>
 					</div>
 				</div>
 			<!-- Slide #3 Ends -->
@@ -132,7 +151,7 @@
 	@endsection
 	@section('ConteudoSecundario')
 
-	<!-- teste  -->
+	<!-- teste  
 	<div class="card-body">
          @if (session('status'))
           <div class="alert alert-success">
@@ -141,7 +160,8 @@
          @endif
      Você está logado ! 
     </div>
-     <!-- teste fim -->
+    teste fim -->
+    
 	<!-- Conteudo Inicio  -->
 		<div class="container main-container">
 		<!-- Conteudo inBox -->
@@ -154,7 +174,7 @@
 						<p>
 							 Corpo técnico qualificado, 
 						</p>
-						<a href="#" class="btn btn-transparent">Saiba Mais...</a>
+						<a href="/pagina/medicos" class="btn btn-transparent">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Box #1 Ends -->
@@ -166,7 +186,7 @@
 						<p>
 							Dicas de saúde, para você e sua família.
 						</p>
-						<a href="#" class="btn btn-transparent">Saiba Mais...</a>
+						<a href="/pagina/noticias" class="btn btn-transparent">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Box #2 Ends -->
@@ -178,7 +198,7 @@
 						<p>
 							Teste e analise clínicas em laborátório especializados fazer seu exame
 						</p>
-						<a href="#" class="btn btn-transparent">Saiba Mais...</a>
+						<a href="/pagina/examesLab" class="btn btn-transparent">Saiba Mais...</a>
 					</div>
 				</div>
 			<!-- Box #3 Ends -->
@@ -190,7 +210,7 @@
 						<p>
 							Lorem ipsum dolorit amet consetur adipiscing Morbi sollicitudin just non odio molestie.
 						</p>
-						<a href="#" class="btn btn-transparent">Read More</a>
+						<a href="/pagina/noticias" class="btn btn-transparent">Read More</a>
 					</div>
 				</div>
 			<!-- Box #4 Ends -->
@@ -247,7 +267,7 @@
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book.
 								</p>
 							</div>							
-							<a href="doctor-profile.html" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
+							<a href="/pagina/medicos" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
 						</div>
 					</div>
 				<!-- Doctor Bio #1 Ends -->
@@ -272,7 +292,7 @@
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book.
 								</p>
 							</div>							
-							<a href="doctor-profile.html" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
+							<a href="/pagina/medicos" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
 						</div>
 					</div>
 				<!-- Doctor Bio #2 Ends -->
@@ -297,7 +317,7 @@
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book.
 								</p>
 							</div>							
-							<a href="doctor-profile.html" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
+							<a href="/pagina/medicos" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
 						</div>
 					</div>
 				<!-- Doctor Bio #3 Ends -->
@@ -322,7 +342,7 @@
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book.
 								</p>
 							</div>							
-							<a href="doctor-profile.html" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
+							<a href="/pagina/medicos" class="btn btn-transparent inverse text-uppercase">Book An Appointment</a>
 						</div>
 					</div>
 				<!-- Doctor Bio #4 Ends -->

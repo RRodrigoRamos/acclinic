@@ -112,6 +112,12 @@ h6 { font-size: 16px; }
 	font-family: 'Lato', sans-serif;
 }
 
+/* Estilizando Form Login */
+
+.form_user {
+	margin:auto !important;
+}
+
 /* Formularios & Botões */
 .btn-main, 
 .btn-main:hover, 
@@ -364,14 +370,14 @@ h6 { font-size: 16px; }
 	  background-color: #097189;
 	  opacity:1;
 	}
-	/*Breakpoint*/
+	/* Ir Ao Topo Responsive*/
 	@media only screen and (min-width: 768px) {
 	  .to-top {
 	    right: 20px;
 	    bottom: 20px;
 	  }
 	}
-	/*Breakpoint*/
+	/*Ir Ao Topo Responsive*/
 	@media only screen and (min-width: 1024px) {
 	  .to-top {
 	    height: 40px;
@@ -380,7 +386,6 @@ h6 { font-size: 16px; }
 	    bottom: 30px;
 	  }
 	}
-
 
 		
 /* Slider Styles Starts */

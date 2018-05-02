@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('title', 'INSTITUCIONAL-QUEM SOMOS')
+@section('title', 'EXAMES LABORATÓRIAS')
 @section('topoInfor')
 			<!-- Informações do Topo site -->
 				<div class="top-bar hidden-sm hidden-xs">
@@ -35,7 +35,7 @@
 							</button>
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
-							<a href="/inicio" class="navbar-brand">
+							<a href="/home" class="navbar-brand">
 								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
@@ -48,18 +48,18 @@
 									<li>
 										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
 									</li>
-									<li class="dropdown active">
+									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
-											<li class="active">
+											<li>
 												<a href="/pagina/institucional">Quem Somos</a>
 											</li>
-											<li>
+											<li class="active">
 												<a href="/pagina/equipe"> 
 												Equipe</a>
 											</li>
-											<li>
+											<li class="active">
 												<a href="/pagina/medicos">
 												Médicos</a>
 											</li>
@@ -112,10 +112,10 @@
 
 	@section('ConteudoPrincipal')
 	<br>
-	<br><br>
- Conteudo da Pagina QUEM SOMOS
- <br><br>
+	<br><br><br>
+ Conteudo da Pagina AREA EXAMES DE LABORATORIO
+ <br><br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario Pagina QUEM SOMOS
+Conteudo Secundario Pagina AREA EXAMES DE LABORATORIO
 @endsection

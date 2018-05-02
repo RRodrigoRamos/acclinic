@@ -3,7 +3,12 @@
 namespace acclinic\Exceptions;
 
 use Exception;
+use Illuminate\Validation\ValidationExpection;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+
 
 class Handler extends ExceptionHandler
 {
@@ -44,8 +49,15 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
+
+    // Alternativa para trabalhar com erros
     public function render($request, Exception $exception)
     {
+        
+        if ($exception instanceof ModelNotFoundException)
+         {
+             return response()->view('erros.custom', [], 404);
+         }
         return parent::render($request, $exception);
     }
 }

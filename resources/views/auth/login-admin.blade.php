@@ -1,6 +1,5 @@
 @extends('layout.template')
-@section('title', 'LOGIN - USUÁRIO')
-
+@section('title', 'LOGIN - ADMIN')
 @section('Menu')
             <!-- Navbar Menu -Inicio -->
                 <nav id="nav" class="navbar navbar-default" role="navigation">
@@ -30,54 +29,8 @@
                                     <li>
                                         <a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="/pagina/institucional">Quem Somos</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/equipe"> 
-                                                Equipe</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/medicos">
-                                                Médicos</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/unidades">Unidades</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/especialidades">Especialidades</a>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/convenios">Convênios</a>
-                                    </li>       
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            Serviços 
-                                            <i class="fa fa-caret-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="/servico/consultas">Consultas</a>
-                                            </li>
-                                            <li>
-                                                <a href="/servico/exames">Exames</a>
-                                            </li>
-                                            <li>
-                                                <a href="/servico/agendamentos">Agendamentos</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li>
                                         <a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
                                     </li>
                                 </ul>
                             </div>
@@ -91,19 +44,19 @@
     <!-- Topo Fim -->
     @endsection
 @section('ConteudoPrincipal')
- <div class="container form_user">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5 col-sm-6 col-xs-12">
             <div class="card">
                 <div class="card-header"></div>
 
                 <div class="card-body">
-                    <form id="formLoginUser" method="POST" action="{{ route('login') }}">
+                    <form id="formLoginUser" method="POST" action="/areaAdmin/login">
                         @csrf
 
                         <div class="form-group row">
                         <label for="email" class="col-sm-4 col-form-label text-md-right">
-                            {{ __('E-Mail @') }}
+                            {{ __('E-Mail Admin') }}
                         </label>
                             <div class="col-md-12 col-sm-6 col-xs-12">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
@@ -118,7 +71,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-6 col-sm-6 col-xs-12 col-form-label text-md-right" placehold="teste">{{ __('Senha') }}</label>
+                            <label for="password" class="col-md-6 col-sm-6 col-xs-12 col-form-label text-md-right">{{ __('Senha Admin') }}</label>
 
                             <div class="col-md-12 col-sm-6 col-xs-12">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>

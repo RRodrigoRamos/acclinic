@@ -1,24 +1,6 @@
 @extends('layout.template')
-@section('title', 'INSTITUCIONAL-QUEM SOMOS')
-@section('topoInfor')
-			<!-- Informações do Topo site -->
-				<div class="top-bar hidden-sm hidden-xs">
-					<div class="row">
-						<div class="col-sm-6 col-xs-12">
-							  <span> <i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>  Funcionamos de </span> segunda à sexta: 7h às 18h e sábados de 7h às 12h.
-						</div>
-						<div class="col-sm-6 col-xs-12">
-							<ul class="list-unstyled list-inline">
-								<li><a href="mailto:sac@hemodiagnostico.com.br">
-									<i class="fa fa-envelope-o"></i> sac@hemodiagnostico.com.br
-								</a></li>
-								<li><i class="fa fa-phone"></i> Fone: (96) 3217-0700 / 98801-3805</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-		<!-- Informações do Topo site Fim -->
-@endsection
+@section('title', 'Area Cliente')
+
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
 				<nav id="nav" class="navbar navbar-default" role="navigation">
@@ -35,7 +17,7 @@
 							</button>
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
-							<a href="/inicio" class="navbar-brand">
+							<a href="/home" class="navbar-brand">
 								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
@@ -46,16 +28,16 @@
 							<div class="navbar-collapse collapse">					
 								<ul class="nav navbar-nav navbar-right">
 									<li>
-										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
+										<a href="/inicio">Início</a>
 									</li>
 									<li class="dropdown active">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
-											<li class="active">
+											<li>
 												<a href="/pagina/institucional">Quem Somos</a>
 											</li>
-											<li>
+											<li class="active">
 												<a href="/pagina/equipe"> 
 												Equipe</a>
 											</li>
@@ -87,7 +69,7 @@
 												<a href="/servicos/exames">Exames</a>
 											</li>
 											<li>
-												<a href="/servico/agendamentos">Agendamentos</a>
+												<a href="/servico/agendamento">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
@@ -95,7 +77,7 @@
 										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
 									<li>
-										<a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
+										<a href="/areaClinte" ><i class="fa fa-user"></i> Área do cliente</a>
 									</li>
 								</ul>
 							</div>
@@ -111,11 +93,10 @@
 
 
 	@section('ConteudoPrincipal')
-	<br>
-	<br><br>
- Conteudo da Pagina QUEM SOMOS
- <br><br>
+	<br><br><br>
+ Conteudo da Pagina AREA DO CLIENTE
+ <br><br><br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario Pagina QUEM SOMOS
+Conteudo Secundario Pagina  AREA DO CLIENTE
 @endsection
