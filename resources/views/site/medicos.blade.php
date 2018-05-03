@@ -111,11 +111,353 @@
 
 
 	@section('ConteudoPrincipal')
-	<br>
-	<br><br><br>
- Conteudo da Pagina MEDICOS CLINICA
- <br><br><br>
+	
+	<!-- Main Banner Starts -->
+		<div class="main-banner six">
+			<div class="container">
+				<h2><span>Médicos</span></h2>
+			</div>
+		</div>
+	<!-- Main Banner Ends -->
+	<!-- Breadcrumb Starts -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li><a href="index.html">Início</a></li>
+					<li class="active">Médicos</li>
+				</ul>
+			</div>
+		</div>		
+	<!-- Breadcrumb Ends -->
+	<!-- Main Container Starts -->
+		<div class="container main-container">
+		<!-- Doctors Desigination Filters Starts -->
+			<ul id="doctors-filter" class="list-unstyled list-inline">
+				<li><a href="#" class="active" data-group="all">Todos os Departamentos</li>
+				<li><a href="#" data-group="cardiologia">Cardiologia</a></li>
+				<li><a href="#" data-group="clinica_medica">Clínica médica</a></li>
+				<li><a href="#" data-group="endocrinologia">Endocrinologia</a></li>
+				<li><a href="#" data-group="gastroenterologia">Gastroenterologia</a></li>
+				<li><a href="#" data-group="geriatria">Geriatria</a></li>
+				<li><a href="#" data-group="ginecologista">Ginecologista</a></li>
+				<li><a href="#" data-group="nutrologia">Nutrologia</a></li>
+				<li><a href="#" data-group="ortopedia">Ortopedia</a></li>
+				<li><a href="#" data-group="pediatria">Pediatria</a></li>
+				<li><a href="#" data-group="practologia">Practologia</a></li>
+				<li><a href="#" data-group="reumatologia">Reumatologia</a></li>
+				<li><a href="#" data-group="teste_da_orelinha">Teste da Orelinha</a></li>
+				<li><a href="#" data-group="ultrassonografia">Ultrassonografia</a></li>
+				<li><a href="#" data-group="endoscopia">Endoscopia</a></li>
+			</ul>
+		<!-- Doctors Desigination Filters Ends -->
+		<!-- Doctors Bio List Starts -->
+			<ul id="doctors-grid" class="row grid">
+			<!-- Doctor Bio #1 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-group='["cardiologia"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img2.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Manoel Brasil</h4>
+							<p class="designation">Especialidade</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Agende sua consulta</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #1 Ends -->
+			<!-- Doctor Bio #2 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "pediatria"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img1.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr.</h4>
+							<p class="designation">Especialidade</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Agende sua consulta</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #2 Ends -->
+			<!-- Doctor Bio #3 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "cardiaca"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img3.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dra.Fernanda</h4>
+							<p class="designation">especialidade</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Agende sua consulta</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #3 Ends -->
+			<!-- Doctor Bio #4 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "ginecologista"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img4.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4></h4>
+							<p class="designation">especialidades</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Agende uma Consultar</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #4 Ends -->
+			<!-- Doctor Bio #5 Starts 
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "geral"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img8.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			 Doctor Bio #5 Ends 
+			 Doctor Bio #6 Starts 
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "pediatria"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img9.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+					
+			
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "cardiaca"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img10.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			 Doctor Bio #7 Ends 
+			 Doctor Bio #8 Starts 
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "ginecologista"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img11.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			Doctor Bio #8 Ends
+			Doctor Bio #9 Starts
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "geral"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img12.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			Doctor Bio #9 Ends 
+			Doctor Bio #10 Starts 
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "pediatria"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img13.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			Doctor Bio #10 Ends 			
+			Doctor Bio #11 Starts 
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "cardiaca"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img15.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			Doctor Bio #11 Ends
+			Doctor Bio #12 Starts
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "ginecologista"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="images/doctors/doctor-bio-img16.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Tom Smith Bert</h4>
+							<p class="designation">Cardiac Clinic, Health Care</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the with the release of Letraset sheets Lorem Ipsum passages.
+							</p>
+						</div>							
+						<a href="doctor-profile.html" class="btn btn-secondary text-uppercase">Book An Appointment</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #12 Ends -->
+			</ul>
+		<!-- Doctors List Ends -->
+		</div>
+	<!-- Main Container Ends -->
+
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario Pagina MÉDICO CLINICA
+
 @endsection

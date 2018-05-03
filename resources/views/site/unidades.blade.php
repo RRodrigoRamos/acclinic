@@ -110,11 +110,70 @@
 	@endsection
 
 	@section('ConteudoPrincipal')
-	<br>
-	<br>
- Conteudo da Pagina UNIDADES DA CLINICA
- <br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario  UNIDADES DA CLINICA
+
+	<!-- Main Banner Starts -->
+		<div class="main-banner seven">
+			<div class="container">
+				<h2><span>Unidades Clínicas</span></h2>
+			</div>
+		</div>
+	<!-- Main Banner Ends -->
+	<!-- Breadcrumb Starts -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li><a href="index.html">Início</a></li>
+					<li class="active">Unidades</li>
+				</ul>
+			</div>
+		</div>		
+	<!-- Breadcrumb Ends -->
+	<!-- Main Container Starts -->
+		<div class="container main-container">
+			<h2 class="main-heading2 nomargin-top">Unidades</h2>
+		
+
+	<!-- Main Container Starts -->
+		<div class="container">
+		<!-- About Intro Text Starts -->
+			<section class="welcome-area about">
+				<div class="row">
+					<div class="col-md-6 col-xs-12 about-col" align="justify">
+						<h4>Matriz:</h4>
+						<p>
+							Av. Coaracy Nunes, 892 - Centro
+							Contato: 3217 - 0700 / 9 8801 - 3805
+						</p>
+						<h4>São Lázaro:</h4>
+						<p>
+							Rua Adilson José Pinto Pereira 1209 - São Lázaro
+							Contato: 3117 - 0704	
+						</p>
+						<h4>Zerão:</h4>
+						<p>
+							Rua Dom José Maritano, 1184 - Zerão
+							Contato: 9 8139 - 0044
+						</p>
+						<h4>
+							Pérpetuo Socorro:
+						</h4>
+						<p> 
+							Rua Rio Xingu
+							Contato: 3222 - 6120
+						</p>
+						<h4>
+							Marabaixo:
+						</h4>
+						<p>
+							Sem endereço
+						</p>
+					</div>
+					</div>
+				</div>
+			</section>
+		<!-- About Intro Text Ends -->
+		</div>
+	<!-- Main Container Ends -->
 @endsection

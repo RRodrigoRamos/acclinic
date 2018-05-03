@@ -51,12 +51,11 @@
 				<div class="container-fluid">
 					<div class="row">
 					<!-- Informações Clinica -->
-						<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="col-md-4 col-sm-4 col-xs-12 ">
 							<h4><img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgRodape"> </h4>
 							<p>
-								Sistema de agendamentos de Consultas Clinicas e Exames, para clientes conveniados e atendimento particular.
+								Sistema de Agendamentos de Consultas Clinicas e Exames, para clientes conveniados e atendimento particular.
 							</p>
-							<br/>
 							<ul class="list-unstyled address-list">
 								<li class="clearfix address">
 									<i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>
@@ -78,18 +77,17 @@
 									<i class="fa fa-clock-o fa-2x"></i>
 									Funcionamos de segunda à sexta: 7h às 18h e sábados de 7h às 12h.
 								</li>
-								<br/>
 							</ul>
 						</div>
 					<!-- Informações Clinica Fim -->
 					<!-- Informações Services -->
-						<div class="col-md-2 col-sm-4 col-xs-12">
-							<h4>Mapa do Site <i class="fa fa-map-o" aria-hidden="true"></i> </h4>
+						<div class="col-md-2 col-sm-4 col-xs-12" >
+							<h4><i class="fa fa-map-o" aria-hidden="true"></i>  &nbsp;  Mapa do Site  </h4>
 							<ul class="list-unstyled">
 								<li>
-								<a href="/inicio">
-									<i class="fa fa-angle-right"></i> 
-										Home - Inicio
+									<a href="/inicio">
+										<i class="fa fa-angle-right"></i> 
+										Início
 									</a> 
 								</li>
 								<li>
@@ -145,7 +143,7 @@
 										<li>
 										<a href="/servico/consultas">
 											<i class="fa fa-angle-right"></i> 
-										Consultas
+										Consultas 
 										</a>
 										</li>
 										<li>
@@ -179,7 +177,7 @@
 					<!-- Informações Services-->
 					<!-- Informações Mapa Site -->
 					<div class="col-md-6 col-sm-4 col-xs-12">
-							<h4> Localização  <i class="fa fa-map-marker" aria-hidden="true"></i> </h4>
+							<h4> <i class="fa fa-map-marker" aria-hidden="true"></i>  &nbsp; Localização  </h4>
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63837.082546185346!2d-51.058973!3d0.032986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0465bb4b5e3aac0!2sClin%C3%ADca+e+Laborat%C3%B3rio+Hemodiagn%C3%B3stico!5e0!3m2!1spt-BR!2sbr!4v1524797038055" frameborder="0" allowfullscreen id="mapa"></iframe>
 
 						</div>

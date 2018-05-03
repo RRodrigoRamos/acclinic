@@ -115,7 +115,7 @@
 			<!-- Slide #1 Starts -->
 				<div data-src="../images/slider/slider-img1.jpg">
 					<div class="camera_caption fadeFromLeft hidden-sm hidden-xs">
-						<h2>Clinica Médica e Especializada</h2>
+						<h3>Clinica Médica e Especializada</h3>
 						<p>
 							Por ser gerida por especialistas, ela se preocupa essencialmente com sua saúde e, principalmente, com seu bem-estar e qualidade de vida.
 						</p>
@@ -126,7 +126,7 @@
 			<!-- Slide #2 Starts -->
 				<div data-src="../images/slider/slider-img2.jpg">
 					<div class="camera_caption fadeIn hidden-sm hidden-xs">
-						<h2>Exames Laboratorias</h2>
+						<h3>Exames Laboratorias</h3>
 						<p>
 							Uma das principais finalidades dos testes laboratoriais é auxiliar o raciocínio médico após a obtenção da história clínica e a realização do exame físico.
 						</p>
@@ -137,7 +137,7 @@
             <!-- Slide #3 Starts -->
 				<div data-src="../images/slider/slider-img3.jpg">
 					<div class="camera_caption fadeIn hidden-sm hidden-xs">
-						<h2>Agendamento para Consultas e Exames </h2>
+						<h3>Agendamento para Consultas e Exames </h3>
 						<p>
 							Este é mais um serviço que disponibilizamos para você. Faça seu agendamento de consultas e exames de uma maneira rápida, fácil e segura.
 						</p>
