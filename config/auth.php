@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'admin',
         'passwords' => 'users',
     ],
 
@@ -74,7 +74,7 @@ return [
             'driver' => 'eloquent',
             'model' => acclinic\User::class,
         ],
-        'admin' => [
+        'admins' => [
             'driver' => 'eloquent',
             'model' => acclinic\Admin::class,
         ],
@@ -102,6 +102,11 @@ return [
 
     'passwords' => [
         'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'admins' => [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,

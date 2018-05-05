@@ -1,6 +1,6 @@
 <?php
 
-namespace acclinic\Http\Controllers\Auth;
+namespace acclinic\Http\Controllers\AdminAuth;
 
 use acclinic\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
@@ -25,15 +25,21 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/login';
+    protected $redirectTo = '/admin/login';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+        // para não conflitar com o outro usuario
+    // public function __construct()
+    // {
+    //     $this->middleware('guest');
+    // }
+
+    protected function guard()
     {
-        $this->middleware('guest');
+        return Auth()->guard('admin');
     }
 }

@@ -28,7 +28,7 @@ class HomeController extends Controller
 
         // $title = " HomeController";
         // $this->loadTemplate(viewName:'home',viewName:'');
-        return view('cliente.areaCliente');
+        return view('');
     }
 
     

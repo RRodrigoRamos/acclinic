@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layout.template')
+@section('title', 'REGISTRO - ADMIN')
 
-@section('content')
+@section('ConteudoPrincipal')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -8,7 +9,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('admin.register') }}">
                         @csrf
 
                         <div class="form-group row">

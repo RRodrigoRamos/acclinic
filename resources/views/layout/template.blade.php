@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="ACClinic - Sistema de Monitoriramente de horários e atendimento de agendamento online de consultas clinicas, com o objetivo de aproximar o cliente a clinica">
 		<meta name="keywords" content="Agendamento, Consulta, Agenda Consulta, consulta, Clínica Médica, especialidades, exames, procedimentos, laboratorios, lab, analise clinicas, consultas, analise e diagnostico, diagnosticos, dicas saúde, doutores, doutor, serviços lab, serviços exames.">
+		 <!-- CSRF Token -->
+    	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 		<meta name="author" content="Rodrigo Ramos, Leandro lima, Anderson Sanches">
 		<title>::ACClinic:: @yield('title') </title>

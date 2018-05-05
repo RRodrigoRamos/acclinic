@@ -146,7 +146,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('ENTRAR') }}
                                 </button>
-
+                                <a class="btn btn-success" href="{{ route('register') }}">
+                                    CADASTRA-SE
+                                </a>
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Esqueceu sua Senha?') }}
                                 </a>

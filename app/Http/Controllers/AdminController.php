@@ -2,38 +2,90 @@
 
 namespace acclinic\Http\Controllers;
 
+use acclinic\Admin;
 use Illuminate\Http\Request;
+use \Illuminate\Http\Response;
 
 class AdminController extends Controller
 {
     public function __construct()
     {
-    	//$this->middleware('auth');
+        //$this->middleware('auth');
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
-   	{
-   		return view('admin.index');
-   	}
+    {
+        return view('admin.areaAdmin');
+    }
 
-   	public function login()
-   	{
-   		return view('auth.login-admin');
-   	}
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
-   	public function postLogin(Request $resquest)
-   	{
-      $validator = validator($resquest->all(),[
-        'email' => 'required|min:10|max:100',
-        'password' => 'required|min:3|max:50',
-      ]);
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 
-      if($validator->fails()) {
-        return redirect('/areaAdmin/login')
-            ->withErros($validator)
-            ->withInput();
-      }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \acclinic\Admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Admin $admin)
+    {
+        //
+    }
 
-      return view('admin.index');
-   	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \acclinic\Admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Admin $admin)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \acclinic\Admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Admin $admin)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \acclinic\Admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Admin $admin)
+    {
+        //
+    }
 }

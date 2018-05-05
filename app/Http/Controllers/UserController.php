@@ -17,10 +17,10 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    public function painel()
+    public function index()
     {
     	// Painel do Cliente
-        return view('cliente.painelAdmin');
+        return view('cliente.painel');
     }
 
     public function listaPaciente()

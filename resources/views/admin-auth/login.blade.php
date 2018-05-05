@@ -1,4 +1,4 @@
-@extends('layout.template')
+<!-- @extends('layout.template') -->
 @section('title', 'LOGIN - USUÁRIO')
 
 @section('Menu')
@@ -89,7 +89,7 @@
         <!-- Conteudo Inicial Fim -->
         </header>
     <!-- Topo Fim -->
-    @endsection
+@endsection
 @section('ConteudoPrincipal')
  <div class="container form_user">
     <div class="row justify-content-center">
@@ -98,7 +98,7 @@
                 <div class="card-header"></div>
 
                 <div class="card-body">
-                    <form id="formLoginUser" method="POST" action="{{ route('login') }}">
+                    <form id="formLoginUser" method="POST" action="{{ route('admin.login') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -106,7 +106,7 @@
                             {{ __('E-Mail @') }}
                         </label>
                             <div class="col-md-12 col-sm-6 col-xs-12">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Digite Seu Email" autofocus>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>
@@ -118,10 +118,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-6 col-sm-6 col-xs-12 col-form-label text-md-right" placehold="teste">{{ __('Senha') }}</label>
+                            <label for="password" class="col-md-6 col-sm-6 col-xs-12 col-form-label text-md-right">{{ __('Senha') }}</label>
 
                             <div class="col-md-12 col-sm-6 col-xs-12">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Digite Senha" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -146,8 +146,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('ENTRAR') }}
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-success" href="{{ route('admin.register') }}">
+                                    CADASTRA-SE
+                                </a>
+                                <a class="btn btn-link" href="{{ route('admin.password.reset') }}">
                                     {{ __('Esqueceu sua Senha?') }}
                                 </a>
                             </div>
