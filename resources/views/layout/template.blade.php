@@ -59,7 +59,7 @@
 								Sistema de Agendamentos de Consultas Clinicas e Exames, para clientes conveniados e atendimento particular.
 							</p>
 							<ul class="list-unstyled address-list">
-								<li class="clearfix address">
+								<li class="clearfix">
 									<i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>
 									Av. Coaracy Nunes, 892 - Centro, Macapá - AP, 68900-010
 								</li>
@@ -84,7 +84,7 @@
 					<!-- Informações Clinica Fim -->
 					<!-- Informações Services -->
 						<div class="col-md-2 col-sm-4 col-xs-12" >
-							<h4><i class="fa fa-map-o" aria-hidden="true"></i>  &nbsp;  Mapa do Site  </h4>
+							<h4><i class="fa fa-map-o" aria-hidden="true"></i>  &nbsp;  Mapa Site  </h4>
 							<ul class="list-unstyled">
 								<li>
 									<a href="/inicio">

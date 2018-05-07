@@ -16,7 +16,7 @@ class AdminMiddleware
     public function handle($request, Closure $next, $guard='admin')
     {
         if(!auth()->guard($guard)->check()){
-            return redirect('/areaCliente');
+            return redirect('/areaAdmin');
         }
         return $next($request);
     }

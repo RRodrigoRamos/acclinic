@@ -4,6 +4,9 @@
 Route::get('/inicio', function () {
     return view('home');
 });
+Route::get('/', function () {
+    	return view('home');
+	});
 
 // Grupos de Páginas
 Route::prefix('pagina')->group( function() {
@@ -11,12 +14,12 @@ Route::prefix('pagina')->group( function() {
     	return view('site.'.$id);
 	});
 });
+Route::prefix('servico')->group( function() {
+	Route::get('{id}', function ($id) {
+    	return view('site.'.$id);
+	});
+});
 
-
-// 	Route::get('{id}', function ($id) {
-//     	return view('site.'.$id);
-// 	});
-// });
 
 // Evento caso ao acessar ERRO 404
 Event::listen('404', function()
@@ -24,11 +27,11 @@ Event::listen('404', function()
 	return 'ERRO';
 });
 
-// Rotas Administrativas.  
+// Rotas Administrativas...  
 Route::middleware(['admin'])->group ( function() {
 	Route::get('/areaAdmin', 'AdminController@index');
-	Route::get('/areaAdmin/login', 'AdminController@login');
-	Route::post('/areaAdmin/login', 'AdminController@postLogin');
+	// Route::get('/areaAdmin/login', 'AdminController@login');
+	// Route::post('/areaAdmin/login', 'AdminController@postLogin');
 });
 Route::prefix('admin')->group( function() {
 // Rotas de Login...
@@ -63,7 +66,5 @@ Route::middleware(['web'])->group (function() {
 // 
 // Route::get('editar-usuario/{id}', 'UsuariosController@editarUsuario');
 // Route::delete('deletar-usuario/{id}', 'UsuariosController@deletarUsuario');
-	Route::get('/', function () {
-    	return view('home');
-	});
+	
 });

@@ -497,13 +497,16 @@ h6 { font-size: 16px; }
 	.main-banner.seven {
 		background: url(../images/banners/banner-img7.jpg) center top;
 	}	
+	.main-banner.cliente {
+		background: url(../images/banners/gestao_online.png) center top;
+	}	
 	.main-banner h2 {
 		margin-top: 0;
 		margin-bottom: 0;
 		color: #323232;
 	}
 	.main-banner h2::first-letter {
-		color: #009bdb;
+		color: #323232;
 	}
 		.main-banner h2 span {
 			padding: 20px 50px 16px 30px;
@@ -2023,7 +2026,7 @@ ul#doctors-grid {
 	background-color:#262626; 
 }
 	.footer-area {
-		padding: 60px 20px 70px 20px;	
+		padding: 10px 20px 10px 20px;	
 		background-color: #313131;
 		border-radius: 0px 0px 10px 10px;
 	}
@@ -2031,7 +2034,6 @@ ul#doctors-grid {
 		.footer-area a {
 			color: Gainsboro;
 			font-weight: 300;
-			text-transform: capitalize;
 		}
 		.footer-area a:hover {
 			color: white;
@@ -2051,13 +2053,13 @@ ul#doctors-grid {
 			text-indent: 0px;
 		}
 			.footer-area p:first-letter {
-			font-size:50px;
+			font-size:25px;
 		}
 		/*Barra azul embaixo do Título*/
 			.footer-area h4:after {
 				content: "";
 				position: absolute;
-				width: 69px;
+				width: 100px;
 				height: 2px;
 				left: 0;
 				bottom: 0;
@@ -2065,16 +2067,16 @@ ul#doctors-grid {
 
 			}
 			.footer-area li + li {
-				margin-top: 5px;
+				margin-top: 2px;
 			}	
 			/*Espaçamento entre Subtítulo e LI*/
 		.footer-area .address-list {
-			margin-top: 20px;
+			margin-top: 10px;
 			
 		}
 		/*Espaçamento entre as LI*/
 			.footer-area .address-list li {
-				margin-top: 10px;
+				margin-top: 1px;
 			}
 			/*Cor dos icons*/
 				.footer-area .address-list li .fa {
@@ -2084,7 +2086,7 @@ ul#doctors-grid {
 				}
 				/*Endereço */
 				.footer-area .address-list li.address .fa {
-					margin: 10px;
+					margin: 5px;
 					font-size: 20px;
 				}
 

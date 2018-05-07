@@ -1,4 +1,4 @@
-<!-- @extends('layout.template') -->
+@extends('layout.template')
 @section('title', 'LOGIN - USUÁRIO')
 
 @section('Menu')
@@ -99,7 +99,7 @@
 
                 <div class="card-body">
                     <form id="formLoginUser" method="POST" action="{{ route('admin.login') }}">
-                        @csrf
+                        {!! csrf_field() !!}
 
                         <div class="form-group row">
                         <label for="email" class="col-sm-4 col-form-label text-md-right">

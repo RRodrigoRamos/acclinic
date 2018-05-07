@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.templateAdmin')
 @section('title', 'Area Cliente')
 @section('topoInfor')
 			<!-- Informações do Topo site -->
@@ -41,66 +41,133 @@
 										<a href="/inicio">Início</a>
 									</li>
 									<li>
-										<a href="/pagina/especialidades">Especialidades</a>
+										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
-									<li>
-										<a href="/pagina/convenios">Convênios</a>
-									</li>		
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											Serviços 
+											{{ Auth::user()->name }} 
 											<i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="/servicos/consultas">Consultas</a>
-											</li>
-											<li>
-												<a href="/servicos/exames">Exames</a>
-											</li>
-											<li>
-												<a href="/servico/agendamento">Agendamentos</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
-									</li>
-									<li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+										<li>
+											<a href="/pagina/contato">
+												<i class="fa fa-plus-square" aria-hidden="true"></i> Novo Agendamento
+											</a>
+										</li>
+										<li>
+											<a href="/pagina/contato">
+												<i class="fa fa-address-book-o" aria-hidden="true"></i> Minha Agenda
+											</a>
+										</li>
+										<li>
+											<a href="/pagina/contato">
+												<i class="fa fa-address-card-o" aria-hidden="true"></i> Meus Convenios
+											</a>
+										</li>
+										<li>
+											<a href="/pagina/contato">
+												 Meus Dados <i class="fa fa-user" aria-hidden="true"></i>	
+											</a>
+										</li>
+										<li>
+											<a href="/pagina/contato">
+												 Alterar Senha <i class="fa fa-cogs" aria-hidden="true"></i>
+											</a>
+										</li>
+										<li>
+											<a href="/pagina/contato">
+												 Infor <i class="fa fa-info-circle" aria-hidden="true"></i>
+											</a>
+										</li>
+										<li> <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Sair') }} <i class="fa fa-sign-out" aria-hidden="true"></i>
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
-								</ul>
-							</div>
+                                		</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 						<!-- Navbar Collapse Ends -->
-					</div>
+				</div>
 		</nav>
 			<!-- Navbar Menu Fim -->
 			</div>
 		<!-- Conteudo Inicial Fim -->
 		</header>
 	<!-- Topo Fim -->
-	@endsection
-
-
-	@section('ConteudoPrincipal')
-	<br><br><br>
- Conteudo da Pagina AREA DO CLIENTE
- <br><br><br><br>
 @endsection
+@section('ConteudoPrincipal')
+<!-- Banner Cliente -->
+		<div class="main-banner cliente">
+			<div class="container">
+				<h2><span>Área do Cliente</span></h2>
+			</div>
+		</div>
+<!-- Banner Cliente Fim-->
+<!-- Conteudo Inicio  -->
+		<div class="container main-container">
+		<!-- Conteudo inBox -->
+			<div class="notification-boxes row">
+			<!-- Box #1 Starts -->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="box">
+						<i class="fa fa-calendar-plus-o"></i>
+						<h4> Novo Agendamento </h4>
+						<p>
+							Consulta ou Exame. 
+						</p>
+						<a href="/pagina/medicos" class="btn btn-transparent">Vê lista</a>
+					</div>
+				</div>
+			<!-- Box #1 Ends -->
+			<!-- Box #2 Starts -->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="box">
+						<i class="fa fa-address-book-o"></i>
+						<h4>Meus Convênios</h4>
+							<p>
+								Registro de Convênios
+							</p>
+						<a href="/pagina/noticias" class="btn btn-transparent">Vê registro...</a>
+					</div>
+				</div>
+			<!-- Box #2 Ends -->
+			<!-- Box #3 Starts -->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="box">
+						<i class="fa fa-user-o"></i>
+						<h4> Meus Dados </h4>
+						<p>
+							Dados do Paciente.
+						</p>
+						<a href="/pagina/examesLab" class="btn btn-transparent">Vê registro...</a>
+					</div>
+				</div>
+			<!-- Box #3 Ends -->
+			<!-- Box #4 Starts -->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="box">
+						<i class="fa fa-calendar-check-o"></i>
+						<h4>Agendamentos</h4>
+						<p>
+							Minha Lista de Consultas.
+						</p>
+						<a href="/pagina/noticias" class="btn btn-transparent">Read More</a>
+					</div>
+				</div>
+			<!-- Box #4 Ends -->
+			</div>
+		<!-- Conteudo inBox Fim -->
+		<!-- Conteudo Section -->
+
+@endsection
+
 @section('ConteudoSecundario')
-Conteudo Secundario Pagina  AREA DO CLIENTE
+Conteudo Secundario Pagina  AREA DO CLIENTE 
 @endsection

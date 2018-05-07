@@ -32,18 +32,20 @@ class LoginController extends Controller
      *
      * @return void
      */
-        // para não conflitar com o outro usuario
+    // para não conflitar com o outro usuario
     // public function __construct()
     // {
-    //     // $this->middleware('guest')->except('logout');
+    //     $this->middleware('admin')->except('logout');
     // }
 
+
+    
     protected function guard()
     {
         return Auth()->guard('admin');
     }
 
-    public function showLoginForm()
+    public function showLoginForm() 
     {
         return view('admin-auth.login');
     } 

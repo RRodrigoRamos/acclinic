@@ -48,28 +48,25 @@
 									</li>
 								</ul>
 								<ul>
-									 <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('admin.login') }}">{{ __('Login') }}</a></li>
-                            <li><a  href="{{ route('admin.register') }}">{{ __('Register') }}</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('admin.logout') }}"
+								<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											{{ Auth::user() }} 
+												
+											<i class="fa fa-caret-down"></i>
+										</a>
+										<ul class="dropdown-menu" role="menu">
+										<li> <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
-                        @endguest
+                                		</li>
+										</ul>
+									</li>
 								</ul>
 							</div>
 						<!-- Navbar Collapse Ends -->
@@ -82,6 +79,7 @@
 	<!-- Topo Fim -->
 	@endsection
 @section('ConteudoPrincipal')
+
 	<br>
 	<br><br>
 	 Conteudo da Pagina PAGINA ADMINISTRAÇÃO - UserAdmin

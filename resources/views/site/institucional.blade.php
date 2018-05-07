@@ -82,7 +82,7 @@
 										</a>
 										<ul class="dropdown-menu" role="menu">
 											<li>
-												<a href="/servicos/consultas">Consultas</a>
+												<a href="/servico/consultas">Consultas</a>
 											</li>
 											<li>
 												<a href="/servicos/exames">Exames</a>

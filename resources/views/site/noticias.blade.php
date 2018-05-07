@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('title', 'CONVÊNIOS')
+@section('title', 'CONTATE-NOS')
 @section('topoInfor')
 			<!-- Informações do Topo site -->
 				<div class="top-bar hidden-sm hidden-xs">
@@ -45,8 +45,8 @@
 						<!-- Navbar Collapse Starts -->
 							<div class="navbar-collapse collapse">					
 								<ul class="nav navbar-nav navbar-right">
-									<li>
-										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
+									<li >
+										<a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i>  Início</a>
 									</li>
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
@@ -71,7 +71,7 @@
 									<li>
 										<a href="/pagina/especialidades">Especialidades</a>
 									</li>
-									<li class="active">
+									<li>
 										<a href="/pagina/convenios">Convênios</a>
 									</li>		
 									<li class="dropdown">
@@ -81,17 +81,17 @@
 										</a>
 										<ul class="dropdown-menu" role="menu">
 											<li>
-												<a href="/servico/consultas">Consultas</a>
+												<a href="/servicos/consultas">Consultas</a>
 											</li>
 											<li>
-												<a href="/servico/exames">Exames</a>
+												<a href="/servicos/exames">Exames</a>
 											</li>
 											<li>
 												<a href="/servico/agendamentos">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
-									<li>
+									<li class="active">
 										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
 									<li>
@@ -109,13 +109,12 @@
 	<!-- Topo Fim -->
 	@endsection
 
-
 	@section('ConteudoPrincipal')
 	<br>
-	<br>
- Conteudo da Pagina CONVENIOS
- <br><br>
+	<br><br>
+ Conteudo da Pagina CONTATO 
+ <br><br><br>
 @endsection
 @section('ConteudoSecundario')
-Conteudo Secundario CONVENIOS CLINICA
+Conteudo Secundario Pagina CONTATO
 @endsection
