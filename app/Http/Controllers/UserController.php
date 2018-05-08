@@ -25,6 +25,11 @@ class UserController extends Controller
 
     public function listaPaciente()
     {
+        // Painel do Cliente
+        return view('cliente.listaPaciente');
+    }
+    public function dadosCliente()
+    {
     	// Painel do Cliente
         return view('cliente.listaPaciente');
     }
@@ -50,8 +55,14 @@ class UserController extends Controller
 
     public function cadastroConvenio()
     {
-    	// Cadastro de Convenio
+        // Cadastro de Convenio
         return view('cliente.pacienteConv');
+    }
+
+    public function pacienteInfor()
+    {
+    	// informações ao Usuario/Paciente
+        return view('cliente.pacienteInfor');
     }
 	
 	

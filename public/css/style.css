@@ -500,6 +500,9 @@ h6 { font-size: 16px; }
 	.main-banner.cliente {
 		background: url(../images/banners/gestao_online.png) center top;
 	}	
+	.main-banner.clienteInfor {
+		background: url(../images/banners/busca.jpg) center left;
+	}	
 	.main-banner h2 {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -508,7 +511,7 @@ h6 { font-size: 16px; }
 	.main-banner h2::first-letter {
 		color: #323232;
 	}
-		.main-banner h2 span {
+	.main-banner h2 span {
 			padding: 20px 50px 16px 30px;
 			letter-spacing: 0.3px;
 			background: rgba(255, 255, 255, 0.8);

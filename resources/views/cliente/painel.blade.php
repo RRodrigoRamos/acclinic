@@ -32,6 +32,7 @@
 							</a>
 						<!-- Logo Fim -->
 					</div>
+					
 					<!-- Menu Infor Fim -->
 						<!-- Navbar Header Ends -->
 						<!-- Navbar Collapse Starts -->
@@ -43,7 +44,7 @@
 									<li>
 										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
-									<li class="dropdown">
+									<li class="dropdown active">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											{{ Auth::user()->name }} 
 											<i class="fa fa-caret-down"></i>
@@ -51,17 +52,17 @@
 										<ul class="dropdown-menu" role="menu">
 										<li>
 											<a href="/pagina/contato">
-												<i class="fa fa-plus-square" aria-hidden="true"></i> Novo Agendamento
+												<i class="fa fa-plus-square" aria-hidden="true"></i> Agendamento
 											</a>
 										</li>
 										<li>
 											<a href="/pagina/contato">
-												<i class="fa fa-address-book-o" aria-hidden="true"></i> Minha Agenda
+												Minha Agenda
 											</a>
 										</li>
 										<li>
 											<a href="/pagina/contato">
-												<i class="fa fa-address-card-o" aria-hidden="true"></i> Meus Convenios
+												Meus Convenios
 											</a>
 										</li>
 										<li>
@@ -75,8 +76,8 @@
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
-												 Infor <i class="fa fa-info-circle" aria-hidden="true"></i>
+											<a href="/areaCliente/infor">
+												 Informativo <i class="fa fa-info-circle" aria-hidden="true"></i>
 											</a>
 										</li>
 										<li> <a class="dropdown-item" href="{{ route('logout') }}"
@@ -101,6 +102,7 @@
 		<!-- Conteudo Inicial Fim -->
 		</header>
 	<!-- Topo Fim -->
+
 @endsection
 @section('ConteudoPrincipal')
 <!-- Banner Cliente -->
@@ -120,16 +122,28 @@
 						<i class="fa fa-calendar-plus-o"></i>
 						<h4> Novo Agendamento </h4>
 						<p>
-							Consulta ou Exame. 
+							Consulta e Exame. 
 						</p>
-						<a href="/pagina/medicos" class="btn btn-transparent">Vê lista</a>
+						<a href="/pagina/medicos" class="btn btn-transparent">Agendar...</a>
 					</div>
 				</div>
 			<!-- Box #1 Ends -->
 			<!-- Box #2 Starts -->
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<div class="box">
-						<i class="fa fa-address-book-o"></i>
+						<i class="fa fa-calendar-check-o"></i>
+						<h4>Agendamentos</h4>
+						<p>
+							Minha Lista de Consultas e Exames
+						</p>
+						<a href="/pagina/noticias" class="btn btn-transparent">Vê Registro...</a>
+					</div>
+				</div>
+			<!-- Box #2 Ends -->
+			<!-- Box #3 Starts -->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="box">
+						<i class="fa fa-credit-card" aria-hidden="true"></i>
 						<h4>Meus Convênios</h4>
 							<p>
 								Registro de Convênios
@@ -137,11 +151,11 @@
 						<a href="/pagina/noticias" class="btn btn-transparent">Vê registro...</a>
 					</div>
 				</div>
-			<!-- Box #2 Ends -->
-			<!-- Box #3 Starts -->
+			<!-- Box #3 Ends -->
+			<!-- Box #4 Starts -->
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<div class="box">
-						<i class="fa fa-user-o"></i>
+						<i class="fa fa-user" aria-hidden="true"></i>
 						<h4> Meus Dados </h4>
 						<p>
 							Dados do Paciente.
@@ -149,25 +163,8 @@
 						<a href="/pagina/examesLab" class="btn btn-transparent">Vê registro...</a>
 					</div>
 				</div>
-			<!-- Box #3 Ends -->
-			<!-- Box #4 Starts -->
-				<div class="col-md-3 col-sm-6 col-xs-12">
-					<div class="box">
-						<i class="fa fa-calendar-check-o"></i>
-						<h4>Agendamentos</h4>
-						<p>
-							Minha Lista de Consultas.
-						</p>
-						<a href="/pagina/noticias" class="btn btn-transparent">Read More</a>
-					</div>
-				</div>
 			<!-- Box #4 Ends -->
 			</div>
 		<!-- Conteudo inBox Fim -->
 		<!-- Conteudo Section -->
-
-@endsection
-
-@section('ConteudoSecundario')
-Conteudo Secundario Pagina  AREA DO CLIENTE 
 @endsection

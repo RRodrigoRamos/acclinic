@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -22,7 +22,7 @@ class CreateMedicosTable extends Migration
             $table->date('data_nasc');
             $table->string('telefone');
             $table->integer('especialidade_id')->unsigned();
-            $table->foreign('especialidade_id')->references('id')->on('especialidades')->onDelete('cascade');
+            $table->foreign('especialidade_id')->references('id')->on('especialidades');
             $table->integer('endereco_id')->unsigned();
             $table->foreign('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');
             $table->timestamps();

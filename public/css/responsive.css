@@ -19,7 +19,8 @@
 		border-color:#d7d7d7;
 		border-width:1px;
 	}
-	
+
+
 /* Heading Styles Starts */
 
 	.side-heading1.top {
@@ -252,8 +253,8 @@
 /*logo Clinic*/
 	.imgLogo {
 		padding:0px;
-		margin-top:-15px;
-		margin-left:100px;
+		margin-top:5px;
+		margin-left:10px;
 		width:150px;
 		height:70px;
 	}
@@ -291,8 +292,8 @@
 /* Navigation Styles Starts */
 		
 	#nav .navbar-header {
-		margin-top: 25px;
-		padding-bottom: 20px;
+		margin-top: 1px;
+		padding-bottom: 1px;
 		border-bottom: 1px solid #d3d3d3;
 	}
 	#nav .navbar-header, 
@@ -656,7 +657,7 @@
 /* Main Banner Styles Starts */
 
 	.main-banner h2 {
-		display: none;
+		/* display: none; */
 	}
 	
 /* About Featured Section Starts */

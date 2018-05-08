@@ -57,7 +57,8 @@ Route::middleware(['web'])->group (function() {
 	Route::post('/areaCliente/paciente','UserController@cadastroPaciente');
 	Route::post('/areaCliente/convenio','UserController@cadastroConvenio');
 	Route::post('/areaCliente/agendamento','UserController@agendamento');
-	Route::post('/areaCliente/meusdados','UserController@painel');
+	Route::post('/areaCliente/meusdados','UserController@dadosCliente');
+	Route::get('/areaCliente/infor','UserController@pacienteInfor');
 
 // 	Route::get('lista-usuarios', 'UsuariosController@listaUsuario');
 // Route::get('cria-usuario', 'UsuariosController@formularioUsuario');

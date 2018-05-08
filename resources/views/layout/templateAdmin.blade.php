@@ -15,8 +15,8 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <!-- Template CSS Files  -->
         <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
         <link href="../js/plugins/camera/css/camera.css" rel="stylesheet">
-        <link href="../js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
         
@@ -204,7 +204,6 @@
     <script src="../js/plugins/camera/js/jquery.easing.1.3.js"></script>
     <script src="../js/plugins/camera/js/camera.min.js"></script>   
     <script src="../js/plugins/camera/js/shuffle/jquery.shuffle.modernizr.min.js"></script>
-    <script src="../js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="../js/custom.js"></script>
     </body>
 </html>
