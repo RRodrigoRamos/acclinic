@@ -19,9 +19,16 @@ class UserController extends Controller
 
     public function index()
     {
-    	// Painel do Cliente
+        // Painel do Cliente
         return view('cliente.painel');
     }
+
+    public function agendamento()
+    {
+    	// Painel do Cliente
+        return view('cliente.agendamento');
+    }
+
 
     public function listaPaciente()
     {
@@ -40,18 +47,11 @@ class UserController extends Controller
         return view('cliente.listaPaciente');
     }
 	
-	public function cadastroPaciente()
+	public function pacienteForm()
     {
     	// Cadastro de Paciente
         return view('cliente.pacienteForm');
     }
-
-    public function deletePaciente($id)
-  	{
-    	User::destroy($id);
-
-    return redirect('lista-usuarios');
-  	}
 
     public function cadastroConvenio()
     {
@@ -59,10 +59,23 @@ class UserController extends Controller
         return view('cliente.pacienteConv');
     }
 
+     public function deleteConven($id)
+    {
+        User::destroy($id);
+
+    return redirect('cliente.pacienteConvForm');
+    }
+
     public function pacienteInfor()
     {
-    	// informações ao Usuario/Paciente
+        // informações ao Usuario/Paciente
         return view('cliente.pacienteInfor');
+    }
+    
+    public function pacienteContat()
+    {
+    	// informações contato com a Clinica.
+        return view('cliente.pacienteContat');
     }
 	
 	

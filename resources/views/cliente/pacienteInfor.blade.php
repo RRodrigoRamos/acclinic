@@ -27,7 +27,7 @@
 							</button>
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
-							<a href="/home" class="navbar-brand">
+							<a href="/areaCliente" class="navbar-brand">
 								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
@@ -39,45 +39,45 @@
 							<div class="navbar-collapse collapse">					
 								<ul class="nav navbar-nav navbar-right">
 									<li>
-										<a href="/inicio">Início</a>
+										<a href="/areaCliente">Início</a>
 									</li>
 									<li>
-										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
+										<a href="/areaCliente/pacienteContat"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
-									<li class="dropdown">
+									<li class="dropdown active">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											{{ Auth::user()->name }} 
 											<i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/agendamento">
 												<i class="fa fa-plus-square" aria-hidden="true"></i> Agendamento
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/listaAgenda">
 												Minha Agenda
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/pacienteConv">
 												Meus Convenios
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/meus_dados">
 												 Meus Dados <i class="fa fa-user" aria-hidden="true"></i>	
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/altera_senha">
 												 Alterar Senha <i class="fa fa-cogs" aria-hidden="true"></i>
 											</a>
 										</li>
-										<li>
-											<a href="/pagina/contato">
-												 Infor <i class="fa fa-info-circle" aria-hidden="true"></i>
+										<li class="active">
+											<a href="/areaCliente/infor">
+												 Informativo <i class="fa fa-info-circle" aria-hidden="true"></i>
 											</a>
 										</li>
 										<li> <a class="dropdown-item" href="{{ route('logout') }}"
@@ -108,7 +108,17 @@
 <!-- Banner Cliente -->
 		<div class="main-banner clienteInfor">
 			<div class="container">
-				<h2><span>Informativo Cliente </span></h2>
+				<h2><span>Informativo</span></h2>
+			</div>
+		</div>
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li>
+						<a href="/areaCliente">Area Cliente</a>
+					</li>
+					<li class="active">Informativo</li>
+				</ul>
 			</div>
 		</div>
 <!-- Banner Cliente Fim-->
@@ -236,14 +246,14 @@
 				<!-- Panel Heading Starts -->
 					<div class="panel-heading">
 						<h5 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion-faqs" href="#collapse5">
+							<a data-toggle="collapse" data-parent="#accordion-faqs" href="#collapse6">
 								 Onde altero meu(s) convênio(s) cadastrado(s)?
 							</a>
 						</h5>
 					</div>
 				<!-- Panel Heading Ends -->
 				<!-- Panel Body Starts -->
-					<div id="collapse5" class="panel-collapse collapse">
+					<div id="collapse6" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
 								Você poderá alterar seu convênio em Minha área » Meus Convênios
@@ -258,14 +268,14 @@
 				<!-- Panel Heading Starts -->
 					<div class="panel-heading">
 						<h5 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion-faqs" href="#collapse5">
+							<a data-toggle="collapse" data-parent="#accordion-faqs" href="#collapse7">
 								 Eu posso agendar do meu smart phone ou tablet?
 							</a>
 						</h5>
 					</div>
 				<!-- Panel Heading Ends -->
 				<!-- Panel Body Starts -->
-					<div id="collapse5" class="panel-collapse collapse">
+					<div id="collapse7" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
 								Sim. A plataforma também está disponível para agendamentos via smart phone e tablets.

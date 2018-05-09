@@ -27,7 +27,7 @@
 							</button>
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
-							<a href="/home" class="navbar-brand">
+							<a href="/areaCliente" class="navbar-brand">
 								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
@@ -38,40 +38,40 @@
 						<!-- Navbar Collapse Starts -->
 							<div class="navbar-collapse collapse">					
 								<ul class="nav navbar-nav navbar-right">
-									<li>
-										<a href="/inicio">Início</a>
+									<li class="active">
+										<a href="/areaCliente">Início</a>
 									</li>
 									<li>
-										<a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
+										<a href="/areaCliente/pacienteContat"><i class="fa fa-comments"> </i> Fale Conosco</a>
 									</li>
-									<li class="dropdown active">
+									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											{{ Auth::user()->name }} 
 											<i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/agendamento">
 												<i class="fa fa-plus-square" aria-hidden="true"></i> Agendamento
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/listaAgenda">
 												Minha Agenda
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/pacienteConv">
 												Meus Convenios
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/meus_dados">
 												 Meus Dados <i class="fa fa-user" aria-hidden="true"></i>	
 											</a>
 										</li>
 										<li>
-											<a href="/pagina/contato">
+											<a href="/areaCliente/altera_senha">
 												 Alterar Senha <i class="fa fa-cogs" aria-hidden="true"></i>
 											</a>
 										</li>
@@ -124,7 +124,7 @@
 						<p>
 							Consulta e Exame. 
 						</p>
-						<a href="/pagina/medicos" class="btn btn-transparent">Agendar...</a>
+						<a href="/areaCliente/agendamento" class="btn btn-transparent">Agendar...</a>
 					</div>
 				</div>
 			<!-- Box #1 Ends -->
@@ -136,7 +136,7 @@
 						<p>
 							Minha Lista de Consultas e Exames
 						</p>
-						<a href="/pagina/noticias" class="btn btn-transparent">Vê Registro...</a>
+						<a href="/areaCliente/listaAgenda" class="btn btn-transparent">Vê Registro...</a>
 					</div>
 				</div>
 			<!-- Box #2 Ends -->
@@ -148,7 +148,7 @@
 							<p>
 								Registro de Convênios
 							</p>
-						<a href="/pagina/noticias" class="btn btn-transparent">Vê registro...</a>
+						<a href="/areaCliente/pacienteConv" class="btn btn-transparent">Vê registro...</a>
 					</div>
 				</div>
 			<!-- Box #3 Ends -->
@@ -160,7 +160,7 @@
 						<p>
 							Dados do Paciente.
 						</p>
-						<a href="/pagina/examesLab" class="btn btn-transparent">Vê registro...</a>
+						<a href="/areaCliente/meus_dados" class="btn btn-transparent">Vê registro...</a>
 					</div>
 				</div>
 			<!-- Box #4 Ends -->
