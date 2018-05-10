@@ -111,14 +111,147 @@
 
 
 	@section('ConteudoPrincipal')
-	<br>
-	<br>
- Conteudo da Pagina ESPECIALIDADES - MEDICAS
- <br><br>
-@endsection
-@section('ConteudoSecundario')
-<br>
-	<br>
- Conteudo da ESPECIALIDADES - MEDICAS
- <br><br>
-@endsection
+	<!-- Main Banner Starts -->
+		<div class="main-banner paginaEspecialidade">
+			<div class="container">
+				<h2><span>Especialidades Médicas</span></h2>
+			</div>
+		</div>
+	<!-- Main Banner Ends -->
+	<!-- Breadcrumb Starts -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li><a href="/inicio">Início</a></li>
+					<li class="active">Especialidades</li>
+				</ul>
+			</div>
+		</div>	
+	<!-- Breadcrumb Ends -->
+	<!-- Main Container Starts -->
+		<div class="container main-container">
+		<!-- Doctors Desigination Filters Starts -->
+			<ul id="doctors-filter" class="list-unstyled list-inline">
+				<li><a href="#" class="active" data-group="all">Todos os Departamentos</li>
+				<li><a href="#" data-group="cardiologia">Cardiologia</a></li>
+				<li><a href="#" data-group="clinica_medica">Clínica médica</a></li>
+				<li><a href="#" data-group="endocrinologia">Endocrinologia</a></li>
+				<li><a href="#" data-group="gastroenterologia">Gastroenterologia</a></li>
+				<li><a href="#" data-group="geriatria">Geriatria</a></li>
+				<li><a href="#" data-group="ginecologista">Ginecologista</a></li>
+				<li><a href="#" data-group="nutrologia">Nutrologia</a></li>
+				<li><a href="#" data-group="ortopedia">Ortopedia</a></li>
+				<li><a href="#" data-group="pediatria">Pediatria</a></li>
+				<li><a href="#" data-group="practologia">Practologia</a></li>
+				<li><a href="#" data-group="reumatologia">Reumatologia</a></li>
+				<li><a href="#" data-group="teste_da_orelinha">Teste da Orelinha</a></li>
+				<li><a href="#" data-group="ultrassonografia">Ultrassonografia</a></li>
+				<li><a href="#" data-group="endoscopia">Endoscopia</a></li>
+			</ul>
+		<!-- Doctors Desigination Filters Ends -->
+		<!-- Doctors Bio List Starts -->
+			<ul id="doctors-grid" class="row grid">
+			<!-- Doctor Bio #1 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-group='["cardiologia"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="../images/doctors/doctor-bio-img2.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr. Manoel Brasil</h4>
+							<p class="designation">Especialidade</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="/pagina/consultas" class="btn btn-secondary text-uppercase">Agende sua consulta</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #1 Ends -->
+			<!-- Doctor Bio #2 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "pediatria"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="../images/doctors/doctor-bio-img1.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dr.</h4>
+							<p class="designation">Especialidade</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="/pagina/consultas" class="btn btn-secondary text-uppercase">Agende sua consulta</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #2 Ends -->
+			<!-- Doctor Bio #3 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "cardiaca"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="../images/doctors/doctor-bio-img3.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4>Dra.Fernanda</h4>
+							<p class="designation">especialidade</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="/pagina/consultas" class="btn btn-secondary text-uppercase">Agende sua consulta</a>
+					</div>
+				</li>
+			<!-- Doctor Bio #3 Ends -->
+			<!-- Doctor Bio #4 Starts -->
+				<li class="col-md-4 col-sm-6 col-xs-12 doctors-grid" data-groups='["all", "ginecologista"]'>
+					<div class="bio-box">
+						<div class="profile-img">
+							<img src="../images/doctors/doctor-bio-img4.jpg" alt="Doctor" class="img-responsive img-center-sm img-center-xs">
+							<div class="overlay">
+								<ul class="list-unstyled list-inline sm-links">
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-skype"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="inner">
+							<h4></h4>
+							<p class="designation">especialidades</p>
+							<p class="divider"><i class="fa fa-plus-square"></i></p>
+							<p>
+								Descrição
+							</p>
+						</div>							
+						<a href="/pagina/consultas" class="btn btn-secondary text-uppercase">Agende uma Consultar</a>
+					</div>
+				</li>
+			</ul>
+		<!-- Doctors List Ends -->
+		</div>
+	<!-- Main Container Ends -->
+	@endsection

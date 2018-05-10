@@ -109,13 +109,163 @@
 	<!-- Topo Fim -->
 	@endsection
 
-
 	@section('ConteudoPrincipal')
-	<br>
-	<br>
- Conteudo da Pagina CONVENIOS
- <br><br>
-@endsection
-@section('ConteudoSecundario')
-Conteudo Secundario CONVENIOS CLINICA
+<!-- Banner Cliente -->
+		<div class="main-banner paginaConvenio">
+			<div class="container">
+				<h2><span>Convênios</span></h2>
+			</div>
+		</div>
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li>
+						<a href="/inicio">Inicio</a>
+					</li>
+					<li class="active">Convênios</li>
+				</ul>
+			</div>
+		</div>
+<!-- Banner Cliente Fim-->
+<!-- Main Container Starts -->
+	<div class="container main">
+		<br>
+		<div class="row container-fluid">
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/aspeb.jpg" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<div class="caption">
+  						<p>texto opcional ahsh kuhsk ahskj has</p>
+ 					</div>
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/amil.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<div class="caption">
+  						<p>texto opcional ojhkajhskj kasjh kasjh kasjh </p>
+ 					</div>
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/assefaz.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<div class="caption">
+  						<p>texto opcional ajkshk jhksaj hkasjh s</p>
+ 					</div>
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/bradesco.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<div class="caption">
+  						<p>texto opcionaksjh kjhsak jhask jahs al</p>
+ 					</div>
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/capesesp.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<div class="caption">
+  						<p>texto opcionasopi apo psoi apsoi aal</p>
+ 					</div>
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/teste.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<div class="caption">
+  						<p>texto opcional kajsn kjaskj sak </p>
+ 					</div>
+ 				</div>
+			</div>
+		</div>
+		<div class="row container-fluid">
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/casaembrapa.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/caixa.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/cassi.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/correios.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/evida.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/gama.jpg" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+		</div>
+		<div class="row container-fluid">
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/geap.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/sao-camilo.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/sulamerica.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+			<div class="col-md-2 col-sm col-xs-12">
+				<div class="thumbnail">
+ 					<img class="img-responsive" src="../images/convenios/unimed-seguro.png" alt="Imagem Convênio ACCLINIC" title="Mensagem aqui! Ao passar o mouse"/>
+ 					<!-- <div class="caption">
+  						<p>texto opcional</p>
+ 					</div> -->
+ 				</div>
+			</div>
+		</div>
+	
+	</div>
+	<!-- Main Container Ends -->
+
 @endsection

@@ -124,7 +124,7 @@
 		<div class="breadcrumb">
 			<div class="container">
 				<ul class="list-unstyled list-inline">
-					<li><a href="index.html">Início</a></li>
+					<li><a href="/inicio">Início</a></li>
 					<li class="">Institucional</li>
 					<li class="active">Quem Somos</li>
 
@@ -156,25 +156,25 @@
 						<div class="row">
 							<div class="col-sm-6 col-xs-12">
 								<ul class="list-unstyled list-style-3">
-									<li><a href="institucional-equipe.html">Equipe</a></li>
-									<li><a href="institucional-medicos.html">Médicos</a></li>
-									<li><a href="institucional-unidades.html">Unidades</a></li>
-									<li><a href="institucional-convenios">Convênios</a></li>
+									<li><a href="/pagina/equipe">Equipe</a></li>
+									<li><a href="/pagina/medicos">Médicos</a></li>
+									<li><a href="/pagina/unidades">Unidades</a></li>
+									<li><a href="/pagina/convenios">Convênios</a></li>
 								</ul>
 							</div>
 							<div class="col-sm-6 col-xs-12">
 								<ul class="list-unstyled list-style-3">
-									<li><a href="#">Especialidades</a></li>
-									<li><a href="">Consultas</a></li>
-									<li><a href="#">Exames</a></li>
-									<li><a href="#">Agendamentos</a></li>
+									<li><a href="/servico/especialidades">Especialidades</a></li>
+									<li><a href="/servico/consultas">Consultas</a></li>
+									<li><a href="/servico/exames">Exames</a></li>
+									<li><a href="/servico/agendamentos">Agendamentos</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-12 hidden-sm hidden-xs">
 						<br><br><br><br><br>
-						<img src="..\images\about\predio.png" width="100%" height="">
+						<img src="../images/about/predio.png" width="100%" height="">
 					</div>
 				</div>
 			</section>
@@ -238,7 +238,7 @@
 					</li>
 
 
-				<p class="text-center"><a href="#" class="btn btn-transparent text-uppercase">Agende<i class="fa fa-chevron-right"></i></a></p>
+				<p class="text-center"><a href="/servico/agendamentos" class="btn btn-transparent text-uppercase">Agende<i class="fa fa-chevron-right"></i></a></p>
 			</div>
 		</section>
 	<!-- About Featured Section Ends -->
@@ -338,6 +338,7 @@
 						</li>
 					<!-- #7 Ends -->
 					</ul>
+					<a href="/pagina/convenios"><button class="btn btn-success text-center">Lista de Convênios</button></a>
 				</div>
 				<div class="col-sm-6 col-xs-12">
 				<p class="visible-xs"><br></p>

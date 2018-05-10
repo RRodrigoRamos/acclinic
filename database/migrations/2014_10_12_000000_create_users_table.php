@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('telefone');
             $table->string('rg')->unique();
             $table->string('cpf')->unique();
-            $table->string('profissao');->nullable();
+            $table->string('profissao')->nullable();
             $table->integer('convenio_id')->nullable();
             $table->foreign('convenio_id')->references('id')->on('convenios')->onDelete('cascade');
             $table->integer('triagem_id')->unsigned();

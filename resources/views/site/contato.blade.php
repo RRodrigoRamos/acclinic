@@ -108,13 +108,109 @@
 		</header>
 	<!-- Topo Fim -->
 	@endsection
+@section('ConteudoPrincipal')
+<!-- Banner Cliente -->
+		<div class="main-banner clienteContat">
+			<div class="container">
+				<h2><span>Fale Conosco</span></h2>
+			</div>
+		</div>
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li>
+						<a href="/inicio">Inicio</a>
+					</li>
+					<li class="active">Fale Conosco</li>
+				</ul>
+			</div>
+		</div>
+<!-- Banner Cliente Fim-->
+<!-- Main Container Starts -->
+		<div class="container main">
+			<!-- Contact Content Starts -->
+			<div class="contact-content">
+				<div class="row">
+				<!-- Contact Form Starts -->
+					<div class="col-sm-8 col-xs-12">
+						<h3> Entre em contato preenchendo o formulário abaixo </h3>
+						<div class="status alert alert-success contact-status"></div>
+						<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="/pagina/contato" role="form">
+							<div class="row">
+							<!-- Name Field Starts -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="name">Nome Completo: </label>
+										<input type="text" class="form-control" name="name" id="name" required="required">
+									</div>
+								</div>
+							<!-- Name Field Ends -->
+							<!-- Email Field Starts -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="email">Endereço Email @: </label>
+										<input type="text" class="form-control" name="email" id="email" required="required">
+									</div>
+								</div>
+							<!-- Email Field Ends -->
+							<!-- Phone No Field Starts -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="phoneno">Número para Contato: </label>
+										<input type="text" class="form-control" name="phoneno" id="phoneno" required="required">
+									</div>
+								</div>
+							<!-- Phone No Field Ends -->
+							<!-- Message Field Starts -->
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="message">Escreva sua Mensagem: </label>
+										<textarea class="form-control" rows="8" name="message" id="message" required="required"></textarea>
+									</div>
+								</div>
+							<!-- Message Field Ends -->
+								<div class="col-xs-12">
+									<input type="submit" class="btn btn-black text-uppercase" value="ENVIAR MENSAGEM">
+								</div>
+							</div>
+						</form>
+					</div>
+				<!-- Contact Form Ends -->
+				<!-- Address Starts -->
+					<div class="col-sm-4 col-xs-12">
+					<!-- Box #1 Starts -->
+						<div class="cblock-1">
+							<span class="icon-wrap"><i class="fa fa-car"></i></span>
+							<h4>Venha e Visite-nos</h4>
+							<ul class="list-unstyled">
+								<li>MATRIZ: Av. Coaracy Nunes</li>
+								<li> 892 - Centro, Macapá - AP, 68900-010</li>
+								<li>(96) 3217 - 0700</li>
+								<li>(96) 98801 - 3805</li>
+								<li>sac@hemodiagnostico.com.br</li>
 
-	@section('ConteudoPrincipal')
-	<br>
-	<br><br>
- Conteudo da Pagina CONTATO 
- <br><br><br>
-@endsection
-@section('ConteudoSecundario')
-Conteudo Secundario Pagina CONTATO
+							</ul>
+						</div>
+					<!-- Box #1 Ends -->
+					<!-- Box #2 Starts -->
+						<div class="cblock-1">
+							<span class="icon-wrap red"> <i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+							<h4>Nossas Unidades - Filias</h4>
+							<ul class="list-unstyled">
+								<li><b>São Lázaro:</b> Rua Adilson José Pinto Pereira 1209: <i>Contato: 3117 - 0704</i></li>
+								<li><b>Zerão:</b> Rua Dom José Maritano, 1184 - Zerão <i>Contato: 9 8139 - 0044</i></li>
+								<li> <b>Pérpetuo Socorro:</b> Rua Rio Xingu <i>Contato: 3222 - 6120</i></li>
+							</ul>
+						</div>
+					<!-- Box #2 Ends -->
+					</div>
+				<!-- Address Ends -->
+				</div>
+			</div>
+		<!-- Contact Content Ends -->
+		<br>
+		<br>
+		</div>
+	<!-- Main Container Ends -->
+
 @endsection

@@ -23,29 +23,23 @@ class UserController extends Controller
         return view('cliente.painel');
     }
 
-    public function agendamento()
+    public function agendamento(Request $request)
     {
-    	// Painel do Cliente
         return view('cliente.agendamento');
     }
 
 
-    public function listaPaciente()
+    public function listaAgenda()
     {
         // Painel do Cliente
-        return view('cliente.listaPaciente');
+        return view('cliente.listaAgenda');
     }
-    public function dadosCliente()
+    public function pacienteDados()
     {
     	// Painel do Cliente
-        return view('cliente.listaPaciente');
+        return view('cliente.pacienteDados');
     }
 
-    public function listaMedicos()
-    {
-    	// Painel do Cliente
-        return view('cliente.listaPaciente');
-    }
 	
 	public function pacienteForm()
     {

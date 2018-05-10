@@ -1,4 +1,4 @@
-@extends('layout.templateAdmin')
+@extends('layout.template')
 @section('title', 'Area Cliente')
 @section('topoInfor')
 			<!-- Informações do Topo site -->
@@ -13,7 +13,7 @@
 @endsection
 @section('Menu')
 			<!-- Navbar Menu -Inicio -->
-				<nav id="nav" class="navbar navbar-default" role="navigation">
+			<nav id="nav" class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
 				<!-- Navbar Header Starts -->
 					<div class="navbar-header">
@@ -50,7 +50,7 @@
 											<i class="fa fa-caret-down"></i>
 										</a>
 										<ul class="dropdown-menu" role="menu">
-										<li class="active">
+										<li>
 											<a href="/areaCliente/agendamento">
 												<i class="fa fa-plus-square" aria-hidden="true"></i> Agendamento
 											</a>
@@ -65,7 +65,7 @@
 												Meus Convenios
 											</a>
 										</li>
-										<li>
+										<li class="active">
 											<a href="/areaCliente/meus_dados">
 												 Meus Dados <i class="fa fa-user" aria-hidden="true"></i>	
 											</a>
@@ -106,59 +106,10 @@
 @endsection
 @section('ConteudoPrincipal')
 <!-- Banner Cliente -->
-		<div class="main-banner clienteAgenda">
+		<div class="main-banner cliente">
 			<div class="container">
-				<h2><span>Agendamentos</span></h2>
-			</div>
-		</div>
-		<div class="breadcrumb">
-			<div class="container">
-				<ul class="list-unstyled list-inline">
-					<li>
-						<a href="/areaCliente">Área Cliente</a>
-					</li>
-					<li>Agendamentos</li>
-				</ul>
+				<h2><span>Área do Cliente</span></h2>
 			</div>
 		</div>
 <!-- Banner Cliente Fim-->
-<!-- Conteudo Agenda -->
-<div class="container main">
-<br>
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-	<ul class="nav nav-wizard">
-  				<li class="active">
-  					<a href="#"> <span class="badge badge-step">1</span> 
-  						Escolha Procedimento/Exame 
-  					</a>
-  				</li>
-    		<li class="active">
-    			<a href=""><span class="badge badge-step">2</span> Escolha Data e Hora</a>
-    		</li>
-    		<li class="active">
-    			<a href="#"><span class="badge badge-step">3</span> Verificação dos Dados</a>
-    		</li>
-  			<li>
-  				<a href="#"><span class="badge badge-step">4</span> Agendamentos Confirmado</a>
-  			</li>
-		</ul>
-	<br>
-</div>
-	<div class="row col-md-12 col-sm-12 col-xs-12 text-center">
-		teste
-		<div class="alert alert-info">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <div class="text"><i class="fa fa-info-circle"></i> &nbsp; Você pode escolher quantos procedimentos forem necessários!</div>
-        </div>
-        <br><br>
-		<div class="row col-md-12 col-sm-12 col-xs-12 text-center">
-        <p>Data: <input type="date" /> <i class="fa fa-calendar" aria-hidden="true"></i> </p>
-		</div>
-		<div class="row col-md-12 col-sm-12 col-xs-12 text-center">
-        <p>Data: <input type="dateTime" /> <i class="fa fa-calendar" aria-hidden="true"></i> </p>
-		</div>
-	</div>
-</div>
-	<!-- Conteudo Agenda Fim -->
-
 @endsection

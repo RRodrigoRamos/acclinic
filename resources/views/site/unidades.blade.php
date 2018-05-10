@@ -35,7 +35,7 @@
 							</button>
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
-							<a href="/home" class="navbar-brand">
+							<a href="/inicio" class="navbar-brand">
 								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
@@ -81,13 +81,13 @@
 										</a>
 										<ul class="dropdown-menu" role="menu">
 											<li>
-												<a href="/areaCliente/consultas">Consultas</a>
+												<a href="/servico/consultas">Consultas</a>
 											</li>
 											<li>
-												<a href="/areaCliente/exames">Exames</a>
+												<a href="/servico/exames">Exames</a>
 											</li>
 											<li>
-												<a href="/areaCliente/agendamento">Agendamentos</a>
+												<a href="/servico/agendamentos">Agendamentos</a>
 											</li>
 										</ul>
 									</li>
@@ -114,7 +114,7 @@
 @section('ConteudoSecundario')
 
 	<!-- Main Banner Starts -->
-		<div class="main-banner seven">
+		<div class="main-banner paginaUnidade">
 			<div class="container">
 				<h2><span>Unidades Clínicas</span></h2>
 			</div>
@@ -124,17 +124,16 @@
 		<div class="breadcrumb">
 			<div class="container">
 				<ul class="list-unstyled list-inline">
-					<li><a href="index.html">Início</a></li>
+					<li><a href="/inicio">Início</a></li>
+					<li class="">Institucional</li>
 					<li class="active">Unidades</li>
 				</ul>
 			</div>
-		</div>		
+		</div>	
 	<!-- Breadcrumb Ends -->
 	<!-- Main Container Starts -->
 		<div class="container main-container">
 			<h2 class="main-heading2 nomargin-top">Unidades</h2>
-		
-
 	<!-- Main Container Starts -->
 		<div class="container">
 		<!-- About Intro Text Starts -->

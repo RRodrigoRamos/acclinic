@@ -53,7 +53,6 @@ Route::prefix('admin')->group( function() {
 Route::middleware(['web'])->group (function() {
 	Auth::routes();
 	Route::get('/areaCliente','UserController@index');
-	Route::post('/areaCliente/paciente','UserController@cadastroPaciente');
 	Route::post('/areaCliente/convenio','UserController@cadastroConvenio');
 	Route::get('/areaCliente/agendamento','UserController@agendamento');
 	Route::get('/areaCliente/meus_dados','UserController@pacienteForm');

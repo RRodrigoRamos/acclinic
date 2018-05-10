@@ -20,6 +20,7 @@
         <link href="../js/plugins/camera/css/camera.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
         <link href="../css/responsive.css" rel="stylesheet">
+        <link href="../css/jquery-ui.css" rel="stylesheet">
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -206,5 +207,6 @@
     <script src="../js/plugins/camera/js/camera.min.js"></script>   
     <script src="../js/plugins/camera/js/shuffle/jquery.shuffle.modernizr.min.js"></script>
     <script src="../js/custom.js"></script>
+    <script src="../js/jquery-ui.js"></script>
     </body>
 </html>

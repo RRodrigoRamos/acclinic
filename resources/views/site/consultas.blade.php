@@ -108,14 +108,30 @@
 		</header>
 	<!-- Topo Fim -->
 	@endsection
-
-
-	@section('ConteudoPrincipal')
-	<br>
-	<br><br>
- Conteudo da Pagina INFORMAÇÕES DE CONSULTAS
- <br><br><br>
-@endsection
+@section('ConteudoPrincipal')
+	<!-- Main Banner Starts -->
+		<div class="main-banner servicoConsulta">
+			<div class="container">
+				<h2><span>Consultas Clínicas</span></h2>
+			</div>
+		</div>
+	<!-- Main Banner Ends -->
+	<!-- Breadcrumb Starts -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li><a href="/inicio">Início</a></li>
+					<li>Serviço</li>
+					<li class="active">Consultas</li>
+				</ul>
+			</div>
+		</div>	
+	<!-- Breadcrumb Ends -->
+	<!-- Main Container Starts -->
+		<div class="container main-container">
+		</div>
+	<!-- Main Container Ends -->
+	@endsection
 @section('ConteudoSecundario')
 Conteudo Secundario INFORMAÇÕES DE CONSULTAS
 @endsection
