@@ -39,11 +39,9 @@ class UserController extends Controller
 
     public function agendamentoForm()
     {
-        $especialidades_medicos = Medico::select('name','campo')
-            ->join('especialidades', 'medicos.id', '=', 'especialidades.especialidade.id')
-            ->get();
-        // $especialidades = Especialidade::select('*')->get();
-        // $clinicas = Clinica::select('*')->get();
+        $medicos = Medico::select('*')->get();
+        $especialidades = Especialidade::select('*')->get();
+        $clinica = Clinica::select('*')->get();
 
         return view('cliente.agendamentoForm',compact('medicos','especialidades','clinicas'));
     }

@@ -533,6 +533,9 @@ h6 { font-size: 16px; }
 	.main-banner.servicoAgenda{
 		background: url(../images/banners/medicina.jpg) center top;
 	}	
+	.main-banner.paginaRegistro{
+		background: url(../images/banners/registros.png) center right;
+	}	
 	.main-banner h2 {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -2714,6 +2717,9 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
 
 	.obr {
 		color:red !important;
+	}
+	.verd {
+		color:silver !important;
 	}	
 
 	.agendar {
