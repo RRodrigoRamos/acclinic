@@ -135,3 +135,63 @@ $(function() {
         monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
     });
 });
+
+
+// Calculo do IMC 
+function  calcularIMC() {
+  var peso = eval(document.form.peso.value)
+  var alt = eval(document.form.alt.value)
+  var alt2 = alt / 100
+  var IMC = peso  / (alt2 * alt2)
+  document.form.massacor.value=custRound(IMC,1);
+if (document.form.massacor.value <18.5)
+document.form.comment.value = "Peso Baixo";
+if (document.form.massacor.value >=18.5 && document.form.massacor.value <=24.9)
+document.form.comment.value = "Peso Ideal";
+if (document.form.massacor.value >=25 && document.form.massacor.value <=29.9)
+document.form.comment.value = "Acima do Peso";
+if (document.form.massacor.value >=30 && document.form.massacor.value <=34.9)
+document.form.comment.value = "Obesidade Tipo I";
+if (document.form.massacor.value >=35 && document.form.massacor.value <=39.9)
+document.form.comment.value = "Obesidade Tipo II";
+if (document.form.massacor.value >=40 && document.form.massacor.value <=49.9)
+document.form.comment.value = "Obesidade M?rbida";
+if (document.form.massacor.value >40)
+document.form.comment.value = "Obesidade Extrema";
+}
+function custRound(x,places) {
+  return (Math.round(x*Math.pow(10,places)))/Math.pow(10,places)
+}
+
+
+
+// Configuração de Mascaras Formularios
+// $(function() {
+// 	$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1" />');
+// // input masking
+// 	$('.mask-date').mask("00/00/0000", {
+// 	 placeholder: "__-__-____"
+// 	});
+// 	$('.mask-money').mask('000.000.000.000.000,00', {
+//  	 reverse: true
+// 	});
+	
+// // custom checkbox and radio
+// 	$('input').iCheck({
+//  	 checkboxClass: 'icheckbox_square-blue',
+//  	 radioClass: 'iradio_square-blue'
+// 	});
+// }
+
+// function optionCheck(){
+//         var option = document.getElementById("options").value;
+//         if(option == "Convênio"){
+//             document.getElementById("hiddenDiv").input.type ="text";
+//         }
+//         if(option == "Particular"){
+//             document.getElementById("hiddenDiv").input.type ="hidden";
+//         }
+//         if(option == "Retorno"){
+//             document.getElementById("hiddenDiv").input.type ="hidden";
+//         }
+//     }

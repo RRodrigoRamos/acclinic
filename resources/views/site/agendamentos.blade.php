@@ -107,15 +107,29 @@
 		<!-- Conteudo Inicial Fim -->
 		</header>
 	<!-- Topo Fim -->
+@endsection
+@section('ConteudoPrincipal')
+	<!-- Main Banner Starts -->
+		<div class="main-banner servicoAgenda">
+			<div class="container">
+				<h2><span>Agendamentos</span></h2>
+			</div>
+		</div>
+	<!-- Main Banner Ends -->
+	<!-- Breadcrumb Starts -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li><a href="/inicio">Início</a></li>
+					<li>Serviço</li>
+					<li class="active">Agendamentos</li>
+				</ul>
+			</div>
+		</div>	
+	<!-- Breadcrumb Ends -->
+	<!-- Main Container Starts -->
+	<div class="container main-container">
+			<h2 class="main-heading2 nomargin-top">Agende uma Consulta ou Exame</h2>
+			<h3 class="main-heading3">  </h3>
+	</div>
 	@endsection
-
-
-	@section('ConteudoPrincipal')
-	<br>
-	<br><br>
- Conteudo da Pagina Informações de AGENDAMENTOS
- <br><br><br>
-@endsection
-@section('ConteudoSecundario')
-Conteudo Secundario Pagina Informações de AGENDAMENTOS
-@endsection

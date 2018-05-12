@@ -108,14 +108,28 @@
 		</header>
 	<!-- Topo Fim -->
 	@endsection
-
-
 	@section('ConteudoPrincipal')
-	<br>
-	<br>
- Conteudo da Pagina EXAMES MÉDICOS
- <br><br>
-@endsection
-@section('ConteudoSecundario')
-Conteudo Secundario EXAMES MÉDICOS
-@endsection
+	<!-- Main Banner Starts -->
+		<div class="main-banner servicoExame">
+			<div class="container">
+				<h2><span>Exames</span></h2>
+			</div>
+		</div>
+	<!-- Main Banner Ends -->
+	<!-- Breadcrumb Starts -->
+		<div class="breadcrumb">
+			<div class="container">
+				<ul class="list-unstyled list-inline">
+					<li><a href="/inicio">Início</a></li>
+					<li>Serviço</li>
+					<li class="active">Exames</li>
+				</ul>
+			</div>
+		</div>	
+	<!-- Breadcrumb Ends -->
+	<!-- Main Container Starts -->
+	<div class="container main-container">
+			<h2 class="main-heading2 nomargin-top">Lista de Exames</h2>
+			<h3 class="main-heading3"> Mamografia </h3>
+	</div>
+	@endsection

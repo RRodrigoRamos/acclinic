@@ -4,6 +4,20 @@ namespace acclinic\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use acclinic\Agendamento;
+use acclinic\Clinica;
+use acclinic\User;
+use acclinic\Medico;
+use acclinic\ClinicaMedico;
+use acclinic\Especialidade;
+use acclinic\statusAgenda;
+use acclinic\Triagen;
+use acclinic\Convenio;
+use acclinic\Endereco;
+use acclinic\Bairro;
+use acclinic\Cidade;
+use acclinic\Estado;
+use DB;
 
 class UserController extends Controller
 {
@@ -23,17 +37,37 @@ class UserController extends Controller
         return view('cliente.painel');
     }
 
-    public function agendamento(Request $request)
+    public function agendamentoForm()
     {
-        return view('cliente.agendamento');
+        $especialidades_medicos = Medico::select('name','campo')
+            ->join('especialidades', 'medicos.id', '=', 'especialidades.especialidade.id')
+            ->get();
+        // $especialidades = Especialidade::select('*')->get();
+        // $clinicas = Clinica::select('*')->get();
+
+        return view('cliente.agendamentoForm',compact('medicos','especialidades','clinicas'));
     }
 
 
-    public function listaAgenda()
+    public function agendaSalva(request $resquest)
     {
-        // Painel do Cliente
+        $agendaform = $request->all();
+        $dadosagenda = Agendamento::create($agendaform);
+        $agendaform['users_id'] = $dadosagenda->id;
+        statusAgenda::create($agendaform);
+        $agendaform['users_id'] = $dadosagenda->id;
+        Clinica_Medico::create($agendaform);
+
+// public function enviar(QuestionarioRequest $request){
+//     $filler = $request->all();
+//     $questionario = Questionario::create($filler);   
+//     $filler['questionario_id'] = $questionario->id;
+//     Enunciado::create($filler);
+// return redirect()->action('ControllerPrincipal@index');
         return view('cliente.listaAgenda');
     }
+
+    
     public function pacienteDados()
     {
     	// Painel do Cliente

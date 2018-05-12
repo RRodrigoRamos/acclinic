@@ -72,9 +72,9 @@ class UserTableSeeder extends Seeder
             'rg' => '120011-PA',
             'cpf' => '801.319.144-21',
             'profissao' => 'Dentista',
-            // 'convenio_id' => 2,
+            'convenio_id' => 2,
             'triagem_id' => 3,
-            // 'endereco_id' => 1,
+            'endereco_id' => 1,
         ]);  
     }
 }

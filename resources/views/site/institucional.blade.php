@@ -139,8 +139,7 @@
 				<div class="row">
 					<div class="col-md-6 col-xs-12 about-col" align="justify">
 						<h3 class="main-heading1">Quem Somos</h3>
-						<h3 class="main-heading2">
-						</h3>
+						<h3 class="main-heading2"></h3>
 						<p>
 							A Clínica & Laboratório Hemodiagnóstico foi fundada em 2007 pelas médicas Ana Lucia de Sá Pinto, Fernanda Rodrigues Lima e Beatriz Perondi, contando com a assessoria da fisioterapeuta Silmara Macksud El Khoury.
 						</p>

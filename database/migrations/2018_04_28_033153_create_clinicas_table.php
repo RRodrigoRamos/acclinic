@@ -15,9 +15,9 @@ class CreateClinicasTable extends Migration
     {
         Schema::create('clinicas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo_clinic');
+            $table->enum('tipo_clinic', ['Matriz', 'Filial']);
             $table->string('nome');
-            $table->string('contato');
+            $table->string('contato')->nullable();  
             $table->integer('endereco_id')->unsigned();
             $table->foreign('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');
             $table->timestamps();

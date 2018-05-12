@@ -39,14 +39,6 @@ class EspecialidadeTableSeeder extends Seeder
         ]);
         Especialidade::create ([
             'campo'=>'Ortodontia',
-            'descricao'=>'Serviços de enfermagem na clínica: Análises ao sangue, Análises à urina, Rastreio da hipertensão arterial, Rastreio da diabetes, Rastreio do colesterol e triglicerídios, Electrocardiograma, Administração de injecções (Medicamentos, vacinas),Realização de tratamento de Feridas, Remoção de pontos/agrafos,  Monitorização de Peso, IMC, Perímetro Abdominal e Peso do Bebé, Ensinos à família/Cuidador Informal de doentes dependentes, Gestão de Medicação, Cuidados de enfermagem ao domicilio.',
-        ]);
-        Especialidade::create ([
-            'campo'=>'Ortodontia',
-            'descricao'=>'Serviços de enfermagem na clínica: Análises ao sangue, Análises à urina, Rastreio da hipertensão arterial, Rastreio da diabetes, Rastreio do colesterol e triglicerídios, Electrocardiograma, Administração de injecções (Medicamentos, vacinas),Realização de tratamento de Feridas, Remoção de pontos/agrafos,  Monitorização de Peso, IMC, Perímetro Abdominal e Peso do Bebé, Ensinos à família/Cuidador Informal de doentes dependentes, Gestão de Medicação, Cuidados de enfermagem ao domicilio.',
-        ]);
-        Especialidade::create ([
-            'campo'=>'Ortodontia',
             'descricao'=>'A Ortodontia é a especialidade odontológica que corrige a posição dos dentes e dos ossos maxilares quando estes estão posicionados de forma inadequada. O tratamento ortodôntico torna a boca mais saudável, proporcionando uma aparência mais agradável.',
         ]);
         Especialidade::create ([

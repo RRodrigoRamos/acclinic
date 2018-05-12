@@ -128,10 +128,38 @@
 		</div>	
 	<!-- Breadcrumb Ends -->
 	<!-- Main Container Starts -->
-		<div class="container main-container">
-		</div>
-	<!-- Main Container Ends -->
+	<div class="container main-container">
+			<h2 class="main-heading2 nomargin-top">Consultas</h2>
+			<h3 class="main-heading3"> Mamografia </h3>
+	</div>
+<div class="container">
+	<form name="form" id="form">
+		Peso (em Kg)
+		<br>
+		<input type="Text" name="peso" size="15"> 
+		<br>
+		Altura (em Cm)
+		<br>
+		<input type="Text" name="alt" size="15"> 
+		<br>
+		<br>
+		<input type="button" style="Padding: 9pt" value="Calcular IMC" onclick="calcularIMC()" name="button">
+		<input type="reset" style="Padding:9pt" value="Limpar Valores">
+		<br>
+		<br>
+		IMC
+		<br>
+		<input type="Text" name="massacor" id="massacor" size="18"> 
+		<br>
+		Avaliacao do IMC
+		<br> 
+		<input type="Text" name="comment" id="comment" size="18">
+		<br>
+		<br>
+		<center>
+		<span style="font-size: x-small;"><a href="http://www.emagrecerpravaler.com/dieta-dos-pontos-tabela-de-pontos/" target="”_blank”"></a></span></center>
+		<center>
+		<span style="font-size: x-small;"><a href="" target="?_blank?"></a></span></center>
+	</form>
+</div>
 	@endsection
-@section('ConteudoSecundario')
-Conteudo Secundario INFORMAÇÕES DE CONSULTAS
-@endsection

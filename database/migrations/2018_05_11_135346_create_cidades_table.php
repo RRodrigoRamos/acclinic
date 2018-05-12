@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTriagensTable extends Migration
+class CreateCidadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTriagensTable extends Migration
      */
     public function up()
     {
-        Schema::create('triagens', function (Blueprint $table) {
+        Schema::create('cidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('altura');
-            $table->string('peso');
-            $table->string('obs')->nullable();;
+            $table->string('nome');
+            $table->integer('estado_id')->nullable()->unsigned();
+            $table->foreign('estado_id')->references('id')->on('estados');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTriagensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('triagens');
+        Schema::dropIfExists('cidades');
     }
 }

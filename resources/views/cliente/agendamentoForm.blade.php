@@ -125,40 +125,73 @@
 <!-- Conteudo Agenda -->
 <div class="container main">
 <br>
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-	<ul class="nav nav-wizard">
-  				<li class="active">
-  					<a href="#"> <span class="badge badge-step">1</span> 
-  						Escolha Procedimento/Exame 
-  					</a>
-  				</li>
-    		<li class="active">
-    			<a href=""><span class="badge badge-step">2</span> Escolha Data e Hora</a>
-    		</li>
-    		<li class="active">
-    			<a href="#"><span class="badge badge-step">3</span> Verificação dos Dados</a>
-    		</li>
-  			<li>
-  				<a href="#"><span class="badge badge-step">4</span> Agendamentos Confirmado</a>
-  			</li>
-		</ul>
-	<br>
-</div>
-	<div class="row col-md-12 col-sm-12 col-xs-12 text-center">
-		teste
+	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <div class="text"><i class="fa fa-info-circle"></i> &nbsp; Você pode escolher quantos procedimentos forem necessários!</div>
+            <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Preencha os campos necessário para o AGENDAMENTO!</div>
         </div>
-        <br><br>
-		<div class="row col-md-12 col-sm-12 col-xs-12 text-center">
-        <p>Data: <input type="date" /> <i class="fa fa-calendar" aria-hidden="true"></i> </p>
-		</div>
-		<div class="row col-md-12 col-sm-12 col-xs-12 text-center">
-        <p>Data: <input type="dateTime" /> <i class="fa fa-calendar" aria-hidden="true"></i> </p>
-		</div>
 	</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+   <form class="form"  method="post" action="/areaCliente/agendaSalva">
+    {!! csrf_field() !!}
+    <fieldset>
+      <input type="hidden" name="status_id" value="4">
+      <input type="hidden" name="agenda_de" value="CONSULTA">
+      <input type="hidden" name="users_id" value="{{ Auth::user()->name }}">
+          <legend>Dados da Consulta</legend>
+          <div class="form-group col-sm-12 col-md-12 col-lg-6">
+            <label for="tipo_agenda" class="control-label">Tipo de Atendimento <span class="obr">*</span></label>
+                <div class="form-group">
+              <select id="tipo_agenda" name="tipo_agenda" class="form-control" data-live-search="true" required>
+                  <option value="" disabled="disabled">Selecione</option>
+                  <option value="Convênio">Convênio</option>
+                  <option value="Particular" selected="selected">Particular</option>
+                  <option value="Retorno">Retorno</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group col-sm-6 col-md-6 col-lg-3"">
+            <label for="data_agenda" class="control-label">Data do Agendamento <span class="obr">*</span></label>
+            <input type="date" class="form-control" name="data_agenda" required>
+          </div>
+          <div class="form-group col-sm-6 col-md-6 col-lg-3">
+            <label for="data_nasc" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>
+            <input type="text" class="form-control" name="data_nasc" id="timepicker1" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
+            <span class="obr"> Exeto aos Sábado 7:00h as 12:00h !</span>
+          </div>
+          <div class="form-group col-sm-12 col-md-12 col-lg-6">
+            <label for="tipo_agenda" class="control-label">Escolhar Especialidade / Médico <span class="obr">*</span></label>
+                <div class="form-group">
+              <select name="clinica_medicos_id" class="form-control" data-live-search="true" required>
+                  <option value="" disabled="disabled">Selecione</option>
+                  @foreach ($especialidades_medicos as $especialidade)
+                    <option value="{{$especialidade->id}}">{{$especialidade->campo}}</option>
+                  @endforeach
+              </select>
+            </div>
+          </div> 
+          <div class="form-group col-sm-12 col-md-12 col-lg-6">
+            <label for="tipo_agenda" class="control-label">Escolhar Unidade Média <span class="obr">*</span></label>
+                <div class="form-group">
+                  <select name="clinica_medicos_id" class="form-control" data-live-search="true" required>
+                  <option value="" disabled="disabled">Selecione</option>
+                  @foreach ($clinicas as $clinica)
+                    <option value="{{$clinica->id}}">{{$clinica->nome}}</option>
+                  @endforeach
+              </select>
+            </div>
+            </div>
+          </div> 
+        <br>
+      <div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
+        <h1> 
+        <button type="submit" class="btn btn-primary form-control agendar"> Agendar Consulta.</button>
+        </h1>
+      </div>
+    </fieldset>
+  </form>
+  <br>
 </div>
-	<!-- Conteudo Agenda Fim -->
-
+<br>
+<!-- Conteudo Agenda Fim -->
 @endsection

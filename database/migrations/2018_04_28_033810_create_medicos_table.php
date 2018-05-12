@@ -18,9 +18,10 @@ class CreateMedicosTable extends Migration
             $table->string('foto',100)->nullable();
             $table->string('name');
             $table->string('crm')->unique();
-            $table->string('sexo');
+            $table->enum('sexo', ['Masc', 'Fem']);
             $table->date('data_nasc');
             $table->string('telefone');
+            $table->string('email')->unique();
             $table->integer('especialidade_id')->unsigned();
             $table->foreign('especialidade_id')->references('id')->on('especialidades');
             $table->integer('endereco_id')->unsigned();

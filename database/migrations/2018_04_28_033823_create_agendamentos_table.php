@@ -16,16 +16,16 @@ class CreateAgendamentosTable extends Migration
         Schema::create('agendamentos', function (Blueprint $table) {
             $table->increments('id');
             $table->date('data_agenda');
-            $table->string('hora_inicio');
-            $table->string('tipo_agenda');
-            $table->string('agenda_de');
+            $table->string('hora_agenda');
+            $table->enum('tipo_agenda', ['CONVÊNIO', 'PARTICULAR','RETORNO']);
+            $table->enum('agenda_de', ['CONSULTA']);
             $table->string('obs')->nullable();
-            $table->integer('paciente_id')->unsigned();
-            $table->foreign('paciente_id')->references('id')->on('pacientes');
-            $table->integer('medico_id')->unsigned();
-            $table->foreign('medico_id')->references('id')->on('medicos');
+            $table->integer('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
+            $table->integer('clinica_medicos_id')->unsigned();
+            $table->foreign('clinica_medicos_id')->references('id')->on('clinica_medicos');
             $table->integer('status_id')->unsigned();
-            $table->foreign('status_id')->references('id')->on('status');
+            $table->foreign('status_id')->references('id')->on('status_agendas');
             $table->timestamps();
         });
     }
