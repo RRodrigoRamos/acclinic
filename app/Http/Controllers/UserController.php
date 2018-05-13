@@ -103,7 +103,8 @@ class UserController extends Controller
     	// informações contato com a Clinica.
         return view('cliente.pacienteContat');
     }
-	
+    
+	$endereco = User::find(1);
 	
 
     

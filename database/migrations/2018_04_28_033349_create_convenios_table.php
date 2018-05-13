@@ -18,7 +18,7 @@ class CreateConveniosTable extends Migration
             $table->string('nome_convenio');
             $table->string('tipo_plano');
             $table->string('n_registro')->unique();
-            $table->date('validade');
+            $table->string('validade');
 
             $table->timestamps();
         });

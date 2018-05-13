@@ -4,10 +4,6 @@ namespace acclinic\Http\Controllers\Auth;
 
 use acclinic\User;
 use acclinic\Triagen;
-use acclinic\Endereco;
-use acclinic\Bairro;
-use acclinic\Cidade;
-use acclinic\Estado;
 use acclinic\Convenio;
 use acclinic\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -61,6 +57,7 @@ class RegisterController extends Controller
         ]);
     }
 
+    $model = User::find(1);
     /**
      * Create a new user instance after a valid registration.
      *
@@ -74,10 +71,11 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
     }
+
+
+    
+
+        
+    
 }

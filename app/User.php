@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function endereco()
+    {
+        return $this->hasOne('acclinic\Endereco');
+    }
+
+    public function agenda()
+    {
+        return $this->hasMany('acclinic\Agendamento');
+
+    }
+
 }
