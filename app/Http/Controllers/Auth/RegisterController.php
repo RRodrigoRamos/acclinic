@@ -3,6 +3,12 @@
 namespace acclinic\Http\Controllers\Auth;
 
 use acclinic\User;
+use acclinic\Triagen;
+use acclinic\Endereco;
+use acclinic\Bairro;
+use acclinic\Cidade;
+use acclinic\Estado;
+use acclinic\Convenio;
 use acclinic\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -64,6 +70,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

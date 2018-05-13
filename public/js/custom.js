@@ -159,39 +159,31 @@ document.form.comment.value = "Obesidade M?rbida";
 if (document.form.massacor.value >40)
 document.form.comment.value = "Obesidade Extrema";
 }
+
 function custRound(x,places) {
   return (Math.round(x*Math.pow(10,places)))/Math.pow(10,places)
 }
 
-
-
-// Configuração de Mascaras Formularios
-// $(function() {
-// 	$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1" />');
-// // input masking
-// 	$('.mask-date').mask("00/00/0000", {
-// 	 placeholder: "__-__-____"
-// 	});
-// 	$('.mask-money').mask('000.000.000.000.000,00', {
-//  	 reverse: true
-// 	});
-	
-// // custom checkbox and radio
-// 	$('input').iCheck({
-//  	 checkboxClass: 'icheckbox_square-blue',
-//  	 radioClass: 'iradio_square-blue'
-// 	});
-// }
-
-// function optionCheck(){
-//         var option = document.getElementById("options").value;
-//         if(option == "Convênio"){
-//             document.getElementById("hiddenDiv").input.type ="text";
-//         }
-//         if(option == "Particular"){
-//             document.getElementById("hiddenDiv").input.type ="hidden";
-//         }
-//         if(option == "Retorno"){
-//             document.getElementById("hiddenDiv").input.type ="hidden";
-//         }
-//     }
+/* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('telefone').onkeypress = function(){
+		mascara( this, mtel );
+	}
+}

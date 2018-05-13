@@ -2,6 +2,7 @@
 
 namespace acclinic\Http\Controllers\AdminAuth;
 
+use acclinic\Admin;
 use acclinic\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -33,10 +34,10 @@ class LoginController extends Controller
      * @return void
      */
     // para não conflitar com o outro usuario
-    // public function __construct()
-    // {
-    //     $this->middleware('admin')->except('logout');
-    // }
+    public function __construct()
+    {
+        // $this->middleware('admin')->except('logout');
+    }
 
 
     

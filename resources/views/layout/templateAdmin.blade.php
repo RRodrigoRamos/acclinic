@@ -208,5 +208,6 @@
     <script src="../js/plugins/camera/js/shuffle/jquery.shuffle.modernizr.min.js"></script>
     <script src="../js/custom.js"></script>
     <script src="../js/jquery-ui.js"></script>
+    <script src="../js/jquery.mask.min.js"></script>
     </body>
 </html>

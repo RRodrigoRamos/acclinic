@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.templateAdmin')
 @section('title', 'LOGIN - REGISTRO')
 @section('topoInfor')
             <!-- Informações do Topo site -->
@@ -168,7 +168,8 @@
                 <label for="data_nasc" class="control-label">Data Nascimento: </label><input type="date" class="form-control" id="data_nasc" name="data_nasc" required>
           </div>
           <div class="form-group col-sm-12 col-md-12 col-lg-4">
-                <label for="telefone" class="control-label">Telefone: <span class="obr">*</span></label><input type="text" class="form-control" id="telefone" name="telefone" required>
+                <label for="telefone" class="control-label">Telefone: <span class="obr">*</span></label><input type="tel" class="form-control" id="telefone" name="telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" required>
+                <script type="text/javascript">$("#telefone").mask("(00) 0000-00009");</script>
           </div>
       </div>
       <div class="row">
