@@ -17,7 +17,7 @@ use acclinic\Endereco;
 use acclinic\Bairro;
 use acclinic\Cidade;
 use acclinic\Estado;
-use DB;
+
 
 class UserController extends Controller
 {
@@ -39,22 +39,25 @@ class UserController extends Controller
 
     public function agendamentoForm()
     {
-        $medicos = Medico::select('*')->get();
-        $especialidades = Especialidade::select('*')->get();
-        $clinica = Clinica::select('*')->get();
+        $especialidades = Medico::select('*')
+            ->join('especialidades','medicos.especialidade_id', '=', 'especialidades.id' )
+            ->get();
 
-        return view('cliente.agendamentoForm',compact('medicos','especialidades','clinicas'));
+
+
+        $clinica = Clinica::select('*')->get();
+        return view('cliente.agendamentoForm',compact('especialidades','clinica'));
     }
 
 
     public function agendaSalva(request $resquest)
     {
-        $agendaform = $request->all();
-        $dadosagenda = Agendamento::create($agendaform);
-        $agendaform['users_id'] = $dadosagenda->id;
-        statusAgenda::create($agendaform);
-        $agendaform['users_id'] = $dadosagenda->id;
-        Clinica_Medico::create($agendaform);
+        // $agendaform = $request->all();
+        // $dadosagenda = Agendamento::create($agendaform);
+        // $agendaform['users_id'] = $dadosagenda->id;
+        // statusAgenda::create($agendaform);
+        // $agendaform['users_id'] = $dadosagenda->id;
+        // Clinica_Medico::create($agendaform);
 
 // public function enviar(QuestionarioRequest $request){
 //     $filler = $request->all();
@@ -103,9 +106,4 @@ class UserController extends Controller
     	// informações contato com a Clinica.
         return view('cliente.pacienteContat');
     }
-    
-	$endereco = User::find(1);
-	
-
-    
 }

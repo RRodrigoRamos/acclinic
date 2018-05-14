@@ -54,10 +54,12 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'rg' => 'required|string|max:9|unique:users',
+            'cpf' => 'required|string|max:15|unique:users',
         ]);
     }
 
-    $model = User::find(1);
+    // ;
     /**
      * Create a new user instance after a valid registration.
      *
@@ -67,9 +69,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'foto' => $data['foto'],
             'name' => $data['name'],
+            'name_social' => $data['name_social'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'sexo' => $data['sexo'],
+            'data_nasc' => $data['data_nasc'],
+            'data_nasc' => $data['data_nasc'],
         ]);
     }
 

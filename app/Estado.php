@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Estado extends Model
 {
-    public function cidades()
+	protected $fillable = [
+        'sigla','descricao',
+    ];
+
+    public function Estado()
     {
-        return $this->hasMany('acclinic\Estado');
+        return $this->hasMany(\acclinic\Cidade::class);
     }
 }

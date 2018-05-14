@@ -102,7 +102,6 @@
 		<!-- Conteudo Inicial Fim -->
 		</header>
 	<!-- Topo Fim -->
-
 @endsection
 @section('ConteudoPrincipal')
 <!-- Banner Cliente -->
@@ -156,28 +155,29 @@
           </div>
           <div class="form-group col-sm-6 col-md-6 col-lg-3">
             <label for="data_nasc" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>
-            <input type="text" class="form-control" name="data_nasc" id="timepicker1" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
+            <input type="text" class="form-control" name="data_nasc" OnKeyPress="formatar('##:##h', this)" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
             <span class="obr"> Exeto aos Sábado 7:00h as 12:00h !</span>
           </div>
           <div class="form-group col-sm-12 col-md-12 col-lg-6">
-            <label for="tipo_agenda" class="control-label">Escolhar Especialidade / Médico <span class="obr">*</span></label>
+            <label for="tipo_agenda" class="control-label">Escolhar o Médico / Especialidade <span class="obr">*</span></label>
                 <div class="form-group">
-              <select name="clinica_medicos_id" class="form-control" data-live-search="true" required>
+              <select name="medicos_id" class="form-control" data-live-search="true" required>
                   <option value="" disabled="disabled">Selecione</option>
-                  @foreach ($especialidades_medicos as $especialidade)
-                    <option value="{{$especialidade->id}}">{{$especialidade->campo}}</option>
-                  @endforeach
+                  	@foreach($especialidades as $especialidade)
+                    <option value="{{ $especialidade }}"> {{ $especialidade->name }} / {{ $especialidade->campo}}
+                    </option>
+                    @endforeach
               </select>
             </div>
           </div> 
           <div class="form-group col-sm-12 col-md-12 col-lg-6">
             <label for="tipo_agenda" class="control-label">Escolhar Unidade Média <span class="obr">*</span></label>
                 <div class="form-group">
-                  <select name="clinica_medicos_id" class="form-control" data-live-search="true" required>
+                  <select name="clinica_id" class="form-control" data-live-search="true" required>
                   <option value="" disabled="disabled">Selecione</option>
-                  @foreach ($clinicas as $clinica)
-                    <option value="{{$clinica->id}}">{{$clinica->nome}}</option>
-                  @endforeach
+                  	@foreach($clinica as $clinica_escolha)
+                    <option value="{{ $clinica_escolha }}"> {{ $clinica_escolha->nome }} </option>
+                    @endforeach
               </select>
             </div>
             </div>
