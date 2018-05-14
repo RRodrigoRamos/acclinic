@@ -151,7 +151,7 @@
           </div>
           <div class="form-group col-sm-6 col-md-6 col-lg-3"">
             <label for="data_agenda" class="control-label">Data do Agendamento <span class="obr">*</span></label>
-            <input type="date" class="form-control" name="data_agenda" required>
+            <input type="date" class="form-control" OnKeyPress="formatar('##/##/####', this)" name="data_agenda" required>
           </div>
           <div class="form-group col-sm-6 col-md-6 col-lg-3">
             <label for="data_nasc" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>

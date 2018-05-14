@@ -213,6 +213,7 @@
 	<script src="../js/plugins/camera/js/jquery.easing.1.3.js"></script>
 	<script src="../js/plugins/camera/js/camera.min.js"></script>	
 	<script src="../js/plugins/camera/js/shuffle/jquery.shuffle.modernizr.min.js"></script>
+	<script src="../js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<script src="../js/custom.js"></script>
 	</body>
 </html>
