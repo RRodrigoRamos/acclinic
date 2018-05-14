@@ -15,7 +15,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'foto','name','name_social', 'email','sexo','data_nasc','telefone','rg','cpf','profissao','convenio_id','triagem_id','endereco_id',
+        'foto','name','name_social', 'email','sexo','data_nasc','telefone','rg','cpf','profissao',
+        'convenio_id','triagem_id','endereco_id',
     ];
 
     /**
@@ -27,24 +28,24 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function endereco()
-    {
-        return $this->hasOne(\acclinic\Endereco::class);
-    }
+    // public function endereco()
+    // {
+    //     return $this->hasOne(\acclinic\Endereco::class);
+    // }
 
-    public function triagen()
-    {
-        return $this->hasOne(\acclinic\Triagen::class);
-    }
+    // public function triagen()
+    // {
+    //     return $this->hasOne(\acclinic\Triagen::class);
+    // }
     
-    public function convenio()
-    {
-        return $this->hasOne(\acclinic\Convenio::class);
-    }
+    // public function convenio()
+    // {
+    //     return $this->hasOne(\acclinic\Convenio::class);
+    // }
 
-    public function agenda()
-    {
-        return $this->belongsTo(\acclinic\Agendamento::class);
-    }
+    // public function agenda()
+    // {
+    //     return $this->belongsTo(\acclinic\Agendamento::class);
+    // }
 
 }

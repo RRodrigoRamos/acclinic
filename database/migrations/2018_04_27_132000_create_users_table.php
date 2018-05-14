@@ -27,6 +27,12 @@ class CreateUsersTable extends Migration
             $table->string('rg')->unique();
             $table->string('cpf')->unique();
             $table->string('profissao')->nullable();
+$table->integer('convenio_id')->unsigned()->nullable();
+            $table->foreign('convenio_id')->references('id')->on('convenios')->onDelete('cascade');
+            $table->integer('triagem_id')->unsigned();
+            $table->foreign('triagem_id')->references('id')->on('triagens')->onDelete('cascade');
+            $table->integer('endereco_id')->nullable()->unsigned();
+            $table->foreign('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -42,9 +48,3 @@ class CreateUsersTable extends Migration
     }
 }
 
-// $table->integer('convenio_id')->unsigned()->nullable();
-//             $table->foreign('convenio_id')->references('id')->on('convenios')->onDelete('cascade');
-//             $table->integer('triagem_id')->unsigned();
-//             $table->foreign('triagem_id')->references('id')->on('triagens')->onDelete('cascade');
-//             $table->integer('endereco_id')->nullable()->unsigned();
-//             $table->foreign('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');

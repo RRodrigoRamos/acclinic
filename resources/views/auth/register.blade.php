@@ -119,13 +119,18 @@
         </div>
 <!-- Banner Cliente Fim-->
 <div class="container main">
+
     <br>
-<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-1">
+    </div>
+  <div class="col-lg-10">
+<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
       <div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <div class="text"><i class="fa fa-info-circle fa-2x "></i> &nbsp; Preencha os campos necessário para o CADASTRO <span class="obr">( * ) Campos obrigatórios<span></div>
         </div>
     </div>
+    
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
    <form class="form"  method="post" action="{{ route('register') }}">
         @csrf
@@ -297,6 +302,7 @@
       </div>
   <br>
   </form>
+</div>
 </div>
 </div>
 @endsection
