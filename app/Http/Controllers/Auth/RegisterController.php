@@ -9,6 +9,8 @@ use acclinic\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Controllers\Auth\resquest;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -48,9 +50,9 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator(Resquest $resquest)
     {
-        return Validator::make($data, [
+        return Validator::make($request, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
@@ -66,23 +68,51 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \acclinic\User
      */
-    protected function create(array $data)
+    // protected function create(array $data)
+    // {
+    //     return User::create([
+    //         'foto' => $data['foto'],
+    //         'name' => $data['name'],
+    //         'name_social' => $data['name_social'],
+    //         'email' => $data['email'],
+    //         'password' => Hash::make($data['password']),
+    //         'sexo' => $data['sexo'],
+    //         'data_nasc' => $data['data_nasc'],
+    //         // 'data_nasc' => $data['data_nasc'],
+    //     ]);
+    // }
+
+
+        // Funcionou com esse 
+    protected function register(Request $request)
     {
-        return User::create([
-            'foto' => $data['foto'],
-            'name' => $data['name'],
-            'name_social' => $data['name_social'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'sexo' => $data['sexo'],
-            'data_nasc' => $data['data_nasc'],
-            // 'data_nasc' => $data['data_nasc'],
-        ]);
-    }
+        if ($request != null) {
+            User::create([
+                'foto' => $request['foto'],
+                'name' => $request['name'],
+                'name_social' => $request['name_social'],
+                'email' => $request['email'],
+                'password' => Hash::make($request['password']),
+                'sexo' => $request['sexo'],
+                'data_nasc' => $request['data_nasc'],
+                'telefone' => $request['telefone'],
+                'rg' => $request['rg'],
+                'cpf' => $request['cpf'],
+                'profissao' => $request['profissao'],
+                'convenio_id' => $request['convenio_id'],
+                'triagem_id' => $request['triagem_id'],
+                'endereco_id' => $request['endereco_id'],
+            ]);
+            Convenio::create([
+                'id' => $request['id'],
+                'nome_convenio' => $request['nome_convenio'],
+                'tipo_plano' => $request['tipo_plano'],
+                'n_registro' => $request['n_registro'],
+                'validade' => $request['validade'],
+            ]);
 
-
-    
-
+        return redirect('/areaCliente');
+        }
         
-    
+    }
 }

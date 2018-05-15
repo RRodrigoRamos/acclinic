@@ -139,7 +139,7 @@
           <div class="row">
             <div class="form-group col-sm-12 col-md-12 col-lg-2">
                 <label for="foto" class="control-label">Foto</label>
-                    <input type="file" class="form-group">
+                    <input type="text" class="form-group" name="foto" id="foto">
             </div>
             </div>
             <div class="row">
@@ -153,29 +153,30 @@
                 <span class="verd">* Como deseja ser chamado</span>
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-sm-6 col-md-6 col-lg-6"">
                 <label for="email" class="control-label">Email <span class="obr">*</span></label>
                 <input type="email" class="form-control" name="email" id="email" placeholder="exemplo_email@gmail.com" required>
           </div>
           <div class="form-group col-sm-6 col-md-6 col-lg-3">
-                <label for="password" class="control-label">Senha <span class="obr">*</span></label><input type="password" class="form-control" id="password" name="password" placeholder="***Senha***" required> <span class="verd">* Minino 6 digitos</span>
+                <label for="password" class="control-label">Senha <span class="obr">*</span></label><input type="password" class="form-control" name="password" placeholder="***Senha***" required> <span class="verd">* Minino 6 digitos</span>
           </div>
           <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                <label for="password_confirmation" class="control-label">Confirme Senha <span class="obr">*</span></label><input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="***Senha***"required> <span class="verd">* Confirme Senha </span>
+                <label for="password_confirmation" class="control-label">Confirme Senha <span class="obr">*</span></label><input type="password" class="form-control" name="password_confirmation" placeholder="***Senha***"required> <span class="verd">* Confirme Senha </span>
           </div>
       </div>
       <div class="row">
           <div class="form-group col-sm-6 col-md-6 col-lg-3">
                 <label class="control-label">Sexo</label> <span class="obr">*</span>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="genero" id="Masc" value="Masc"> 
+            <input class="form-check-input" type="radio" name="sexo" id="Masc" value="Masc"> 
                 <label class="form-check-label" for="Masc">
                     Masculino
                 </label>
             </div>
             <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="genero" id="Fem" value="Fem">
+            <input class="form-check-input" type="radio" name="sexo" id="Fem" value="Fem">
                 <label class="form-check-label" for="Fem">
                     Feminino
                 <br>
