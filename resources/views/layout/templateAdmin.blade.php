@@ -53,12 +53,12 @@
             <div class="footer-area">
             <!-- Area Footer Site -->
                 <div class="container-fluid">
-                    <div class="row">
                     <!-- Informações Clinica -->
-                        <div class="col-md-4 col-sm-4 col-xs-12 ">
+                        <div class="col-md-4 col-sm-4 col-lg-8 col-xs-8 ">
+                            <div class="row">
                             <h4><img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgRodape"> </h4>
                             <p>
-                                Sistema de Agendamentos de Consultas Clinicas e Exames, para clientes conveniados e atendimento particular.
+                                Sistema de Agendamentos de Consultas Clinicas, para clientes conveniados e atendimento particular.
                             </p>
                             <ul class="list-unstyled address-list">
                                 <li class="clearfix address">
@@ -83,94 +83,34 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
                     <!-- Informações Clinica Fim -->
-                    <!-- Informações Services -->
-                        <div class="col-md-4 col-sm-4 col-xs-12" >
-                            <h4><i class="fa fa-map-o" aria-hidden="true"></i>  &nbsp;  Mapa do Site  </h4>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="/inicio">
-                                        <i class="fa fa-angle-right"></i> 
-                                        Início
-                                    </a> 
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="fa fa-angle-right"></i> 
-                                        Institucional
-                                    </a>
-                                    <ul>
-                                        <li>
-                                        <a href="/pagina/institucional">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Quem Somos
-                                        </a>
-                                        </li>
-                                        <li>
-                                        <a href="/pagina/equipe">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Equipe
-                                        </a>
-                                        </li>                                       
-                                        <li>
-                                        <a href="/pagina/medicos">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Médicos
-                                        </a>
-                                        </li>
-                                        <li>
-                                        <a href="/pagina/unidades">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Unidades
-                                        </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    <!-- Informações Services-->
             <!-- Area Footer Site Fim -->
-                        <div class="col-md-4 col-sm-4 col-xs-12" >
+                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4" >
                             <h4><i class="fa fa-info" aria-hidden="true"></i>  &nbsp;  Ajuda <i class="fa fa-question-circle" aria-hidden="true"></i>  </h4>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="/inicio">
+                                    <a href="/areaCliente/infor">
                                         <i class="fa fa-angle-right"></i> 
-                                        Início
+                                        Sobre o ACClinic.
                                     </a> 
                                 </li>
                                 <li>
-                                    <a href="#">
-                                    <i class="fa fa-angle-right"></i> 
-                                        Institucional
-                                    </a>
-                                    <ul>
-                                        <li>
-                                        <a href="/pagina/institucional">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Quem Somos
-                                        </a>
-                                        </li>
-                                        <li>
-                                        <a href="/pagina/equipe">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Equipe
-                                        </a>
-                                        </li>                                       
-                                        <li>
-                                        <a href="/pagina/medicos">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Médicos
-                                        </a>
-                                        </li>
-                                        <li>
-                                        <a href="/pagina/unidades">
-                                            <i class="fa fa-angle-right"></i> 
-                                        Unidades
-                                        </a>
-                                        </li>
-                                    </ul>
+                                    <a href="/inicio">
+                                        <i class="fa fa-angle-right"></i> 
+                                        Voltar a Pagina Inicial
+                                    </a> 
                                 </li>
+                                <li> <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('SAIR') }} <i class="fa fa-sign-out fa-1x" aria-hidden="true"></i>
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                        </li>
                             </ul>
                         </div>
                     <!-- Informações Services-->

@@ -537,6 +537,9 @@ h6 { font-size: 16px; }
 	.main-banner.paginaRegistro{
 		background: url(../images/banners/registros.png) center right;
 	}	
+	.main-banner.paginaLogin{
+		background: url(../images/banners/admin_login.png) center top;
+	}	
 	.main-banner h2 {
 		margin-top: 0;
 		margin-bottom: 0;

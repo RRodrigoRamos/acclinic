@@ -55,7 +55,7 @@
 						<div class="col-md-4 col-sm-4 col-xs-12 ">
 							<h4><img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgRodape"> </h4>
 							<p>
-								Sistema de Agendamentos de Consultas Clinicas e Exames, para clientes conveniados e atendimento particular.
+								Sistema de Agendamentos de Consultas Clinicas, para clientes conveniados e atendimento particular.
 							</p>
 							<ul class="list-unstyled address-list">
 								<li class="clearfix">

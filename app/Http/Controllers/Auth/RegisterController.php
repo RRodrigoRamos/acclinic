@@ -88,7 +88,6 @@ class RegisterController extends Controller
 
 
     $bairros = Bairro::select('*')->get();
-    $name_social = $request->input('name_social','$name');
         // Verifica se foi adicionado nome social caso não colocar valor padrão
         
         // , compact('name_social')
@@ -119,11 +118,8 @@ class RegisterController extends Controller
         return view('auth.register',compact('bairros'));
     }
 
-
-        // Funcionou com esse 
     protected function register(Request $request)
-    {
-            
+    {       
 
             $triagens = new Triagen();
             $triagens->altura = $request->get('altura');
@@ -139,37 +135,27 @@ class RegisterController extends Controller
             $endereco->numero = $request->get('numero');
             $endereco->complement = $request->get('complement');
             $endereco->bairro_id = $request->get('bairro_id');
+            $endereco->id = $request->get('id');
             $endereco->save();
-            $endereco_id = $triagem_id;
 
             $paciente = new User();
             $paciente->name = $request->get('name');
             $paciente->name_social = $request->get('name_social');
             $paciente->email = $request->get('email');
-            $paciente->password = $request->get('password');
+            $paciente->password = bcrypt($request->get('password'));
             $paciente->sexo = $request->get('sexo');
             $paciente->data_nasc = $request->get('data_nasc');
             $paciente->telefone = $request->get('telefone');
             $paciente->cpf = $request->get('cpf');
+            $paciente->triagem_id = $triagem_id;
             $paciente->convenio_id = $request->get('convenio_id');
-            $paciente->endereco_id = $endereco_id;
-            $paciente->save();
-            
-          
+            $paciente->endereco_id = $endereco->id;
+            $paciente->save();     
+
+            \Auth::login($paciente);
 
             return redirect('/areaCliente');
            
-            
-                // $a = new A() ;
-                // $a->nome = 'Teste' ;
-                // $a->save() ;
-
-                // $b = new B() ;
-                // $b->a_id = $a->id;
-                // $b->teste = Request::get('teste');
-                // $b->save() ;
-
-        // return redirect('/areaCliente');
     }
         
 }

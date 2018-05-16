@@ -122,9 +122,12 @@
 		</div>
 <!-- Banner Cliente Fim-->
 <!-- Conteudo Agenda -->
+
+	
 <div class="container main">
 <br>
-	<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="col-lg-12">
+	<div class="col-md-12 col-sm-12 col-lg-8 col-xs-12">
 		<div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Preencha os campos necessário para o AGENDAMENTO!</div>
@@ -185,7 +188,7 @@
         <br>
       <div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
         <h1> 
-        <button type="submit" class="btn btn-primary form-control agendar"> Agendar Consulta.</button>
+        <button type="submit" class="btn btn-primary form-control agendar"> Agendar</button>
         </h1>
       </div>
     </fieldset>
@@ -193,5 +196,6 @@
   <br>
 </div>
 <br>
+</div>
 <!-- Conteudo Agenda Fim -->
 @endsection
