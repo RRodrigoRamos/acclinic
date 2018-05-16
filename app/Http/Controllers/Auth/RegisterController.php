@@ -5,11 +5,12 @@ namespace acclinic\Http\Controllers\Auth;
 use acclinic\User;
 use acclinic\Triagen;
 use acclinic\Convenio;
+use acclinic\Endereco;
+use acclinic\Bairro;
 use acclinic\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Controllers\Auth\resquest;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -82,37 +83,93 @@ class RegisterController extends Controller
     //     ]);
     // }
 
+    public function showRegistrationForm()
+    {
+
+
+    $bairros = Bairro::select('*')->get();
+    $name_social = $request->input('name_social','$name');
+        // Verifica se foi adicionado nome social caso não colocar valor padrão
+        
+        // , compact('name_social')
+
+//         // Declara a data! :P
+// $data = '29/08/2008';
+
+// // Separa em dia, mês e ano
+// list($dia, $mes, $ano) = explode('/', $data);
+
+// // Descobre que dia é hoje e retorna a unix timestamp
+// $hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+// // Descobre a unix timestamp da data de nascimento do fulano
+// $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+
+// // Depois apenas fazemos o cálculo já citado :)
+// $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+
+// print $idade;
+
+// Outro metodo para calcular idaded
+//         $date = new DateTime( '1901-10-11' ); // data de nascimento
+// $interval = $date->diff( new DateTime( '2011-12-14' ) ); // data definida
+
+// echo $interval->format( '%Y Anos, %m Meses e %d Dias' ); // 110 Anos, 2 Meses e 2 Dias
+
+
+        return view('auth.register',compact('bairros'));
+    }
+
 
         // Funcionou com esse 
     protected function register(Request $request)
     {
-        if ($request != null) {
-            User::create([
-                'foto' => $request['foto'],
-                'name' => $request['name'],
-                'name_social' => $request['name_social'],
-                'email' => $request['email'],
-                'password' => Hash::make($request['password']),
-                'sexo' => $request['sexo'],
-                'data_nasc' => $request['data_nasc'],
-                'telefone' => $request['telefone'],
-                'rg' => $request['rg'],
-                'cpf' => $request['cpf'],
-                'profissao' => $request['profissao'],
-                'convenio_id' => $request['convenio_id'],
-                'triagem_id' => $request['triagem_id'],
-                'endereco_id' => $request['endereco_id'],
-            ]);
-            Convenio::create([
-                'id' => $request['id'],
-                'nome_convenio' => $request['nome_convenio'],
-                'tipo_plano' => $request['tipo_plano'],
-                'n_registro' => $request['n_registro'],
-                'validade' => $request['validade'],
-            ]);
+            
 
-        return redirect('/areaCliente');
-        }
-        
+            $triagens = new Triagen();
+            $triagens->altura = $request->get('altura');
+            $triagens->peso = $request->get('peso');
+            $triagens->obs = $request->get('obs');
+            $triagens->save();
+            $triagem_id= $triagens->id;
+
+            $endereco = new Endereco();
+            $endereco->cep = $request->get('cep');
+            $endereco->tipo_local = $request->get('tipo_local');
+            $endereco->endereco = $request->get('endereco');
+            $endereco->numero = $request->get('numero');
+            $endereco->complement = $request->get('complement');
+            $endereco->bairro_id = $request->get('bairro_id');
+            $endereco->save();
+            $endereco_id = $triagem_id;
+
+            $paciente = new User();
+            $paciente->name = $request->get('name');
+            $paciente->name_social = $request->get('name_social');
+            $paciente->email = $request->get('email');
+            $paciente->password = $request->get('password');
+            $paciente->sexo = $request->get('sexo');
+            $paciente->data_nasc = $request->get('data_nasc');
+            $paciente->telefone = $request->get('telefone');
+            $paciente->cpf = $request->get('cpf');
+            $paciente->convenio_id = $request->get('convenio_id');
+            $paciente->endereco_id = $endereco_id;
+            $paciente->save();
+            
+          
+
+            return redirect('/areaCliente');
+           
+            
+                // $a = new A() ;
+                // $a->nome = 'Teste' ;
+                // $a->save() ;
+
+                // $b = new B() ;
+                // $b->a_id = $a->id;
+                // $b->teste = Request::get('teste');
+                // $b->save() ;
+
+        // return redirect('/areaCliente');
     }
+        
 }

@@ -16,7 +16,6 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('foto')->nullable();
             $table->string('name');
             $table->string('name_social')->nullable();
             $table->string('email')->unique();
@@ -24,9 +23,7 @@ class CreateUsersTable extends Migration
             $table->enum('sexo', ['Masc', 'Fem']);
             $table->date('data_nasc');
             $table->string('telefone');
-            $table->string('rg')->unique();
             $table->string('cpf')->unique();
-            $table->string('profissao')->nullable();
             $table->integer('convenio_id')->unsigned()->nullable();
             $table->foreign('convenio_id')->references('id')->on('convenios')->onDelete('cascade');
             $table->integer('triagem_id')->unsigned()->nullable();

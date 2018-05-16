@@ -15,11 +15,10 @@ class CreateConveniosTable extends Migration
     {
         Schema::create('convenios', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome_convenio');
-            $table->string('tipo_plano');
-            $table->string('n_registro')->unique();
-            $table->string('validade');
-
+            $table->string('nome_convenio')->nullable();
+            $table->string('tipo_plano')->nullable();
+            $table->string('n_registro')->unique()->nullable();
+            $table->string('validade')->nullable();
             $table->timestamps();
         });
     }

@@ -1,4 +1,4 @@
-@extends('layout.templateAdmin')
+@extends('layout.template')
 @section('title', 'LOGIN - REGISTRO')
 @section('topoInfor')
             <!-- Informações do Topo site -->
@@ -127,21 +127,14 @@
 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
       <div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <div class="text"><i class="fa fa-info-circle fa-2x "></i> &nbsp; Preencha os campos necessário para o CADASTRO <span class="obr">( * ) Campos obrigatórios<span></div>
+            <div class="text"><i class="fa fa-info-circle fa-2x "></i> &nbsp; Preencha os campos necessário para o CADASTRO ! <span class="obr"> obs: ( * ) Campos obrigatórios<span></div> 
         </div>
-    </div>
-    
+    </div>    
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
    <form class="form"  method="post" action="{{ route('register') }}">
         @csrf
     <fieldset>
           <legend>Dados de Paciente</legend>
-          <div class="row">
-            <div class="form-group col-sm-12 col-md-12 col-lg-2">
-                <label for="foto" class="control-label">Foto</label>
-                    <input type="text" class="form-group" name="foto" id="foto">
-            </div>
-            </div>
             <div class="row">
               <div class="form-group col-sm-6 col-md-6 col-lg-6"">
                     <label for="name" class="control-label">Nome <span class="obr">*</span></label>
@@ -167,72 +160,25 @@
           </div>
       </div>
       <div class="row">
-          <div class="form-group col-sm-6 col-md-6 col-lg-3">
-                <label class="control-label">Sexo</label> <span class="obr">*</span>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sexo" id="Masc" value="Masc"> 
-                <label class="form-check-label" for="Masc">
-                    Masculino
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="sexo" id="Fem" value="Fem">
-                <label class="form-check-label" for="Fem">
-                    Feminino
-                <br>
-            </label>
-            </div>
+        <div class="form-group col-sm-6 col-md-6 col-lg-3">
+               <label for="sexo" class="control-label">Sexo <span class="obr">*</span></label>
+              <select id="sexo" name="sexo" class="form-control" data-live-search="true">
+                <option value="" disabled="disabled" selected>Selecione</option>
+                            <option value="Masc">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+            </select>
         </div>
-          <div class="form-group col-sm-12 col-md-12 col-lg-4">
-                <label for="data_nasc" class="control-label">Data Nascimento: </label><input type="date" class="form-control" id="data_nasc" name="data_nasc" required>
+        <div class="form-group col-sm-12 col-md-12 col-lg-3"">
+                <label for="cpf" class="control-label">CPF: <span class="obr">*</span> </label>
+                <input type="text" class="form-control" name="cpf" id="cpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="000.000.000-00" required>
           </div>
-          <div class="form-group col-sm-12 col-md-12 col-lg-4">
+          <div class="form-group col-sm-12 col-md-12 col-lg-3">
+                <label for="data_nasc" class="control-label">Data Nascimento: <span class="obr">*</span></label><input type="date" class="form-control" id="data_nasc" name="data_nasc" required>
+          </div>
+          <div class="form-group col-sm-12 col-md-12 col-lg-3">
                 <label for="telefone" class="control-label">Telefone: <span class="obr">*</span></label><input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15" placeholder="(96) 00000 - 0000">
           </div>
       </div>
-      <div class="row">
-          <div class="form-group col-sm-12 col-md-12 col-lg-4"">
-                    <label for="rg" class="control-label">RG:<span class="obr">*</span></label>
-                    <input type="txt" class="form-control" name="rg" id="rg" maxlength="9" OnKeyPress="formatar('######-##', this)" placeholder="000000-AP"required >
-              </div>
-            <div class="form-group col-sm-12 col-md-12 col-lg-4"">
-                <label for="cpf" class="control-label">CPF: <span class="obr">*</span> </label>
-                <input type="txt" class="form-control" name="cpf" id="cpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="000.000.000-00" required>
-          </div>
-          <div class="form-group col-sm-12 col-md-12 col-lg-4"">
-                <label for="profissao" class="control-label">Profissão:</label>
-                <input type="txt" class="form-control" name="profissao" id="profissao" placeholder="Ex.: Autonomo">
-          </div>
-        </div>
-    </fieldset>
-    <br>
-    <fieldset>
-          <legend>Dados de Convênio</legend>
-          <div class="row">
-           <div class="form-group col-sm-12 col-md-6 col-lg-3">
-            <label for="nome_convenio" class="control-label">Nome do Convênio</label>
-                <div class="form-group">
-              <select id="nome_convenio" name="nome_convenio" class="form-control" data-live-search="true">
-                  <option value="" disabled="disabled">Selecione</option>
-                  <option value="Convênio">Sulmericano</option>
-                  <option value="Particular" selected="selected">SUS</option>
-                  <option value="Retorno">Amprev</option>
-              </select>
-            </div>
-          </div>
-              <div class="form-group col-sm-12 col-md-6 col-lg-3">
-                    <label for="tipo_plano" class="control-label">Tipo de Convênio </label>
-                    <input type="txt" class="form-control" name="tipo_plano" id="tipo_plano" placeholder="Ex.: Básico, Empresarial, Especial II.">
-              </div>
-              <div class="form-group col-sm-12 col-md-6 col-lg-3">
-                    <label for="n_registro" class="control-label">Nº de Registro </label>
-                    <input type="txt" class="form-control" name="n_registro" id="n_registro" placeholder="0x0x0x0x0x0x0x0x0x0x0">
-              </div>
-              <div class="form-group col-sm-12 col-md-6 col-lg-3">
-                    <label for="validade" class="control-label">Validade</label>
-                    <input type="txt" class="form-control" name="validade" id="validade" maxlength="10" OnKeyPress="formatar('##/##/####', this)" placeholder="dd/mm/aaaa">
-              </div>
-            </div>
     </fieldset>
     <br>
      <fieldset>
@@ -243,8 +189,8 @@
                     <input type="txt" class="form-control" name="altura" id="altura" maxlength="4" OnKeyPress="formatar('#.##', this)" placeholder="Ex.: 1.70" required>
               </div>
               <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                    <label for="n_registro" class="control-label"> Peso Atual: <span class="obr">*</span></label>
-                    <input type="txt" class="form-control" name="n_registro" id="n_registro" maxlength="4" OnKeyPress="formatar('##.#', this)" placeholder="Ex.: 80.0" required>
+                    <label for="peso" class="control-label"> Peso Atual: <span class="obr">*</span></label>
+                    <input type="txt" class="form-control" name="peso" id="n_registro" maxlength="4" OnKeyPress="formatar('##.#', this)" placeholder="Ex.: 80.0" required>
               </div>
               <div class="form-group col-sm-12 col-md-4 col-lg-6">
                     <label for="obs" class="control-label">Observação</label>
@@ -254,9 +200,9 @@
     </fieldset>
     <br>
     <fieldset>
-          <legend>Dados de Endereço</legend>
+        <legend>Dados de Endereço</legend>
           <div class="row">
-              <div class="form-group col-sm-12 col-md-12 col-lg-6">
+              <div class="form-group col-sm-12 col-md-12 col-lg-9">
                     <label for="endereco" class="control-label">Endereço: </label>
                     <input type="txt" class="form-control" name="endereco" id="endereco" placeholder="Ex.: Rua.: Av.: Travessa, Etc...">
               </div>
@@ -264,41 +210,93 @@
                     <label for="numero" class="control-label">Número: </label>
                     <input type="txt" class="form-control" name="numero" id="numero"  placeholder="Ex.: 1313A, Apt14... " maxlength="10">
               </div>            
-              <div class="form-group col-sm-12 col-md-12 col-lg-3">
+             <!--  <div class="form-group col-sm-12 col-md-12 col-lg-3">
                     <label for="tipo_local" class="control-label">Tipo Local: </label>
                     <input type="txt" class="form-control" name="tipo_local" id="tipo_local" placeholder="Prédio, Casa Própria, KitNet...">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-sm-12 col-md-12 col-lg-3">
+              </div> -->
+        </div>
+        <div class="row">
+              <!-- <div class="form-group col-sm-12 col-md-12 col-lg-3">
                 <label for="cep" class="control-label">CEP:</label>
                     <input type="text" class="form-control" name="cep" id="cep" OnKeyPress="formatar('##.###-###', this)" maxlength="10" placeholder="68.900-00">
-            </div>
-              <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                    <label for="bairro" class="control-label">Bairro: </label>
-                    <input type="txt" class="form-control" name="bairro" id="bairro" placeholder="Novo Horizonte, Alvorada...">
-              </div>
-              <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                    <label for="cidade" class="control-label">Cidade: </label>
-                    <input type="txt" class="form-control" name="cidade" id="cidade" placeholder="Macapá, Mazagão, Santana">
-              </div>
-                <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                    <label for="estado" class="control-label">Estado: </label>
-                    <input type="txt" class="form-control" name="estado" id="estado" placeholder="Amapá-AP, Pará-PA...">
-              </div>
+            </div> -->
+            <div class="form-group col-sm-12 col-md-12 col-lg-6">
+                    <label for="bairro_id" class="control-label">Bairro: </label>
+                    <div class="form-group">
+              <select id="bairro_id" name="bairro_id" class="form-control" data-live-search="true">
+                    <option value="" disabled="disabled" selected>Selecione</option>
+                            @foreach($bairros as $bairro)
+                            <option value="{{ $bairro->id }}"> {{ $bairro->nome }}
+                    </option>
+                            @endforeach
+                </select>
+                </div>
+                    
           </div>
-          <div class="row">
-              
-              <div class="form-group col-sm-12 col-md-12 col-lg-8">
-                    <label for="complement" class="control-label">Complemento: </label>
-                    <input type="txt" class="form-control" name="complement" id="complement" placeholder="Proximo de, Esquina com, Ponto Comercial...">
+          <div class="form-group col-sm-12 col-md-12 col-lg-3">
+              <label for="cidade" class="control-label"> Municpio / Cidade: </label>
+                <div class="form-group">
+              <select id="cidade" name="cidade" class="form-control" data-live-search="true">
+                            <option value="Amapá">Amapá</option>
+                            <option value="Calçoene">Calçoene</option>
+                            <option value="Cutias">Cutias</option>
+                            <option value="Ferreira Gomes">Ferreira Gomes</option>
+                            <option value="Itaubal">Itaubal</option>
+                            <option value="Laranjal do Jari">Laranjal do Jari</option>
+                            <option value="Macapá" selected>Macapá</option>
+                            <option value="Mazagão">Mazagão</option>
+                            <option value="Oiapoque">Oiapoque</option>
+                            <option value="Pedra Branca do Amapari">Pedra Branca do Amapari</option>
+                            <option value="Porto Grande">Porto Grande</option>
+                            <option value="Pracuúba">Pracuúba</option>
+                            <option value="Santana">Santana</option>
+                            <option value="Serra do Navio">Serra do Navio</option>
+                            <option value="Tartarugalzinho">Tartarugalzinho</option>
+                            <option value="Vitória do Jari">Vitória do Jari</option>
+                </select>
+                </div>
+           </div>
+            <div class="form-group col-sm-12 col-md-12 col-lg-3">
+                  <label for="nome_convenio" class="control-label">Estado</label>
+                <div class="form-group">
+              <select id="estado" name="estado" class="form-control" data-live-search="true">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP" selected>Amapá</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PR">Paraná</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                  </select>
               </div>
           </div>
     </fieldset>
     <br>
+    <div class="col-lg-4">
+    </div>
   <div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
             <button type="submit" class="btn btn-primary form-control agendar"> 
-            Cadastrar Usúario </button>
+            Cadastrar</button>
         
       </div>
   <br>

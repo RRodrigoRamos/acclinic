@@ -475,6 +475,7 @@ h6 { font-size: 16px; }
 .main-banner {
 	padding-top: 130px;
 	padding-bottom: 70px;
+
 }
 	.main-banner.one {
 		background: url(../images/banners/mais_saude.jpg) center top;
@@ -548,6 +549,7 @@ h6 { font-size: 16px; }
 			padding: 20px 50px 16px 30px;
 			letter-spacing: 0.3px;
 			background: rgba(255, 255, 255, 0.8);
+			box-shadow:0.1px 0.3px 5px rgba(0, 0, 222, .2);
 		}
 		
 /* Breadcrumb Styles Starts */
@@ -2714,15 +2716,17 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
 		background-color:#f5f5f5;
 		padding-left:10px!important;
 	}
+
 	fieldset:hover 
 	{
 		border: 2px solid #ddd !important;
 		padding-left:10px!important;
-		box-shadow:1px 3px 2px black;
+		box-shadow:0.1px 0.3px 5px rgba(0, 0, 222, .6);
 	}
 
 	.obr {
 		color:red !important;
+		font-size:15px !important; 
 	}
 	.verd {
 		color:silver !important;

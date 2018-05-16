@@ -17,7 +17,7 @@ class CreateTriagensTable extends Migration
             $table->increments('id');
             $table->string('altura');
             $table->string('peso');
-            $table->string('obs')->nullable();;
+            $table->string('obs')->nullable();
             $table->timestamps();
         });
     }
