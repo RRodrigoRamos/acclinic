@@ -54,7 +54,8 @@ Route::middleware(['web'])->group (function() {
 	Auth::routes();
 	Route::get('/areaCliente','UserController@index');
 	Route::get('/areaCliente/agendamento','UserController@agendamentoForm');
-	Route::post('/areaCliente/agendaSalva','UserController@agendaSalva');
+	Route::get('/areaCliente/listaAgenda','UserController@listaAgenda');
+	Route::post('/areaCliente/listaAgenda','UserController@agendaSalva');
 	Route::get('/areaCliente/meus_dados','UserController@pacienteForm');
 	Route::post('/areaCliente/meus_dados','UserController@pacienteForm');
 	Route::get('/areaCliente/convenio','UserController@cadastroConvenioForm');

@@ -126,14 +126,13 @@
 	
 <div class="container main">
 <br>
-	<div class="col-lg-12">
 	<div class="col-md-12 col-sm-12 col-lg-8 col-xs-12">
 		<div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Preencha os campos necessário para o AGENDAMENTO!</div>
         </div>
 	</div>
-<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-12">
    <form class="form"  method="post" action="/areaCliente/agendaSalva">
     {!! csrf_field() !!}
     <fieldset>
@@ -141,26 +140,29 @@
       <input type="hidden" name="agenda_de" value="CONSULTA">
       <input type="hidden" name="users_id" value="{{ Auth::user()->name }}">
           <legend>Dados da Consulta</legend>
-          <div class="form-group col-sm-12 col-md-12 col-lg-6">
-            <label for="tipo_agenda" class="control-label">Tipo de Atendimento <span class="obr">*</span></label>
-                <div class="form-group">
-              <select id="tipo_agenda" name="tipo_agenda" class="form-control" data-live-search="true" required>
-                  <option value="" disabled="disabled">Selecione</option>
-                  <option value="Convênio">Convênio</option>
-                  <option value="Particular" selected="selected">Particular</option>
-                  <option value="Retorno">Retorno</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group col-sm-6 col-md-6 col-lg-3"">
-            <label for="data_agenda" class="control-label">Data do Agendamento <span class="obr">*</span></label>
-            <input type="date" class="form-control" OnKeyPress="formatar('##/##/####', this)" name="data_agenda" required>
-          </div>
-          <div class="form-group col-sm-6 col-md-6 col-lg-3">
-            <label for="data_nasc" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>
-            <input type="text" class="form-control" name="data_nasc" OnKeyPress="formatar('##:##h', this)" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
-            <span class="obr"> Exeto aos Sábado 7:00h as 12:00h !</span>
-          </div>
+          <div class="row">
+	          <div class="form-group col-sm-12 col-md-12 col-lg-6">
+	            <label for="tipo_agenda" class="control-label">Tipo de Atendimento <span class="obr">*</span></label>
+	                <div class="form-group">
+	              <select id="tipo_agenda" name="tipo_agenda" class="form-control" data-live-search="true" required>
+	                  <option value="" disabled="disabled">Selecione</option>
+	                  <option value="Convênio">Convênio</option>
+	                  <option value="Particular" selected="selected">Particular</option>
+	                  <option value="Retorno">Retorno</option>
+	              </select>
+	            </div>
+	          </div>
+	          <div class="form-group col-sm-6 col-md-6 col-lg-3"">
+	            <label for="data_agenda" class="control-label">Data do Agendamento <span class="obr">*</span></label>
+	            <input type="date" class="form-control" OnKeyPress="formatar('##/##/####', this)" name="data_agenda" required>
+	          </div>
+	          <div class="form-group col-sm-6 col-md-6 col-lg-3">
+	            <label for="data_nasc" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>
+	            <input type="text" class="form-control" name="data_nasc" OnKeyPress="formatar('##:##h', this)" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
+	            <span class="obr"> Exeto aos Sábado 7:00h as 12:00h !</span>
+	          </div>
+	      </div>
+	      <div class="row">
           <div class="form-group col-sm-12 col-md-12 col-lg-6">
             <label for="tipo_agenda" class="control-label">Escolhar o Médico / Especialidade <span class="obr">*</span></label>
                 <div class="form-group">
@@ -184,13 +186,13 @@
               </select>
             </div>
             </div>
-          </div> 
+          </div>
+        <div class="row">
         <br>
-      <div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
-        <h1> 
-        <button type="submit" class="btn btn-primary form-control agendar"> Agendar</button>
-        </h1>
-      </div>
+      		<div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
+        		<button type="submit" class="btn btn-primary form-control agendar"> Agendar</button>
+      		</div>
+      	</div>
     </fieldset>
   </form>
   <br>

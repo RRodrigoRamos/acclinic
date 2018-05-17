@@ -131,36 +131,35 @@
             <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Dados de Agendamentos Realizados </div>
         </div>
 	</div>
-
-
-
+<form class="form"  method="post" action="/areaCliente/agendaSalva">
     <fieldset>
-          <legend>Meus Agendamentos </legend>
-          <div class="form-group col-sm-12 col-md-12 col-lg-6">
-            <label for="name" class="control-label">Paciente<span class="obr">*</span></label>
-            <input type="text" class="form-control" value="{{ Auth::user()->name }}" id="name" placeholder="Digite seu nome">
-          </div>
-          <div class="form-group col-sm-6 col-md-6 col-lg-3"">
-            <label for="data_nasc" class="control-label">Data Nascimento</label>
-            <input type="date" class="form-control" id="data_nasc" placeholder="dd/mm/yyyy">
-          </div>
-          <div class="form-group col-sm-6 col-md-6 col-lg-3"">
-            <label for="data_nasc" class="control-label">Idade</label>
-            <input type="date" class="form-control" id="data_nasc" placeholder="dd/mm/yyyy">
-          </div>
-          <div class="form-group">
-            <label for="input-money" class="control-label">Money input (€)</label>
-            <input type="text" class="form-control mask-money" id="input-money" placeholder="0,00">
-          </div>
-          <div class="form-group">
-            <label for="address" class="control-label">Label for address input</label>
-            <input type="text" class="form-control" id="address" placeholder="Address street">
-          </div>
+          <legend>Lista Agenda</legend>
+          <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12">
+	            <table class="table table-striped table-bordered table-condensed table-hover table-responsive">
+						 <thead>
+						  <tr>
+						   <th>Tipo</th>
+						   <th>Especialidade</th>
+						   <th>Médico</th>
+						   <th>Unidade</th>
+						   <th>Data</th>
+						   <th>Status</th>
+						  </tr>
+						 </thead>
+						 <tbody>
+						  <tr>
+						   <td>Chevrolet</td>
+						   <td>Sonic</td>
+						   <td>Sonic</td>
+						   <td>Sonic</td>
+						   <td>Sonic</td>
+						   <td>Sonic</td>
+						  </tr>
+						 </tbody>
+						</table>
+				</div>
 </fieldset>
 <br>
-        </fieldset>
-
-
       </form>
     </div>
   </div>

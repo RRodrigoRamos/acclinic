@@ -68,6 +68,18 @@ class UserController extends Controller
         return view('cliente.listaAgenda');
     }
 
+    public function listaAgenda()
+    {
+        $agendamentos = Agendamentos::select('*')
+            ->join('especialidades','medicos.especialidade_id', '=', 'especialidades.id' )
+            ->get();
+
+        $clinica = Clinica::select('*')->get();
+       
+
+        return view('cliente.listaAgenda');
+    }
+
     
     public function pacienteDados()
     {

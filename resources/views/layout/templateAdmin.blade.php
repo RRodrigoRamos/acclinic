@@ -54,14 +54,13 @@
             <!-- Area Footer Site -->
                 <div class="container-fluid">
                     <!-- Informações Clinica -->
-                        <div class="col-md-4 col-sm-4 col-lg-8 col-xs-8 ">
-                            <div class="row">
+                        <div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
                             <h4><img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgRodape"> </h4>
                             <p>
                                 Sistema de Agendamentos de Consultas Clinicas, para clientes conveniados e atendimento particular.
                             </p>
                             <ul class="list-unstyled address-list">
-                                <li class="clearfix address">
+                                <li class="clearfix">
                                     <i class="fa fa-hospital-o fa-2x" aria-hidden="true"></i>
                                     Av. Coaracy Nunes, 892 - Centro, Macapá - AP, 68900-010
                                 </li>
@@ -83,11 +82,10 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
                     <!-- Informações Clinica Fim -->
             <!-- Area Footer Site Fim -->
                         <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4" >
-                            <h4><i class="fa fa-info" aria-hidden="true"></i>  &nbsp;  Ajuda <i class="fa fa-question-circle" aria-hidden="true"></i>  </h4>
+                            <h4><i class="fa fa-info" aria-hidden="true"></i>  &nbsp;  Ajuda  </h4>
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="/areaCliente/infor">
