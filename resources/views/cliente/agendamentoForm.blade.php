@@ -136,9 +136,9 @@
    <form class="form"  method="post" action="/areaCliente/agendaSalva">
     {!! csrf_field() !!}
     <fieldset>
-      <input type="hidden" name="status_id" value="4">
       <input type="hidden" name="agenda_de" value="CONSULTA">
-      <input type="hidden" name="users_id" value="{{ Auth::user()->name }}">
+      <input type="hidden" name="users_id" value="{{ Auth::user()->id }}">
+
           <legend>Dados da Consulta</legend>
           <div class="row">
 	          <div class="form-group col-sm-12 col-md-12 col-lg-6">
@@ -157,31 +157,31 @@
 	            <input type="date" class="form-control" OnKeyPress="formatar('##/##/####', this)" name="data_agenda" required>
 	          </div>
 	          <div class="form-group col-sm-6 col-md-6 col-lg-3">
-	            <label for="data_nasc" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>
-	            <input type="text" class="form-control" name="data_nasc" OnKeyPress="formatar('##:##h', this)" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
+	            <label for="hora_agenda" class="control-label">Hora do Agendamento  <span class="obr">*</span></label>
+	            <input type="text" class="form-control" name="hora_agenda" OnKeyPress="formatar('##:##h', this)" placeholder="7:00h às 18:00h" autocomplete="off" maxlength="6" required>
 	            <span class="obr"> Exeto aos Sábado 7:00h as 12:00h !</span>
 	          </div>
 	      </div>
 	      <div class="row">
           <div class="form-group col-sm-12 col-md-12 col-lg-6">
-            <label for="tipo_agenda" class="control-label">Escolhar o Médico / Especialidade <span class="obr">*</span></label>
+            <label for="medicos_id" class="control-label">Escolhar o Médico / Especialidade <span class="obr">*</span></label>
                 <div class="form-group">
-              <select name="medicos_id" class="form-control" data-live-search="true" required>
+              <select name="medicos_id" class="form-control" required>
                   <option value="" disabled="disabled">Selecione</option>
                   	@foreach($especialidades as $especialidade)
-                    <option value="{{ $especialidade }}"> {{ $especialidade->name }} / {{ $especialidade->campo}}
+                    <option value="{{ $especialidade->id }}"> {{ $especialidade->name }} / {{ $especialidade->campo}}
                     </option>
                     @endforeach
               </select>
             </div>
           </div> 
           <div class="form-group col-sm-12 col-md-12 col-lg-6">
-            <label for="tipo_agenda" class="control-label">Escolhar Unidade Média <span class="obr">*</span></label>
+            <label for="clinica_id" class="control-label">Escolhar Unidade Média <span class="obr">*</span></label>
                 <div class="form-group">
                   <select name="clinica_id" class="form-control" data-live-search="true" required>
                   <option value="" disabled="disabled">Selecione</option>
                   	@foreach($clinica as $clinica_escolha)
-                    <option value="{{ $clinica_escolha }}"> {{ $clinica_escolha->nome }} </option>
+                    <option value="{{ $clinica_escolha->id }}"> {{ $clinica_escolha->nome }} </option>
                     @endforeach
               </select>
             </div>

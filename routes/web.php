@@ -55,10 +55,11 @@ Route::middleware(['web'])->group (function() {
 	Route::get('/areaCliente','UserController@index');
 	Route::get('/areaCliente/agendamento','UserController@agendamentoForm');
 	Route::get('/areaCliente/listaAgenda','UserController@listaAgenda');
-	Route::post('/areaCliente/listaAgenda','UserController@agendaSalva');
+	Route::post('/areaCliente/agendaSalva','UserController@agendaSalva');
 	Route::get('/areaCliente/meus_dados','UserController@pacienteForm');
 	Route::post('/areaCliente/meus_dados','UserController@pacienteForm');
-	Route::get('/areaCliente/convenio','UserController@cadastroConvenioForm');
+	Route::get('/areaCliente/convenios','UserController@pacienteConv');
+	Route::get('/areaCliente/convenios','UserController@pacienteConv');
 	Route::get('/areaCliente/infor','UserController@pacienteInfor');
 	Route::get('/areaCliente/pacienteContat','UserController@pacienteContat');
 	Route::post('/areaCliente/pacienteContat','UserController@pacienteContat');

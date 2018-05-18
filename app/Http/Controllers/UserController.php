@@ -43,40 +43,56 @@ class UserController extends Controller
             ->join('especialidades','medicos.especialidade_id', '=', 'especialidades.id' )
             ->get();
 
-
-
         $clinica = Clinica::select('*')->get();
+        
         return view('cliente.agendamentoForm',compact('especialidades','clinica'));
     }
 
 
     public function agendaSalva(request $resquest)
     {
-        // $agendaform = $request->all();
-        // $dadosagenda = Agendamento::create($agendaform);
-        // $agendaform['users_id'] = $dadosagenda->id;
-        // statusAgenda::create($agendaform);
-        // $agendaform['users_id'] = $dadosagenda->id;
-        // Clinica_Medico::create($agendaform);
 
-// public function enviar(QuestionarioRequest $request){
-//     $filler = $request->all();
-//     $questionario = Questionario::create($filler);   
-//     $filler['questionario_id'] = $questionario->id;
-//     Enunciado::create($filler);
-// return redirect()->action('ControllerPrincipal@index');
-        return view('cliente.listaAgenda');
+            // dados do agendamento
+            $clinicaMedicos = $resquest->all();
+
+            // dd($clinica_medicos);
+
+            $insert = $this->ClinicaMedico->create($clinicaMedicos);
+
+            if($insert)
+                return 'sucesso';
+            else
+                return 'Erro! ';
+
+
+            // $clinica_medicos = new ClinicaMedico();
+            // $clinica_medicos->medicos_id = $request->get('medicos_id');
+            // $clinica_medicos->clinica_id = $request->get('clinica_id');
+            // $clinica_medicos->save();
+
+
+
+            // $agendamento = new Agendamento();
+            // $agendamentos->data_agenda = $request->get('data_agenda');
+            // $agendamentos->hora_agenda = $request->get('hora_agenda');
+            // $agendamentos->tipo_agenda = $request->get('tipo_agenda');
+            // $agendamentos->agenda_de = $request->get('agenda_de');
+            // $agendamentos->obs = $request->get('obs');
+            // $agendamentos->users_id = $request->get('users_id');
+            // $agendamentos->clinica_medicos_id = $clinica_medicos->id;
+            // $agendamentos->status_id = $request->get('status_id');
+            // $agendamentos->save();   
+           
+            return redirect('cliente.listaAgenda');
     }
 
     public function listaAgenda()
     {
-        $agendamentos = Agendamentos::select('*')
-            ->join('especialidades','medicos.especialidade_id', '=', 'especialidades.id' )
-            ->get();
 
         $clinica = Clinica::select('*')->get();
-       
 
+
+        // ,compact('clinica')
         return view('cliente.listaAgenda');
     }
 
@@ -88,13 +104,14 @@ class UserController extends Controller
     }
 
 	
-	public function pacienteForm()
+
+    public function pacienteConv()
     {
-    	// Cadastro de Paciente
-        return view('cliente.pacienteForm');
+        // lista Convênio de Paciênte
+        return view('cliente.pacienteConv');
     }
 
-    public function cadastroConvenio()
+    public function pacienteConvCad()
     {
         // Cadastro de Convenio
         return view('cliente.pacienteConv');

@@ -128,13 +128,14 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Dados de Agendamentos Realizados </div>
+            <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Meus Agendamentos </div>
         </div>
 	</div>
+<div class="row">
+<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12">
 <form class="form"  method="post" action="/areaCliente/agendaSalva">
     <fieldset>
-          <legend>Lista Agenda</legend>
-          <div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12">
+          <legend>Lista Agenda Programadas</legend>
 	            <table class="table table-striped table-bordered table-condensed table-hover table-responsive">
 						 <thead>
 						  <tr>
@@ -148,20 +149,51 @@
 						 </thead>
 						 <tbody>
 						  <tr>
-						   <td>Chevrolet</td>
-						   <td>Sonic</td>
-						   <td>Sonic</td>
-						   <td>Sonic</td>
-						   <td>Sonic</td>
-						   <td>Sonic</td>
+						   <td>Consulta</td>
+						   <td>Clinico Geral</td>
+						   <td>Dr. Brasil</td>
+						   <td>Matriz</td>
+						   <td>12/12/18 17:00h</td>
+						   <td>Aguardando Confirmação</td>
 						  </tr>
 						 </tbody>
 						</table>
-				</div>
-</fieldset>
+	</fieldset>
 <br>
-      </form>
-    </div>
-  </div>
+  		</form>
+	</div>
+<br>
+</div>
+<div class="row">
+	<form class="form"  method="post" action="/areaCliente/agendaSalva">
+    <fieldset>
+          <legend>Lista Agenda Realizados</legend>
+	            <table class="table table-striped table-bordered table-condensed table-hover table-responsive">
+						 <thead>
+						  <tr>
+						   <th>Tipo</th>
+						   <th>Especialidade</th>
+						   <th>Médico</th>
+						   <th>Unidade</th>
+						   <th>Data</th>
+						   <th>Status</th>
+						  </tr>
+						 </thead>
+						 <tbody>
+						  <tr>
+						   <td>Consulta</td>
+						   <td>Clinico Geral</td>
+						   <td>Dr. Brasil</td>
+						   <td>Matriz</td>
+						   <td>12/12/18 17:00h</td>
+						   <td>Aguardando Confirmação</td>
+						  </tr>
+						 </tbody>
+						</table>
+	</fieldset>
+<br>
+  		</form>
+	</div>
+</div>
 	<!-- Conteudo Agenda Fim -->
 @endsection
