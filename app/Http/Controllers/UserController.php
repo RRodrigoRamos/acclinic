@@ -56,24 +56,24 @@ class UserController extends Controller
             // // dados do agendamento
             $dadosAgenda = $resquest->all();
 
+
             $clinicamedicos = new ClinicaMedico();
-            $clinicamedicos->medicos_id = $dadosAgenda->get('medicos_id');
-            $clinicamedicos->clinica_id = $dadosAgenda->get('clinica_id');
-            $clinicamedicos_id = $dadosAgenda->id;
+            $clinicamedicos->medicos_id = $dadosAgenda['medicos_id'];
+            $clinicamedicos->clinica_id = $dadosAgenda['clinica_id'];
             $clinicamedicos->save();
 
-            $agendamento = new Agendamento($clinicamedicos);
-            $agendamentos->data_agenda = $dadosAgenda->get('data_agenda');
-            $agendamentos->hora_agenda = $dadosAgenda->get('hora_agenda');
-            $agendamentos->tipo_agenda = $dadosAgenda->get('tipo_agenda');
-            $agendamentos->agenda_de = $dadosAgenda->get('agenda_de');
-            $agendamentos->obs = $dadosAgenda->get('obs');
-            $agendamentos->clinica_medicos_id = $clinicamedicos_id;
-            $agendamentos->users_id = $dadosAgenda->get('users_id');
-            $agendamentos->status_id = $dadosAgenda->get('status_id');
-            $agendamentos->save();   
+            // dd($dadosAgenda);
+            $agendamento = new Agendamento();
+            $agendamento->clinica_medicos_id = $clinicamedicos['id'];
+            $agendamento->data_agenda = $dadosAgenda['data_agenda'];
+            $agendamento->hora_agenda = $dadosAgenda['hora_agenda'];
+            $agendamento->tipo_agenda = $dadosAgenda['tipo_agenda'];
+            $agendamento->agenda_de = $dadosAgenda['agenda_de'];
+            $agendamento->users_id = $dadosAgenda['users_id'];
+            $agendamento->status_id = $dadosAgenda['status_id'];
+            $agendamento->save();          
            
-            return redirect('cliente.listaAgenda');
+            return redirect('/areaCliente/listaAgenda');
     }
 
     public function listaAgenda()

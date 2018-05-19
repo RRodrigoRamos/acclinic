@@ -27,12 +27,7 @@ Event::listen('404', function()
 	return 'ERRO';
 });
 
-// Rotas Administrativas...  
-Route::middleware(['admin'])->group ( function() {
-	Route::get('/areaAdmin', 'AdminController@index');
-	// Route::get('/areaAdmin/login', 'AdminController@login');
-	// Route::post('/areaAdmin/login', 'AdminController@postLogin');
-});
+
 Route::middleware(['admin'])->group (function() {
 // Rotas de Login...
     Route::get('/admin/login',['as' => 'admin.login','uses' => 'AdminAuth\loginController@showLoginForm']);
@@ -46,6 +41,11 @@ Route::middleware(['admin'])->group (function() {
     Route::post('/admin/password/email',['as' => 'admin.password.email','uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
 	Route::get('/admin/password/reset/{token}',['as' => 'admin.password.reset.token','uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
 	Route::post('/admin/password/reset',['uses' => 'AdminAuth\ResetPasswordController@reset']);
+
+	// Rotas Administrativas...  
+	Route::get('/areaAdmin', 'AdminController@index');
+	Route::get('/areaAdmin/listaAgendas', 'AdminController@listaAgendas');
+	Route::get('/areaAdmin/listaAgendas', 'AdminController@listaAgendas');
 
 });
 

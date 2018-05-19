@@ -38,8 +38,6 @@ class LoginController extends Controller
     {
         // $this->middleware('admin')->except('logout');
     }
-
-
     
     protected function guard()
     {

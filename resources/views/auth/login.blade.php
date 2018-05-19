@@ -172,6 +172,7 @@
                         </div>
                     </form>
                 </fieldset>
+                <a href="/admin/login"> Area Administrativa. </a>
         </div>
     </div>
 </div>

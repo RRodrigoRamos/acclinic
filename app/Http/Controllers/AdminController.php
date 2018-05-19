@@ -23,6 +23,11 @@ class AdminController extends Controller
         return view('admin.areaAdmin');
     }
 
+    public function listaAgendas()
+    {
+        return view('admin.areaAdmin');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
