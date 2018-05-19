@@ -148,23 +148,13 @@
 						  </tr>
 						 </thead>
 						 <tbody>
-<!-- 
-						 	 "tipo_agenda" => "PARTICULAR"
-        "data_agenda" => "2018-05-10"
-        "hora_agenda" => "08:00h"
-        "nome_medico" => "Dr. Alice Costa"
-        "especialidade" => "Cardiologia"
-        "clinica_medica" => "Laboratório de Analises Clínicas - Hemodiagnostico / Matriz"
-        "nome_paciente" => "Cliente Novo"
-        "status_agenda" => "Pendente" -->
-	
 						@foreach($agendamentosP as $agendamentosPs)
 						  <tr>
      					   <td>{{ $agendamentosPs->tipo_agenda}}</td>
 						   <td>{{ $agendamentosPs->especialidade}}</td>
 						   <td>{{ $agendamentosPs->nome_medico}}</td>
 						   <td>{{ $agendamentosPs->clinica_medica}}</td>
-						   <td>{{ $agendamentosPs->data_agenda}} / {{ $agendamentosPs->hora_agenda}}</td>
+						   <td>{{ date( 'd/m/Y' , strtotime($agendamentosPs->data_agenda))}} às {{ $agendamentosPs->hora_agenda}}</td>
 						   <td>{{ $agendamentosPs->status_agenda}}</td>
 						  </tr>
                     	@endforeach
@@ -177,9 +167,10 @@
 <br>
 </div>
 <div class="row">
-	<form class="form"  method="post" action="/areaCliente/agendaSalva">
+<div class="form-group col-sm-12 col-md-12 col-lg-12 col-xs-12">
+<form class="form"  method="post" action="/areaCliente/agendaSalva">
     <fieldset>
-          <legend>Lista Agenda Realizados</legend>
+          <legend>Lista Agenda Realizadas</legend>
 	            <table class="table table-striped table-bordered table-condensed table-hover table-responsive">
 						 <thead>
 						  <tr>
@@ -192,20 +183,26 @@
 						  </tr>
 						 </thead>
 						 <tbody>
+						@foreach($agendamentosR as $agendamentosPs)
 						  <tr>
-						   <td>Consulta</td>
-						   <td>Clinico Geral</td>
-						   <td>Dr. Brasil</td>
-						   <td>Matriz</td>
-						   <td>12/12/18 17:00h</td>
-						   <td>Aguardando Confirmação</td>
+     					   <td>{{ $agendamentosPs->tipo_agenda}}</td>
+						   <td>{{ $agendamentosPs->especialidade}}</td>
+						   <td>{{ $agendamentosPs->nome_medico}}</td>
+						   <td>{{ $agendamentosPs->clinica_medica}}</td>
+						   <td>{{ date( 'd/m/Y' , strtotime($agendamentosPs->data_agenda))}} às
+
+						   	{{ $agendamentosPs->hora_agenda}}</td>
+						   <td>{{ $agendamentosPs->status_agenda}}</td>
 						  </tr>
+                    	@endforeach
 						 </tbody>
 						</table>
 	</fieldset>
 <br>
   		</form>
 	</div>
+<br>
+</div>
 </div>
 	<!-- Conteudo Agenda Fim -->
 @endsection

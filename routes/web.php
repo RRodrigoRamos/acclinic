@@ -57,7 +57,7 @@ Route::middleware(['web'])->group (function() {
 	Route::get('/areaCliente/listaAgenda','UserController@listaAgenda');
 	Route::post('/areaCliente/agendaSalva','UserController@agendaSalva');
 	Route::get('/areaCliente/meus_dados','UserController@pacienteForm');
-	Route::post('/areaCliente/meus_dados','UserController@pacienteForm');
+	Route::post('/areaCliente/meus_dados','UserController@pacienteDados');
 	Route::get('/areaCliente/convenios','UserController@pacienteConv');
 	Route::get('/areaCliente/convenios','UserController@pacienteConv');
 	Route::get('/areaCliente/infor','UserController@pacienteInfor');

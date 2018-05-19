@@ -192,7 +192,11 @@
                     <label for="peso" class="control-label"> Peso Atual: <span class="obr">*</span></label>
                     <input type="txt" class="form-control" name="peso" id="n_registro" maxlength="4" OnKeyPress="formatar('##.#', this)" placeholder="Ex.: 80.0" required>
               </div>
-              <div class="form-group col-sm-12 col-md-4 col-lg-6">
+              <div class="form-group col-md-2">
+                <label for="idade">Idade Atual:</label>
+                <input type="num" name="idade" id="idade" class="form-control" placeholder="Idade" disabled>
+            </div>
+              <div class="form-group col-sm-12 col-md-4 col-lg-4">
                     <label for="obs" class="control-label">Observação</label>
                     <input type="txtarea" class="form-control" name="obs" id="obs" placeholder="Ex.: Pressão Alta, Alergias, etc..." >
               </div>
