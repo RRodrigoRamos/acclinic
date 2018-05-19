@@ -49,39 +49,29 @@ class UserController extends Controller
     }
 
 
-    public function agendaSalva(request $resquest)
+    public function agendaSalva(Request $resquest)
     {
 
-            // dados do agendamento
-            $clinicaMedicos = $resquest->all();
 
-            // dd($clinica_medicos);
+            // // dados do agendamento
+            $dadosAgenda = $resquest->all();
 
-            $insert = $this->ClinicaMedico->create($clinicaMedicos);
+            $clinicamedicos = new ClinicaMedico();
+            $clinicamedicos->medicos_id = $dadosAgenda->get('medicos_id');
+            $clinicamedicos->clinica_id = $dadosAgenda->get('clinica_id');
+            $clinicamedicos_id = $dadosAgenda->id;
+            $clinicamedicos->save();
 
-            if($insert)
-                return 'sucesso';
-            else
-                return 'Erro! ';
-
-
-            // $clinica_medicos = new ClinicaMedico();
-            // $clinica_medicos->medicos_id = $request->get('medicos_id');
-            // $clinica_medicos->clinica_id = $request->get('clinica_id');
-            // $clinica_medicos->save();
-
-
-
-            // $agendamento = new Agendamento();
-            // $agendamentos->data_agenda = $request->get('data_agenda');
-            // $agendamentos->hora_agenda = $request->get('hora_agenda');
-            // $agendamentos->tipo_agenda = $request->get('tipo_agenda');
-            // $agendamentos->agenda_de = $request->get('agenda_de');
-            // $agendamentos->obs = $request->get('obs');
-            // $agendamentos->users_id = $request->get('users_id');
-            // $agendamentos->clinica_medicos_id = $clinica_medicos->id;
-            // $agendamentos->status_id = $request->get('status_id');
-            // $agendamentos->save();   
+            $agendamento = new Agendamento($clinicamedicos);
+            $agendamentos->data_agenda = $dadosAgenda->get('data_agenda');
+            $agendamentos->hora_agenda = $dadosAgenda->get('hora_agenda');
+            $agendamentos->tipo_agenda = $dadosAgenda->get('tipo_agenda');
+            $agendamentos->agenda_de = $dadosAgenda->get('agenda_de');
+            $agendamentos->obs = $dadosAgenda->get('obs');
+            $agendamentos->clinica_medicos_id = $clinicamedicos_id;
+            $agendamentos->users_id = $dadosAgenda->get('users_id');
+            $agendamentos->status_id = $dadosAgenda->get('status_id');
+            $agendamentos->save();   
            
             return redirect('cliente.listaAgenda');
     }
