@@ -56,7 +56,6 @@ class UserController extends Controller
             // // dados do agendamento
             $dadosAgenda = $resquest->all();
 
-
             $clinicamedicos = new ClinicaMedico();
             $clinicamedicos->medicos_id = $dadosAgenda['medicos_id'];
             $clinicamedicos->clinica_id = $dadosAgenda['clinica_id'];
@@ -78,12 +77,25 @@ class UserController extends Controller
 
     public function listaAgenda()
     {
+            // recupera o usuario logado
+            $usuario = auth()->user()->id; 
 
-        $clinica = Clinica::select('*')->get();
+            // busca o registro
+            // $medico = Medico::find(1);
 
+            // lista os campos da minha lista Agenda
+        $agendamentosP = Agendamento::select(['agendamentos.tipo_agenda','agendamentos.data_agenda','agendamentos.hora_agenda','medicos.name as nome_medico','especialidades.campo as especialidade','clinicas.nome as clinica_medica','users.name as nome_paciente','status_agendas.descricao as status_agenda'])
+            ->join('users','agendamentos.users_id', '=', 'users.id')
+            ->join('clinica_medicos','agendamentos.clinica_medicos_id','=','clinica_medicos.id')
+            ->join('medicos','clinica_medicos.medicos_id','=','medicos.id') 
+            ->join('especialidades','medicos.especialidade_id','=','especialidades.id') 
+            ->join('clinicas','clinica_medicos.clinica_id','=','clinicas.id') 
+            ->join('status_agendas','agendamentos.status_id','=','status_agendas.id')
+            ->where('users.id', '=', $usuario)
+            ->orderBy('agendamentos.data_agenda', 'asc')
+            ->get();
 
-        // ,compact('clinica')
-        return view('cliente.listaAgenda');
+        return view('cliente.listaAgenda',compact('agendamentosP'));
     }
 
     

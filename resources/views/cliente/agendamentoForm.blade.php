@@ -132,6 +132,8 @@
             <div class="text"><i class="fa fa-info-circle fa-2x	"></i> &nbsp; Preencha os campos necessário para o AGENDAMENTO!</div>
         </div>
 	</div>
+
+	 
 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-12">
    <form class="form"  method="post" action="/areaCliente/agendaSalva">
     {!! csrf_field() !!}

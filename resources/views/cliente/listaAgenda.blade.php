@@ -148,14 +148,26 @@
 						  </tr>
 						 </thead>
 						 <tbody>
+<!-- 
+						 	 "tipo_agenda" => "PARTICULAR"
+        "data_agenda" => "2018-05-10"
+        "hora_agenda" => "08:00h"
+        "nome_medico" => "Dr. Alice Costa"
+        "especialidade" => "Cardiologia"
+        "clinica_medica" => "Laboratório de Analises Clínicas - Hemodiagnostico / Matriz"
+        "nome_paciente" => "Cliente Novo"
+        "status_agenda" => "Pendente" -->
+	
+						@foreach($agendamentosP as $agendamentosPs)
 						  <tr>
-						   <td>Consulta</td>
-						   <td>Clinico Geral</td>
-						   <td>Dr. Brasil</td>
-						   <td>Matriz</td>
-						   <td>12/12/18 17:00h</td>
-						   <td>Aguardando Confirmação</td>
+     					   <td>{{ $agendamentosPs->tipo_agenda}}</td>
+						   <td>{{ $agendamentosPs->especialidade}}</td>
+						   <td>{{ $agendamentosPs->nome_medico}}</td>
+						   <td>{{ $agendamentosPs->clinica_medica}}</td>
+						   <td>{{ $agendamentosPs->data_agenda}} / {{ $agendamentosPs->hora_agenda}}</td>
+						   <td>{{ $agendamentosPs->status_agenda}}</td>
 						  </tr>
+                    	@endforeach
 						 </tbody>
 						</table>
 	</fieldset>
