@@ -27,25 +27,29 @@ Event::listen('404', function()
 	return 'ERRO';
 });
 
+Route::get('/admin/login',['as' => 'admin.login','uses' => 'AdminAuth\LoginController@showLoginForm']);
+Route::post('/admin/login',['uses' => 'AdminAuth\LoginController@Login']);
+Route::post('/admin/logout',['as' => 'admin.logout','uses' => 'AdminAuth\LoginController@Logout']);
+Route::get('/admin/password/reset',['as' => 'admin.password.reset','uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
+Route::post('/admin/password/email',['as' => 'admin.password.email','uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
+Route::get('/admin/password/reset/{token}',['as' => 'admin.password.reset.token','uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
+Route::post('/admin/password/reset',['as'=>'admin.password.request','uses' => 'AdminAuth\ResetPasswordController@reset']);
+// Rotas de registro Admin...
 
 Route::middleware(['admin'])->group (function() {
-// Rotas de Login...
-    Route::get('/admin/login',['as' => 'admin.login','uses' => 'AdminAuth\loginController@showLoginForm']);
-    Route::post('/admin/login',['uses' => 'AdminAuth\loginController@Login']);
-    Route::post('/admin/logout',['as' => 'admin.logout','uses' => 'AdminAuth\loginController@Logout']);
-// Rotas de registro Admin...
-    Route::get('/admin/register',['as' => 'admin.register','uses' => 'AdminAuth\RegisterController@showRegistrationForm']);
-    Route::post('/admin/register',['uses' => 'AdminAuth\RegisterController@register']);
-// Passw/R Routes...
-    Route::get('/admin/password/reset',['as' => 'admin.password.reset','uses' => 'AdminAuth\ForgotPasswordController@showLinkRequestForm']);
-    Route::post('/admin/password/email',['as' => 'admin.password.email','uses' => 'AdminAuth\ForgotPasswordController@sendResetLinkEmail']);
-	Route::get('/admin/password/reset/{token}',['as' => 'admin.password.reset.token','uses' => 'AdminAuth\ResetPasswordController@showResetForm']);
-	Route::post('/admin/password/reset',['uses' => 'AdminAuth\ResetPasswordController@reset']);
-
-	// Rotas Administrativas...  
 	Route::get('/areaAdmin', 'AdminController@index');
-	Route::get('/areaAdmin/listaAgendas', 'AdminController@listaAgendas');
-	Route::get('/areaAdmin/listaAgendas', 'AdminController@listaAgendas');
+	Route::get('/admin/agendamentos', 'AdminController@listaAgendas');
+	Route::post('/admin/agendamentosalvar', 'AdminController@CadastrarAgendas');
+	
+	Route::get('/admin/medicos', 'AdminController@listaMedicos');
+	Route::post('/admin/medicos/medicosalvar', 'AdminController@medicosalvar');
+	Route::get('/admin/medicos/{id}', 'AdminController@show');
+	Route::put('/admin/medicos/{id}', 'AdminController@editarmedico');
+	
+	Route::get('/admin/pacientes', 'AdminController@listaPacientes');
+	Route::post('/admin/pacientesalvar', 'AdminController@pacientesalvar');
+
+
 
 });
 

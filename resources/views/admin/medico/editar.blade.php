@@ -1,123 +1,5 @@
-@extends('layout.template')
-@section('title', 'LOGIN - REGISTRO')
-@section('topoInfor')
-            <!-- Informações do Topo site -->
-                <div class="top-bar hidden-sm hidden-xs">
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                              Bem vindo area de CADASTRO DE USUARIO.
-                        </div>
-                    </div>
-                </div>
-        <!-- Informações do Topo site Fim -->
-@endsection
-@section('Menu')
-            <!-- Navbar Menu -Inicio -->
-                <nav id="nav" class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <!-- Navbar Header Starts -->
-                    <div class="navbar-header">
-                        <!-- Collapse Button Menu Mobile -->
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Navegação</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        <!-- Collapse Button Menu Mobile Fim -->
-                            <!-- Logo  -->
-                            <a href="/inicio" class="navbar-brand">
-                                <img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
-                            </a>
-                        <!-- Logo Fim -->
-                    </div>
-                    <!-- Menu Infor Fim -->
-                        <!-- Navbar Header Ends -->
-                        <!-- Navbar Collapse Starts -->
-                            <div class="navbar-collapse collapse">                  
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>
-                                        <a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="/pagina/institucional">Quem Somos</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/equipe"> 
-                                                Equipe</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/medicos">
-                                                Médicos</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/unidades">Unidades</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/especialidades">Especialidades</a>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/convenios">Convênios</a>
-                                    </li>       
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            Serviços 
-                                            <i class="fa fa-caret-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="/servico/consultas">Consultas</a>
-                                            </li>
-                                            <li>
-                                                <a href="/servico/exames">Exames</a>
-                                            </li>
-                                            <li>
-                                                <a href="/servico/agendamentos">Agendamentos</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        <!-- Navbar Collapse Ends -->
-                    </div>
-        </nav>
-            <!-- Navbar Menu Fim -->
-            </div>
-        <!-- Conteudo Inicial Fim -->
-        </header>
-    <!-- Topo Fim -->
-    @endsection
-@section('ConteudoPrincipal')
-<!-- Banner Cliente -->
-        <div class="main-banner paginaRegistro">
-            <div class="container">
-                <h2><span>Cadastro </span></h2>
-            </div>
-        </div>
-        <div class="breadcrumb">
-            <div class="container">
-                <ul class="list-unstyled list-inline">
-                    <li>
-                        <a href="/inicio">Inicio</a>
-                    </li>
-                    <li class="active">Cadastro</li>
-                </ul>
-            </div>
-        </div>
-<!-- Banner Cliente Fim-->
+@extends('layout.template_login')
+
 <div class="container main">
 
     <br>
@@ -131,16 +13,21 @@
         </div>
     </div>    
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-   <form class="form"  method="post" action="{{ route('register') }}">
+   <form class="form"  method="post" action="{{url('admin/medico/editar/') }}">
         @csrf
-    <fieldset>
-          <legend>Dados de Paciente</legend>
+	<fieldset>
+          <legend>Dados de Medico</legend>
             <div class="row">
               <div class="form-group col-sm-6 col-md-6 col-lg-6"">
                     <label for="name" class="control-label">Nome <span class="obr">*</span></label>
                     <input type="txt" class="form-control" name="name" id="name" placeholder="Nome Completo" required autofocus>
               </div>
 
+            <div class="form-group col-sm-6 col-md-6 col-lg-6"">
+                <label for="name_social" class="control-label">Foto:</label>
+                <input type="file" class="form-control" name="foto" id="foto" placeholder="Fulano(a) de Tal">
+                <span class="verd">* Como deseja ser chamado</span>
+          </div>
         </div>
 
         <div class="row">
@@ -163,16 +50,6 @@
                             <option value="Masc">Masculino</option>
                             <option value="Feminino">Feminino</option>
             </select>
-        </div>        
-        <div class="form-group col-sm-6 col-md-6 col-lg-3">
-               <label for="convenio" class="control-label">Convenio: <span class="obr">*</span></label>
-              <select id="convenio" name="convenio_id" class="form-control" data-live-search="true">
-                                   <option value="" disabled="disabled" selected>Selecione</option>
-                            @foreach($convenios as $convenio)
-                            <option value="{{ $convenio->id }}"> {{ $convenio->nome_convenio }}
-                   			 </option>
-                            @endforeach
-            </select>
         </div>
         <div class="form-group col-sm-12 col-md-12 col-lg-3"">
                 <label for="cpf" class="control-label">CPF: <span class="obr">*</span> </label>
@@ -185,25 +62,25 @@
                 <label for="telefone" class="control-label">Telefone: <span class="obr">*</span></label><input type="tel" class="form-control" id="telefone" name="telefone" maxlength="15" placeholder="(96) 00000 - 0000">
           </div>
       </div>
+          <div class="form-group col-sm-12 col-md-12 col-lg-3">
+                <label for="crm" class="control-label">CRM: <span class="obr">*</span></label><input type="tel" class="form-control" id="crm" name="crm" maxlength="15" placeholder="(96) 00000 - 0000">
+          </div>
+          <div class="form-group col-sm-6 col-md-6 col-lg-3">
+             <div class="form-group">
+             Especialidade:
+              <select id="especialidade_id" name="especialidade_id" class="form-control" data-live-search="true">
+                    <option value="" disabled="disabled" selected>Selecione</option>
+                            @foreach($especialidades as $especialidade)
+                            <option value="{{ $especialidade->id }}"> {{ $especialidade->campo }}
+                    </option>
+                            @endforeach
+                </select>
+                </div>
+                </div>
+      </div>
     </fieldset>
     <br>
-     <fieldset>
-          <legend> Dados de Triagem </legend>
-        <div class="row">
-              <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                    <label for="altura" class="control-label"> Altura Atual: <span class="obr">*</span></label>
-                    <input type="txt" class="form-control" name="altura" id="altura" maxlength="4" OnKeyPress="formatar('#.##', this)" placeholder="Ex.: 1.70" required>
-              </div>
-              <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                    <label for="peso" class="control-label"> Peso Atual: <span class="obr">*</span></label>
-                    <input type="txt" class="form-control" name="peso" id="n_registro" maxlength="4" OnKeyPress="formatar('##.#', this)" placeholder="Ex.: 80.0" required>
-              </div>
-              <div class="form-group col-sm-12 col-md-4 col-lg-6">
-                    <label for="obs" class="control-label">Observação</label>
-                    <input type="txtarea" class="form-control" name="obs" id="obs" placeholder="Ex.: Pressão Alta, Alergias, etc..." >
-              </div>
-            </div>
-    </fieldset>
+    
     <br>
     <fieldset>
         <legend>Dados de Endereço</legend>
@@ -216,20 +93,16 @@
                     <label for="numero" class="control-label">Número: </label>
                     <input type="txt" class="form-control" name="numero" id="numero"  placeholder="Ex.: 1313A, Apt14... " maxlength="10">
               </div>            
-              <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                    <label for="numero" class="control-label">Cep: </label>
-                    <input type="txt" class="form-control" name="numero" id="cep"  placeholder="Ex.: 68932-000... " maxlength="10">
-              </div>            
-             <div class="form-group col-sm-12 col-md-12 col-lg-3">
+             <!--  <div class="form-group col-sm-12 col-md-12 col-lg-3">
                     <label for="tipo_local" class="control-label">Tipo Local: </label>
                     <input type="txt" class="form-control" name="tipo_local" id="tipo_local" placeholder="Prédio, Casa Própria, KitNet...">
-              </div>
-             <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                    <label for="complement" class="control-label">Complemento: </label>
-                    <input type="txt" class="form-control" name="complement" id="complement" placeholder="Prédio, Casa Própria, KitNet...">
-              </div>
+              </div> -->
         </div>
         <div class="row">
+              <!-- <div class="form-group col-sm-12 col-md-12 col-lg-3">
+                <label for="cep" class="control-label">CEP:</label>
+                    <input type="text" class="form-control" name="cep" id="cep" OnKeyPress="formatar('##.###-###', this)" maxlength="10" placeholder="68.900-00">
+            </div> -->
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
                     <label for="bairro_id" class="control-label">Bairro: </label>
                     <div class="form-group">
@@ -267,7 +140,7 @@
                 </div>
            </div>
             <div class="form-group col-sm-12 col-md-12 col-lg-3">
-                  <label for="estado" class="control-label">Estado</label>
+                  <label for="nome_convenio" class="control-label">Estado</label>
                 <div class="form-group">
               <select id="estado" name="estado" class="form-control" data-live-search="true">
                             <option value="AC">Acre</option>
@@ -301,7 +174,7 @@
               </div>
           </div>
     </fieldset>
-    <br>
+        <br>
     <div class="col-lg-4">
     </div>
   <div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
@@ -313,5 +186,3 @@
   </form>
 </div>
 </div>
-</div>
-@endsection

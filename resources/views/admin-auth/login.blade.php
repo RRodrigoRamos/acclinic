@@ -162,9 +162,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('ENTRAR') }}
                                 </button>
-                                <a class="btn btn-success" href="{{ route('admin.register') }}">
-                                    CADASTRA-SE
-                                </a>
+                                
                                 <a class="btn btn-link" href="{{ route('admin.password.request') }}">
                                     {{ __('Esqueceu sua Senha?') }}
                                 </a>
@@ -232,9 +230,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('ENTRAR') }}
                                 </button>
-                                <a class="btn btn-success" href="{{ route('admin.register') }}">
-                                    CADASTRA-SE
-                                </a>
+                               
                                 <a class="btn btn-link" href="{{ route('admin.password.reset') }}">
                                     {{ __('Esqueceu sua Senha?') }}
                                 </a>

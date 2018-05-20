@@ -1,139 +1,41 @@
-@extends('layout.template')
-@section('title', 'LOGIN - REGISTRO')
-@section('topoInfor')
-            <!-- Informações do Topo site -->
-                <div class="top-bar hidden-sm hidden-xs">
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                              Bem vindo area de CADASTRO DE USUARIO.
-                        </div>
-                    </div>
-                </div>
-        <!-- Informações do Topo site Fim -->
-@endsection
-@section('Menu')
-            <!-- Navbar Menu -Inicio -->
-                <nav id="nav" class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <!-- Navbar Header Starts -->
-                    <div class="navbar-header">
-                        <!-- Collapse Button Menu Mobile -->
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Navegação</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        <!-- Collapse Button Menu Mobile Fim -->
-                            <!-- Logo  -->
-                            <a href="/inicio" class="navbar-brand">
-                                <img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
-                            </a>
-                        <!-- Logo Fim -->
-                    </div>
-                    <!-- Menu Infor Fim -->
-                        <!-- Navbar Header Ends -->
-                        <!-- Navbar Collapse Starts -->
-                            <div class="navbar-collapse collapse">                  
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>
-                                        <a href="/inicio"> <i class="fa fa-home" aria-hidden="true"></i> Início</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institucional <i class="fa fa-caret-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="/pagina/institucional">Quem Somos</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/equipe"> 
-                                                Equipe</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/medicos">
-                                                Médicos</a>
-                                            </li>
-                                            <li>
-                                                <a href="/pagina/unidades">Unidades</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/especialidades">Especialidades</a>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/convenios">Convênios</a>
-                                    </li>       
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            Serviços 
-                                            <i class="fa fa-caret-down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <a href="/servico/consultas">Consultas</a>
-                                            </li>
-                                            <li>
-                                                <a href="/servico/exames">Exames</a>
-                                            </li>
-                                            <li>
-                                                <a href="/servico/agendamentos">Agendamentos</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/pagina/contato"><i class="fa fa-comments"> </i> Fale Conosco</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="/areaCliente" ><i class="fa fa-user"></i> Área do cliente</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        <!-- Navbar Collapse Ends -->
-                    </div>
-        </nav>
-            <!-- Navbar Menu Fim -->
-            </div>
-        <!-- Conteudo Inicial Fim -->
-        </header>
-    <!-- Topo Fim -->
-    @endsection
-@section('ConteudoPrincipal')
-<!-- Banner Cliente -->
-        <div class="main-banner paginaRegistro">
-            <div class="container">
-                <h2><span>Cadastro </span></h2>
-            </div>
-        </div>
-        <div class="breadcrumb">
-            <div class="container">
-                <ul class="list-unstyled list-inline">
-                    <li>
-                        <a href="/inicio">Inicio</a>
-                    </li>
-                    <li class="active">Cadastro</li>
-                </ul>
-            </div>
-        </div>
-<!-- Banner Cliente Fim-->
-<div class="container main">
+@extends('layout.template_login')
 
-    <br>
-    <div class="col-lg-1">
-    </div>
-  <div class="col-lg-10">
-<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-      <div class="alert alert-info">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <div class="text"><i class="fa fa-info-circle fa-2x "></i> &nbsp; Preencha os campos necessário para o CADASTRO ! <span class="obr"> obs: ( * ) Campos obrigatórios<span></div> 
-        </div>
-    </div>    
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-   <form class="form"  method="post" action="{{ route('register') }}">
-        @csrf
-    <fieldset>
+
+@section('ConteudoPrincipal')
+
+<table border="1px" >
+
+@foreach($pacientes as $value)
+<tr>
+		<td>
+		</td>
+		<td>
+        {{$value->name}}
+		</td>
+		</td>
+		<td>
+        {{$value->cpf}}
+		</td>
+		<td>
+		{{$value->convenio_id}}
+		</td>
+</tr>
+@endforeach
+</table>
+{{$pacientes->links()}}
+@endsection
+
+@section('ConteudoSecundario')
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Cadastrar Paciente</button>
+
+@component('admin.components.modal')
+@slot('form')
+@component('admin.components.formulario')
+	@slot('url')
+	pacientesalvar
+	@endslot
+	@slot('formulario')
+   <fieldset>
           <legend>Dados de Paciente</legend>
             <div class="row">
               <div class="form-group col-sm-6 col-md-6 col-lg-6"">
@@ -163,7 +65,7 @@
                             <option value="Masc">Masculino</option>
                             <option value="Feminino">Feminino</option>
             </select>
-        </div>        
+        </div>
         <div class="form-group col-sm-6 col-md-6 col-lg-3">
                <label for="convenio" class="control-label">Convenio: <span class="obr">*</span></label>
               <select id="convenio" name="convenio_id" class="form-control" data-live-search="true">
@@ -301,17 +203,8 @@
               </div>
           </div>
     </fieldset>
-    <br>
-    <div class="col-lg-4">
-    </div>
-  <div class="form-group col-sm-6 col-md-6 col-lg-6 col-lg-6">
-            <button type="submit" class="btn btn-primary form-control agendar"> 
-            Cadastrar</button>
-        
-      </div>
-  <br>
-  </form>
-</div>
-</div>
-</div>
+	@endslot
+@endcomponent
+@endslot
+@endcomponent
 @endsection

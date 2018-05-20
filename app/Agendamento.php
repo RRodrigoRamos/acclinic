@@ -18,7 +18,7 @@ class Agendamento extends Model
     }
     public function user()
     {
-        return $this->hasOne(\acclinic\User::class);
+        return $this->belongsTo(\acclinic\User::class);
     }
     public function status()
     {
@@ -26,3 +26,4 @@ class Agendamento extends Model
     }
 
 }
+

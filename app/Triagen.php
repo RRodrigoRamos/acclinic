@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Triagen extends Model
 {
      protected $fillable = [
-        'altura','peso','obs',
+        'paciente_id',
+        'altura',
+        'peso',
+        'obs',
     ];
 
     public function user()
     {
-        return $this->belongsTo(\acclinic\User::class);
+        return $this->belongsTo(\acclinic\Paciente::class);
     }
 }

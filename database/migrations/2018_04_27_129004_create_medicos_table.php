@@ -24,8 +24,8 @@ class CreateMedicosTable extends Migration
             $table->string('email')->unique();
             $table->integer('especialidade_id')->unsigned();
             $table->foreign('especialidade_id')->references('id')->on('especialidades');
-            $table->integer('endereco_id')->unsigned();
-            $table->foreign('endereco_id')->references('id')->on('enderecos')->onDelete('cascade');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

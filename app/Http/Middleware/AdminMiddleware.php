@@ -1,7 +1,7 @@
 <?php
 
 namespace acclinic\Http\Middleware;
-
+use Auth;
 use Closure;
 
 class AdminMiddleware
@@ -13,11 +13,12 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard='admin')
+    public function handle($request, Closure $next, $guard = 'admin')
     {
-        if(!auth()->guard($guard)->check()){
-            return redirect('/areaAdmin');
+        if (!Auth::guard($guard)->check()) {
+            return redirect('/admin/login');
         }
+
         return $next($request);
     }
 }

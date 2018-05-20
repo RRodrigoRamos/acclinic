@@ -15,8 +15,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','name_social','email','sexo','data_nasc','telefone','cpf','password',
-        'convenio_id','triagem_id','endereco_id',
+        'name',
+        'email',
+        'telefone',
+        'cpf',
+        'password',
+        'endereco_id',
+        'role'
     ];
 
     /**
@@ -27,25 +32,16 @@ class User extends Authenticatable
     protected $hidden = [
         'remember_token','updated_at','created_at'
     ];
-
+       public function medico()
+    {
+        return $this->hasOne(\acclinic\Medico::class);
+    }
     public function endereco()
     {
         return $this->hasOne(\acclinic\Endereco::class);
     }
-
-    public function triagen()
+    public function paciente()
     {
-        return $this->hasOne(\acclinic\Triagen::class);
+        return $this->hasOne(\acclinic\Paciente::class);
     }
-    
-    public function convenio()
-    {
-        return $this->hasOne(\acclinic\Convenio::class);
-    }
-
-    public function agenda()
-    {
-        return $this->belongsTo(\acclinic\Agendamento::class);
-    }
-
 }
