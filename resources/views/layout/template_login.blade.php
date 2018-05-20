@@ -11,14 +11,12 @@
 
 		<meta name="author" content="Rodrigo Ramos, Leandro lima, Anderson Sanches">
 		<title>::ACClinic:: @yield('title') </title>
-		<!-- Bootstrap -->
 		
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<!-- Template CSS Files  -->
-		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link href="../js/plugins/camera/css/camera.css" rel="stylesheet">
-		<link href="../css/style.css" rel="stylesheet">
-		<link href="../css/responsive.css" rel="stylesheet">
+		<link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet">
+		<link href="{{ asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+		<link href="{{ asset('js/plugins/camera/css/camera.css')}}" rel="stylesheet">
+		<link href="{{ asset('css/style.css')}}" rel="stylesheet">
+		<link href="{{ asset('css/responsive.css')}}" rel="stylesheet">
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -50,7 +48,7 @@
 						<!-- Collapse Button Menu Mobile Fim -->
 							<!-- Logo  -->
 							<a href="/home" class="navbar-brand">
-								<img src="../images/fav/logo.png" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
+								<img src="{{asset('/images/fav/logo.png')}}	" alt="ACClinic - Agendamentos de Consultas Clinicas e Exames" class="imgLogo">
 							</a>
 						<!-- Logo Fim -->
 					</div>
@@ -85,7 +83,7 @@
 	@yield('ConteudoSecundario')
 	
 	<!-- Template JS Files -->
-	<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery-1.11.3.min.js"></script>
 	<script src="../js/jquery-migrate-1.2.1.min.js"></script>	
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/plugins/camera/js/jquery.mobile.customized.min.js"></script>
@@ -93,6 +91,5 @@
 	<script src="../js/plugins/camera/js/camera.min.js"></script>	
 	<script src="../js/plugins/camera/js/shuffle/jquery.shuffle.modernizr.min.js"></script>
 	<script src="../js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="../js/custom.js"></script>
-	</body>
+	<script src="../js/custom.js"></script></body>
 </html>

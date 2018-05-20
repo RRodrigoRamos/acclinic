@@ -24,7 +24,7 @@ açao
 		</td>
             
             <td>
-            <a href="{{url('admin/medico/editar/'.$value->id)}}">Editar</a>
+            <a href="{{url('admin/medicos/'.$value->id)}}">Editar</a>
       	</td>
 </tr>
 @endforeach

@@ -140,8 +140,9 @@ class AdminController extends Controller
     }
     public function show($id)
     {
-        $medico = User::FindOrFail($id);
-        return view('admin.medico.editar',['medico' => $medico,'bairros' => self::bairros(),'especialidades' => self::especialidade()]);
+        $value=User::select('*')->join('medicos','medicos.user_id', '=', 'users.id')->join('enderecos','users.id', '=', 'enderecos.id')->where('medicos.id', '=', $id)->get();
+        $value = $value[0];
+        return view('admin.medico.editar',['value' => $value,'bairros' => self::bairros(),'especialidades' => self::especialidade()]);
     }
     public function editarmedico($id)
     {
