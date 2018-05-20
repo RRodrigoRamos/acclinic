@@ -113,28 +113,78 @@ class UserController extends Controller
     
     public function pacienteForm()
     {
-    	// recupera o usuario logado
+        // recupera o usuario logado
         $usuario = auth()->user()->id; 
 
-        // busca o registro
-        $paciente = User::find($usuario);
+        $dados = User::select(['users.name','users.name_social','users.email'])
+            ->join('users','agendamentos.users_id', '=', 'users.id')
+            ->join('clinica_medicos','agendamentos.clinica_medicos_id','=','clinica_medicos.id')
+            ->join('medicos','clinica_medicos.medicos_id','=','medicos.id') 
+            ->join('especialidades','medicos.especialidade_id','=','especialidades.id') 
+            ->join('clinicas','clinica_medicos.clinica_id','=','clinicas.id') 
+            ->join('status_agendas','agendamentos.status_id','=','status_agendas.id')
+            ->where('users.id', '=', $usuario)
+            ->get();
+
+        $bairros = Bairro::select('*')->get();
 
 
-        return view('cliente.pacienteDados');
+        return view('cliente.pacienteForm',compact('bairros','dados'));
+    }
+
+    public function pacienteDados()
+    {
+    	$triagens = new Triagen();
+            $triagens->altura = $request->get('altura');
+            $triagens->peso = $request->get('peso');
+            $triagens->obs = $request->get('obs');
+            $triagens->save();
+            $triagem_id= $triagens->id;
+
+            $endereco = new Endereco();
+            $endereco->cep = $request->get('cep');
+            $endereco->tipo_local = $request->get('tipo_local');
+            $endereco->endereco = $request->get('endereco');
+            $endereco->numero = $request->get('numero');
+            $endereco->complement = $request->get('complement');
+            $endereco->bairro_id = $request->get('bairro_id');
+            $endereco->id = $request->get('id');
+            $endereco->save();
+
+            $paciente = new User();
+            $paciente->name = $request->get('name');
+            $paciente->name_social = $request->get('name_social');
+            $paciente->email = $request->get('email');
+            $paciente->password = bcrypt($request->get('password'));
+            $paciente->sexo = $request->get('sexo');
+            $paciente->data_nasc = $request->get('data_nasc');
+            $paciente->telefone = $request->get('telefone');
+            $paciente->cpf = $request->get('cpf');
+            $paciente->triagem_id = $triagem_id;
+            $paciente->convenio_id = $request->get('convenio_id');
+            $paciente->endereco_id = $endereco->id;
+            $paciente->save();     
+
+            \Auth::login($paciente);
+
+            return redirect('/areaCliente');
+
+
+        return view('cliente.pacienteForm');
     }
 
 	
 
     public function pacienteConv()
     {
-        // lista Convênio de Paciênte
+        
         return view('cliente.pacienteConv');
     }
 
     public function pacienteConvCad()
     {
         // Cadastro de Convenio
-        return view('cliente.pacienteConv');
+        return view('cliente.pacienteConvForm');
     }
 
      public function deleteConven($id)

@@ -110,7 +110,7 @@
 <!-- Banner Cliente Fim-->
 <!-- <div class="container form_user">
     <div class="row justify-content-center">
-        <div class="col-md-12 col-sm-12 col-lg-6 col-xs-8">
+        <div class="col-md-12 col-sm-12 col-lg-8 col-xs-12">
             <br>
                 <fieldset>
                         <legend>Login</legend>

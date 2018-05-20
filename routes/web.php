@@ -52,14 +52,14 @@ Route::middleware(['admin'])->group (function() {
 // Rotas do Cliente 
 Route::middleware(['web'])->group (function() {
 	Auth::routes();
-	Route::get('/areaCliente','UserController@index');
+	Route::get('/areaCliente','UserController@index');	
 	Route::get('/areaCliente/agendamento','UserController@agendamentoForm');
 	Route::get('/areaCliente/listaAgenda','UserController@listaAgenda');
 	Route::post('/areaCliente/agendaSalva','UserController@agendaSalva');
 	Route::get('/areaCliente/meus_dados','UserController@pacienteForm');
-	Route::post('/areaCliente/meus_dados','UserController@pacienteDados');
-	Route::get('/areaCliente/convenios','UserController@pacienteConv');
-	Route::get('/areaCliente/convenios','UserController@pacienteConv');
+	Route::post('/areaCliente/meus_dadosSalvo','UserController@pacienteDados');
+	Route::get('/areaCliente/pacienteConv','UserController@pacienteConv');
+	Route::post('/areaCliente/pacienteConvSalvo','UserController@ConvCard');
 	Route::get('/areaCliente/infor','UserController@pacienteInfor');
 	Route::get('/areaCliente/pacienteContat','UserController@pacienteContat');
 	Route::post('/areaCliente/pacienteContat','UserController@pacienteContat');

@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.templateAdmim')
 @section('title', 'Area Cliente')
 
 @section('Menu')

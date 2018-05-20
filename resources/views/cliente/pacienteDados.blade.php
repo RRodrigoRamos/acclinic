@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.templateAdmin')
 @section('title', 'Area Cliente')
 @section('topoInfor')
 			<!-- Informações do Topo site -->
