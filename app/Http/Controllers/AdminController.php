@@ -144,9 +144,25 @@ class AdminController extends Controller
         $value = $value[0];
         return view('admin.medico.editar',['value' => $value,'bairros' => self::bairros(),'especialidades' => self::especialidade()]);
     }
-    public function editarmedico($id)
-    {
- 
+    public function editarmedico($id,Request $request)
+    {   
+            $user = User::find($request->user_id);
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->cpf = $request->cpf;
+            $user->password = bcrypt($request->password);
+            $user->role = 'paciente';
+            $user->save();
+            $user->endereco()->save($endereco);
+            $medico = Medico::find($id);
+            $medico->user_id = $user->id;
+            $medico->foto = $request->foto;
+            $medico->crm = $request->crm;
+            $medico->sexo = $request->sexo;
+            $medico->data_nasc = $request->data_nasc;
+            $medico->telefone = $request->telefone;
+            $medico->especialidade_id= $request->especialidade_id;
+            $medico->save();
     }
 
 }
